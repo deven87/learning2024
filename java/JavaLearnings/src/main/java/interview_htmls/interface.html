@@ -1,0 +1,556 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+     <h1>// Interface</h1>
+
+            <br><br>// interface is used to acheive 100% abstraction
+            <br><br>// each and every member of an interface is only public
+            <br><br>// all methods inside interface should be non concrete, can not have body and are by default abstract and public
+            <br><br>// all variables inside interface are by default public static final, you can not have normal variables
+            <br><br>// from java 1.8 static and default methods are allowed in interfaces
+            <br><br>// from 1.9 private methods are allowed in interfaces
+            <br><br>// a class implementing an interface must override all of its non concrete method, the class inherit all of inteface default methods
+            <br><br>// a class can implements more than one interface
+            <br><br>// an interface can extends one or more interface, interface can not implements another
+            <br><br>// a class can only extends one class and can implements multiple interfaces
+            <br><br>// order should be extend first and then implements as parent class is the one which compiler look into first rather than parent interface
+            <br><br>// interfaces are to acheive 100% abstraction. eg. our main method will have reference of interface which will call the implementing classes, but we only know about the public methods of interfaces not about the implementation
+            <br><br>//  Interfaces specify what a class must do and not how. It is the blueprint of the behaviour.
+            <br><br>//  Interface do not have constructor.
+            <br><br>//  Represent behaviour as interface unless every sub-type of the class is guarantee to have that behaviour.
+            <br><br>//  An Interface is about capabilities like a Player may be an interface and any class implementing Player must be able to (or must implement) move(). So it specifies a set of methods that the class has to implement.
+            <br><br>//  If a class implements an interface and does not provide method bodies for all functions specified in the interface, then the class must be declared abstract.
+            <br><br>//  A Java library example is Comparator Interface. If a class implements this interface, then it can be used to sort a collection.
+            <br><br>// Interfaces are used to achieve multiple inheritance
+            <br><br>// Interfaces are used to acheive abstraction and run time  polymorphism
+
+            <h3>
+
+            interface {
+
+            <br><br>// declare constant fields (public static final)
+            <br><br>// declare methods that abstract and public by default.
+            }
+            </h3>
+
+        </td></tr>
+
+
+    <tr><td>
+
+    <h3>
+        <br><br>  public class MainMain extends C implements A, B{
+
+
+        <br><br>  // interface method , must override
+        <br><br>  @Override
+        <br><br>  public void m1() {
+
+        <br><br>  }
+
+        <br><br>  // interface method, must override
+        <br><br>  @Override
+        <br><br>  public void m2() {
+
+        <br><br>  }
+
+        <br><br>  public static void main(String[] args) {
+
+        <br><br>  MainMain m = new MainMain();
+        <br><br>  System.out.println(m.x); // calling interface variable from class as inherited
+        <br><br>  System.out.println(m.y); // calling interface variable from class as inherited
+        <br><br>  System.out.println(m.z); // calling class variable from another class as inherited
+        <br><br>  m.m1(); // will call overriding method
+        <br><br> m.m2(); // will call overriding method
+        <br><br> m.m3(); // method is not overriden so will call the inherted method as it is
+
+        <br><br>  }
+        <br><br>  }
+        <br><br>
+        interface A{
+
+        <br><br>int x=10;
+        <br><br>void m1();
+        <br><br> }
+
+        <br><br> interface B{
+
+        <br><br> int y=20;
+        <br><br> void m2();
+        <br><br>  }
+
+        <br><br>  class C{
+
+        <br><br>  int z = 30;
+        <br><br>  void m3(){
+
+        <br><br>  }
+        <br><br>  }
+
+    </h3>
+
+    </td></tr>
+
+    <tr><td>
+
+        <b> <br><br>// implementing two interfaces, multiple inheritance via ineterfaces</b>
+
+
+          <h3>     <br> public class MainMain implements A, B{
+
+
+              <br><br>   @Override
+              <br><br>   public void m1() {
+
+              <br><br>   }
+
+              <br><br>   @Override
+              <br><br>   public void m3() {
+
+              <br><br>   }
+
+              <br><br>  @Override
+              <br><br>  public void m2() {
+
+              <br><br>  }
+              <br><br>  }
+
+              <br><br>  interface A {
+
+              <br><br>  void m1();
+              <br><br>  void m2();
+              <br><br>  }
+
+              <br><br>  interface B {
+
+              <br><br>  void m1();
+
+              <br><br>  void m3();
+
+              <br><br>   }
+              </h3>
+
+
+
+    </td></tr>
+
+
+
+    <tr><td>
+
+        <h1> <br><br>Static methods of interface</h1>
+
+            <br><br>// static methods are utility and general purpose methods, as static so not available for overriding, they are available via interface name
+             <br><br>// no need to implement an interface to call its static methods, they are directly available via interface name
+            <br><br>// static method of interface are available only via interface name, not via implmenting class name
+            <br><br>//static methods must have body
+             <br><br>// static methods are by default public in interfaces
+
+        <br><br> }
+
+
+        <br><br> <b> Calling static method with and without implementing the interfaces</b>
+        <h3>
+
+            <br><br> interface A{
+
+            <br><br> static void m1() {
+            <br><br> System.out.println("interface m1 static methods");
+            <br><br>  }
+
+            <br><br>  }
+
+            <br><br>  interface B{
+
+            <br><br>  static void m2() {
+            <br><br>  System.out.println("interface m2 static methods");
+            <br><br>  }
+
+            <br><br>  }
+
+
+            <br><br> <br><br>// below class implements only 1 of the above interfaace, but can call static methods of both via interface names
+            <br><br> class ImplementingClass implements A {
+
+            <br><br>  public static void main(String[] args) {
+
+            <br><br>  B.m2(); <br><br>// static method of interface availabel directly via interface name, it can not be accessed via class name, only via interface name
+            <br><br>  A.m1(); <br><br>// calling static method of interface in class via interface name, even when interface is not implemented
+            <br><br>  <br><br>//  ImplementingClass.m2();  can not call interface static method via class name
+            <br><br>  }
+            <br><br>  }
+        </h3>
+
+
+
+        </td></tr>
+
+
+    <tr><td>
+
+        <h1> Static Methods in interfaces, trying to call via child interface</h1>
+
+
+        <h3>
+            <br><br>  interface A {
+
+            <br><br>  static void m1() {
+            <br><br>  System.out.println("A m1");
+            <br><br>  }
+
+
+            <br><br>  }
+
+            <br><br>  interface B extends A{
+
+            <br><br>  static void m2() {
+            <br><br>  System.out.println("B m1");
+            <br><br>  }
+
+            <br><br>  }
+
+            <br><br>    class C implements B {
+            <br><br>  public static void main(String[] args) {
+
+            <br><br>  <br><br>//  B.m1(); <br><br>// can not invoke static method of an interface from child interface, can only be invoked via same interface
+
+            <br><br>  B.m2();
+
+            <br><br>  A.m1();
+
+            <br><br>  }
+            <br><br>  }
+
+        </h3>
+
+    </td></tr>
+
+    <tr>
+        <td>
+
+            <br><br> <h1>default methods</h1>
+            <br> default methods are introduced from 1.8, reason is if we have a lot of classes implementing an interface, then on updating the interface
+            <br>each class have to update as we must define newly added method in all classes which is added now in interface
+            <br>we have to write dummy code, so to avoid all these things, insteaf of creating abstract method, we create default method and implement it inside interface itself
+            <br>now all classes implementing interface will by default inherit it so we dont need to override, if we want to override in any class, we can do that
+            <br> a generic code which we want to available in all classes, we can write it down in interface as default method
+
+            <br><br> default methods can be overloaded, as well as they are overridden, should follow same basic rules
+            <br><br>Overriden default method in interface can not be final, sych, protected, private, but it can be strictfp
+            <br><br>Overriding a default method can be final, sync, strictfp, but shouldfollow overriding rules
+
+
+
+
+            <h3> Case 1, several interfaces having different default methods
+
+                <br><br>    interface A {
+
+                <br><br>   default void m1() {
+                <br><br>  System.out.println("A m1");
+                <br><br>  }
+
+
+                <br><br> }
+
+                <br><br>  interface B extends A{
+
+                <br><br> default void m2() {
+                <br><br> System.out.println("B m1");
+                <br><br>  }
+
+                <br><br> }
+
+                <br><br> class C implements B {
+
+                <br><br> <br><br>// both default methods are available here in class C as default methods are inherited
+                <br><br> public static void main(String[] args) {
+
+                <br><br> C c = new C();
+                <br><br> c.m1();
+                <br><br> c.m2();
+
+                <br><br> }
+                <br><br> }
+            </h3>
+
+
+        </td></tr>
+
+    <tr><td>
+        <h3> Case 2, 2 interfaces having same default method, but one overrides another default, so that class finally receives only one interface method
+
+            <br><br> interface A {
+
+            <br><br>  default void m1() {
+            <br><br>  System.out.println("A m1");
+            <br><br>   }
+
+            <br><br>  default void m3() {
+            <br><br>  System.out.println("A m3");
+            <br><br>  }
+
+
+            <br><br>  }
+
+            <br><br>   interface B extends A{
+
+            <br><br>  default void m2() {
+            <br><br> System.out.println("B m1");
+            <br><br>  }
+
+            <br><br><br><br>// the below one will overiride A's m3()
+            <br><br> default void m3() {
+            <br><br> System.out.println("A m3");
+            <br><br>  }
+
+
+            <br><br>  }
+
+            <br><br> Since m3 is not coming from A and B both, as B overrides A's m3, it is only coming from B, so no error
+            <br><br> class C implements B {
+
+            <br><br>  @Override
+            <br><br>  public void m2()  {
+            <br><br>  System.out.println("B m1");
+            <br><br>  }
+
+            <br><br>   <br><br>// both default methods are available here in class C as default methods are inherited
+            <br><br>  public static void main(String[] args) {
+
+            <br><br>  C c = new C();
+            <br><br>  c.m1(); <br><br>// available from A as its parent of B
+            <br><br>  c.m2(); <br><br>// available from B
+            <br><br>  c.m3(); <br><br>// available from A
+
+            <br><br> }
+            <br><br> }
+
+        </h3>
+
+        <h3> Case3, When a class implements multiple interfaces having same method
+
+            <br><br>  <br><br>// now A and B both have same name default method and both get inherited into C, so we must override it as CTE otherwise
+            <br><br> if we dont override, compiler dont know which interface method to call, so must override when having same name defa
+            <br><br>  <br><br>// while overriding we can either implements its own or can call default method of any of the interface using interface name and super
+
+
+            <br><br> interface A {
+
+            <br><br> default void m1() {
+            <br><br> System.out.println("A m1");
+            <br><br>  }
+
+
+
+
+            <br><br> }
+
+            <br><br> interface B {
+
+            <br><br> default void m1() {
+            <br><br> System.out.println("B m1");
+            <br><br>  }
+
+            <br><br>  default void m3() {
+            <br><br>  System.out.println("A m3");
+            <br><br>  }
+
+
+            <br><br> }
+
+            <br><br> class C implements A, B {
+       <br><br>  @Override
+            <br><br>  public void m1() {
+            <br><br>  A.super.m1(); <br><br>// Caliing A m1
+            <br><br>  B.super.m1(); <br><br>// Calling B m1
+            <br><br>  }
+
+            <br><br> <br><br>// both default methods are available here in class C as default methods are inherited
+            <br><br>  public static void main(String[] args) {
+
+            <br><br>C c = new C();
+            <br><br>c.m1(); <br><br>// available from A as its parent of B
+            <br><br>c.m3(); <br><br>// available from A
+
+            <br><br>}
+
+
+            <br><br>}
+
+        </h3>
+
+        <tr><td>
+
+    <h3> Defaullt method can be overloaded just like normal methods
+
+
+        <br><br>  public class MainMain implements A, B{
+
+        <br><br>  public static void main(String[] args) {
+        <br><br>  MainMain m = new MainMain();
+        <br><br> m.m1();
+        <br><br> m.m1(10);
+        <br><br>  }
+        <br><br> }
+
+
+        <br><br> interface A {
+
+        <br><br>  default void m1(int x) {
+
+
+        <br><br> }
+        <br><br> }
+
+        <br><br>  interface B {
+        <br><br> default void m1() {
+
+
+        <br><br> }
+
+        <br><br>}
+
+    </h3>
+
+    <h3>
+
+        <br><br>   <br><br>// allowed
+
+        <br><br>    default strictfp void m1() {
+
+
+        <br><br>   }
+
+    </h3>
+
+</td></tr>
+
+
+    <tr><td>
+        <h1>overloading default and static methods</h1>
+        <h1>Having different access specifier for static and default methods</h1>
+        <br><br>default and static both methods can be overloadd
+        <br><br>only default methods can be overriden, not static
+        <br><br> both default and static can be only strictfp and can not be final, protected, private, sync
+        <br><br> at overriding, default keyword can not be used, and method can be final, synch, strictfp
+        <br><br> static to non static and non static to static overriding is not possible
+
+            <h3>
+                <br><br>   public class MainMain implements A{
+
+                <br><br>     <br><br>// overriden
+                <br><br>     <br><br>// final synchronized strictfp  all are allowed, but should follow overriding rules
+                <br><br>     public final synchronized strictfp  void m1(){
+
+                <br><br>      }
+
+
+                <br><br>   public static void main(String[] args) {
+
+
+
+                <br><br>   }
+
+                <br><br>    }
+
+                <br><br>   interface A {
+
+                <br><br>   <br><br>// only allowed things is strictfp with default and static methods
+                <br><br>   strictfp default void m1(){
+
+                <br><br>   }
+
+                <br><br>   <br><br>// only allowed things is strictfp with default and static methods
+                <br><br>   strictfp static void m2(){
+
+                <br><br>   }
+
+                <br><br>    <br><br>// overloaded
+                <br><br>    default void m1(int x){
+
+                <br><br>   }
+
+                <br><br>   <br><br>// overloaded
+                <br><br>   default void m1(int x, int y){
+
+                <br><br>    }
+
+                <br><br>   <br><br>// overloaded method
+                <br><br>   static void m1(int x, int y, int z){
+
+                <br><br>   }
+
+                <br><br>   <br><br>// overloaded method
+                <br><br>   static void m1(String x, int y, int z){
+
+                <br><br>    }
+
+                <br><br>    }
+            </h3>
+
+
+
+    </td></tr>
+
+
+    <tr><td>
+
+        <h1>  <br><br> Private static method and private method in interface</h1>
+
+    // private method and private static methods were introduced in Interface in Java 1.9
+        <br><br>   // they can improve code reusability, if multiple default methods or static methods requires same code, that code can be writeen in private method
+        <br><br>   // and that private method can be called in any interface default or static method
+
+        <h3>
+            <br><br>      public interface TempI {
+
+            <br><br>      public abstract void mul(int a, int b);
+
+            <br><br>      public default void
+            <br><br>     add(int a, int b)
+            <br><br>     {
+            <br><br>   // private method inside default method
+            <br><br>   sub(a, b);
+
+            <br><br>   // static method inside other non-static method
+            <br><br>   div(a, b);
+            <br><br>   System.out.print("Answer by Default method = ");
+            <br><br>   System.out.println(a + b);
+            <br><br>   }
+
+            <br><br>    public static void mod(int a, int b)
+            <br><br>   {
+            <br><br>   div(a, b); // static method inside other static method
+            <br><br>   System.out.print("Answer by Static method = ");
+            <br><br>   System.out.println(a % b);
+            <br><br>   }
+
+            <br><br>  private void sub(int a, int b)
+            <br><br>  {
+            <br><br>   System.out.print("Answer by Private method = ");
+            <br><br>   System.out.println(a - b);
+            <br><br>   }
+
+            <br><br>   private static void div(int a, int b)
+            <br><br>   {
+            <br><br>   System.out.print("Answer by Private static method = ");
+            <br><br>   System.out.println(a / b);
+            <br><br>   }
+            <br><br>   }
+
+        </h3>
+
+    </td></tr>
+
+
+
+    </td></tr></table></html>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="141cdf2d-87f6-4062-81b7-a5231df711ef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/excel.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AppiumRun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FileDownload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ReadFromCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excel.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/file/FileReadWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/MyProtectedMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/arrays.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/flowcontrol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/lambda_functionalInterface.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/lvti.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/modifiers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/numbersystem_literal_datatypes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/operators.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/package_compile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/protectedaccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscprograms/Factoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/miscprograms/ReverseString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/programs/searching/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/programs/searching/LinearSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/programs/sorting/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/programs/sorting/SelectionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/AnonymousClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/abc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/csv/OpenCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/db/DBReadWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/excel/ExcelReadWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/searching/LinearSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/sendemail/EmailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/serialization/JSONParse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selenium/serialization/Serialize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/definition" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/followingprogram/BankCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/followingprogram/CreditCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/followingprogram/DebitCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/followingprogram/ShoppingMall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/violatingprgram/CreditCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/violatingprgram/DebitCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/violatingprgram/ShoppingMall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/definition" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/followingprogram/CashbackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/followingprogram/GPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/followingprogram/Paytm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/followingprogram/ScratchCardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/followingprogram/UPIPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/violatingprogram/GPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/violatingprogram/Paytm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/violatingprogram/UPIPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/definition" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/followingprogram/FacebookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/followingprogram/PostMediaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/followingprogram/SocialMediaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/followingprogram/WhatsappService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/violatingprogram/FacebookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/violatingprogram/SocialMediaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/liskovsubstitution/violatingprogram/WhatsappService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/openclosed/definition" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/openclosed/followingprogram/EmailNotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/openclosed/followingprogram/MobileNotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/openclosed/followingprogram/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/openclosed/followingprogram/WhatsappNotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/openclosed/violatingprogam/BankOtpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/singleresponsibility/definition" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/singleresponsibility/followingprogram/BankOtpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/singleresponsibility/followingprogram/BankPassbookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/singleresponsibility/followingprogram/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/solid/singleresponsibility/violatingprogram/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview_htmls/MainMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/MainMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview_htmls/abstractclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/abstractclasses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview_htmls/objecttypecast.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/typecast.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview_htmls/overriding.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview_htmls/overriding.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2SKHKvA6sZ0XKpZTApeFlkMJpaL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/intelligent/learning/java/JavaLearnings/src/main/java/solid/interfacesegregation/followingprogram&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/solid/interfacesegregation/followingprogram" />
+      <recent name="$PROJECT_DIR$/src/main/java/solid/dependencyinversion/followingprogram" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java/interview_htmls" />
+      <recent name="$PROJECT_DIR$/src/main/java/exceptions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/solid/interfacesegregation" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="solid.interfacesegregation.followingprogram" />
+      <recent name="solid.liskovsubstitution.followingprogram" />
+      <recent name="solid.liskovsubstitution.violatingprogram" />
+      <recent name="solid.openclosed.followingprogram" />
+      <recent name="solid.openclosed.violatingprogam" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FileReadWrite">
+    <configuration name="DownloadCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DownloadCheck" />
+      <module name="JavaLearnings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileDownload" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileDownload" />
+      <module name="JavaLearnings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileReadWrite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="file.FileReadWrite" />
+      <module name="JavaLearnings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingMall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="solid.dependencyinversion.followingprogram.ShoppingMall" />
+      <module name="JavaLearnings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solid.dependencyinversion.followingprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="JavaLearnings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FileReadWrite" />
+        <item itemvalue="Application.ShoppingMall" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.FileDownload" />
+        <item itemvalue="Application.DownloadCheck" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="141cdf2d-87f6-4062-81b7-a5231df711ef" name="Changes" comment="" />
+      <created>1688888292678</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688888292678</updated>
+    </task>
+    <servers />
+  </component>
+</project>

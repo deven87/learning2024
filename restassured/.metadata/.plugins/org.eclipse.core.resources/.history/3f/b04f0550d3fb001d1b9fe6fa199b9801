@@ -1,0 +1,5 @@
+2023-05-26 17:43:56.533 [main] INFO  petstore.logger.Log - inside beforeSuite
+2023-05-26 17:43:56.548 [main] INFO  petstore.logger.Log - inside beforeClass
+2023-05-26 17:43:56.720 [main] INFO  petstore.logger.Log - inside createUserTest
+2023-05-26 17:43:59.569 [main] INFO  petstore.logger.Log - inside get user
+2023-05-26 17:43:59.569 [main] INFO  petstore.logger.Log - getting details for user: rodolfo.wolff

@@ -1,0 +1,147 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> object type casting</h1>
+
+
+<br><br>// 2 compiler rules and 1 JVM rule
+
+            <br><br>// A b = (C) d
+
+            <br><br>// first compiler rule is there must be some relation between C and d
+            <br><br>// second compiler rule is there must be some relation between C and A. A must be same as C or parent of C
+            <br><br>// JVM rule says that, d run time object should be either same or child of C type
+
+
+<h3>
+    <br><br>Object o1 = new String("hello");
+
+    <br><br>String s = (String)o1;
+
+    <br><br>// here A and C both are string, so rule 2 of constructor passed
+    <br><br>// (C) and d have a relation, String and Object
+    <br><br>// JVM rule is o1 real time object is String which is same or parent of (String), so all rules are verified
+    <br><br>// hence this object type cast is allowed
+    <br><br>System.out.println(s);
+
+
+
+    <br><br>String s2 = new String("hello");
+
+    <br><br>//  StringBuilder s3 = (StringBuilder)s2; // compiler rule 1 broke, (C) and d are not related
+
+
+    <br><br>Object o2 = new String("hello");
+
+    <br><br>//  StringBuilder s1 = (String)o1; // compiler rule 2 is broke, A and (C) are not related
+
+
+    <br><br>Object o3 = new String("As");
+
+    <br><br>StringBuilder sb = (StringBuilder) o3; // here A and (C) are same, A and d are related so both rule passed
+    <br><br>// but JVM rule that d real time object is String and (C) is StringBuilder so d must be same or child of (c)
+    <br><br>// is not validated, hence run time error, class cast exception
+
+</h3>
+
+            <br></td>
+    </tr>
+
+
+    <tr><td>
+        <br><br>
+        <h1> primitive type casting</h1>
+
+
+
+
+        // implicit type casting, automatic promotion from one to another type
+        <br><br>  // compiler is responsibe for this, from smaller to longer data type
+        <br><br>  // also known as upcasting or widening
+        <br><br>  // no data lost
+        <br><br>  //    byte -> short -> int -> long -> float -> double
+        <br><br>  //        char -> int
+
+
+        <br><br>   // explicit, when we have to specify type casting
+        <br><br>  // data may lost, we have to do it
+        <br><br>  // also known as downcasting or narrowing
+
+
+        <h3>
+            <br><br>    byte b = 100;
+            <br><br>    short s = 200;
+            <br><br>    char ch = 'a';
+            <br><br>    float f = 100F;
+            <br><br>    long l = 200;
+            <br><br>    double d = 300;
+
+
+            <br><br>   // all below are implicit typcasting
+
+            <br><br>   // byte short char can be converted automatically to int
+            <br><br>   int x = b;
+            <br><br>   x = s;
+            <br><br>   x = ch;
+            <br><br>
+            // int can be converted to long, float, double
+            <br><br>  l = x;
+            <br><br>  f = x;
+            <br><br> d = x;
+
+            <br><br> // long can be converted to float double (though size of long is more
+            <br><br> // than float but storage of floating point is done in a special way, hence it can hold long value as well)
+            <br><br> f = l;
+            <br><br> d = l;
+
+            <br><br> // float can be converted to double
+            <br><br> d = f;
+
+
+
+            <br><br>  b = (byte)x; // explicit
+
+
+        </h3>
+        <br><br>
+        <b> // weird case</b>
+
+        <h3>
+        <br><br>  byte b1 = 'a'; // here we are assigning char to byte, but char is a constant value, which can be represented by int value
+        <br><br>    // so if its under 127 its valid, if its above it, not allowed implicitly
+
+        <br><br>   char ch1 = 'b';
+
+        <br><br>   //  byte b2 = ch1; // this is not allowed as ch1 is not direct value but a char type, so incompatible type
+
+            <br><br>      final char ch2 = 'b';
+
+            <br><br>      byte b2 = ch2; // allowed as ch2 is final so constant, constant char will be represented as its integer value
+
+            <br><br>   }
+
+
+        </h3>
+
+
+
+
+
+
+    </td></tr>
+
+</table>
+
+
+</html>
+
+

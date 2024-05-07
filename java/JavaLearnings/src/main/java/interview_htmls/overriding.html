@@ -1,0 +1,249 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1><br><br>// Method Overriding</h1>
+
+
+           // method overriding
+            <br><br>// when a child class have same method as parent class, same return type and same signature(name and parameters)
+            <br><br>// then this is known as overriding, the child class method is the overriding one and parent method is overriden once
+            <br><br>// overriding is a run time concept, JVM decides either parent class method to be called or child one at run time by looking at the object type
+            <br><br>// if you create a child class object using child reference, it can call childs members or inherited members, in case of same members from parent, only child one will be called
+            <br><br>// if you create parent class object, it has no relation with child so only parent one will be called
+            <br><br>// if you create parent reference and assign it a child object, then childs method will be called, but it must be there in parent as well as reference is parent
+            <br><br>// overidding is applicable only for instance method and not for data members
+            <br><br>// overriding is not applicable for static methods, they will be called based on the reference type and not on run time object type
+            <br><br>// overriding is only possible for a normal method to oveririding a normal method
+            <br><br>// a static method can not be overrident as normal method and vice versa
+            <br><br>// final method can be inherited but can not be overridden
+            <br><br>// while overriding, the method can not have weaker access, it can be same or more
+            <br><br>//  e.g overriding a default access method can only be done as a default access methods or public method
+            <br><br>// normal method can be overriden as sync, strictfp and vice versa
+            <br><br>// if a child throws checked exception, parent must throw same or its parent exception
+            <br><br>// private methods are not inherited, so can not override them
+            <br><br>// overriding method must have same or child return type
+            <br><br>// overriden method can not be final, it can not be sync, it can not be strictfp as
+            <br><br>// overriding method can be final, strictfp or sync
+            <br><br>// static to non static and non static to static overriding is not possible as static can not be override
+
+            }
+
+            <h3>
+                <br><br>     class MyParent {
+                <br><br>     int x=10;
+                <br><br>     void m1(){
+                <br><br>     System.out.println("parent m1");
+                <br><br>     }
+                <br><br>     }
+
+                <br><br>   class Child extends MyParent{
+
+                <br><br>    <br><br>// data variable are not overriden, here they will be inherited but hidden by child class if having same name
+                <br><br>   int x = 20;
+
+                <br><br>   <br><br>// methods will be inherited and overriden if same return type and signature
+                <br><br>   void m1(){
+                <br><br>  System.out.println("child m1");
+                <br><br>  }
+
+                <br><br>   public static void main(String[] args) {
+
+                <br><br>  Child c = new Child();
+                <br><br>   System.out.println(c.x); <br><br>// will print Childs x
+                <br><br>   c.m1(); <br><br>// will call childs m1
+
+                <br><br>  MyParent mp = new Child();
+                <br><br>  System.out.println(mp.x); <br><br>// since no overriding, resolution is done based on reference type, so Parent x will be called
+                <br><br>   mp.m1(); <br><br>// since methods are overriden, compiler will only check that the reference must have m1, but call will be resolved by JVM and childs copy will be called
+                <br><br>   <br><br>// as in overriding the resolution is done by object type and not by reference tyoe
+
+                <br><br>   }
+                <br><br>   }
+            </h3>
+
+
+
+
+        </td></tr>
+
+
+        <td> <h1>   <br><br>Overriding must have same return type, or it can be parent, child, overriding method can have child return type of parent</h1>
+
+            <h3>public class MainMain extends ParentClass{
+
+                <br><br>   public String m1() {
+                <br><br>   System.out.println("child m1");
+                <br><br>   return new String("S");
+                <br><br>  }
+
+
+
+                <br><br>  }
+
+                <br><br>  class ParentClass {
+
+                <br><br>  Object m1() {
+                <br><br>  System.out.println("parent m1");
+                <br><br>  return new String("as");
+                <br><br>  }
+
+                <br><br> }</h3>
+
+
+        </td>
+
+
+
+    </tr>
+
+    <tr><td>
+
+        <br><br>
+        <h1> var arg overriding</h1>
+        // can be overriden by same var arg or by using array, as var arg is converted to array only by compiler</h1>h1>
+
+
+
+        <h3>
+            <br><br>  public class MainMain implements A{
+
+
+
+            <br><br> @Override
+            <br><br> public void m1(int... x) {
+
+            <br><br>   }
+
+            <br><br>   @Override
+            <br><br>  public void m2(int[] x) {
+
+
+
+            <br><br>  }
+
+            <br><br>  public static void main(String[] args) {
+            <br><br>  MainMain m = new MainMain();
+            <br><br>  A a = new MainMain();
+
+            <br><br>  int[] arr = {1,2,3};
+
+
+            <br><br>  m.m1(12,3,4); // valid as m is child reference and child have exact match
+
+            <br><br>   //  a.m1(1,2,3); //  not allowed as compiler will check at compile time that the reference should have the method with three int
+            <br><br>   // or with var arg // but the child has the method but parent does not
+            <br><br>   a.m1(arr);
+
+            <br><br>   a.m2(1,2,3); // valid as reference has var arg
+            <br><br>   a.m2(arr);  // valid as refernce has var arg which is converted to array so can pass array
+
+            <br><br>   }
+
+
+            <br><br>   }
+
+            <br><br>   interface A{
+
+            <br><br>  void m1(int[] x);
+
+            <br><br>  void m2(int... x);
+
+            <br><br>   }
+
+
+</h3>
+
+
+    </td></tr>
+
+    <tr><td>
+        <br><br>
+        <h1> oveririding with unchecked exception</h1>
+        // no rule for unchecked exception, parent method or child method can or can not throw unchecked exception
+
+        <h3>
+
+            <br><br>   public class MainMain extends A{
+
+            <br><br>    @Override
+            <br><br>    void m1() {
+
+            <br><br>    }
+
+            <br><br>    @Override
+            <br><br>    void m2() throws NullPointerException{
+
+            <br><br>   }
+            <br><br>   }
+
+            <br><br>   abstract class A {
+
+            <br><br>   abstract void m1() throws ClassCastException;
+
+            <br><br>   abstract void m2();
+
+            <br><br>   }
+        </h3>
+
+    </td></tr>
+
+
+    <tr><td>
+
+        <br><br>
+        <h1> overriding with checked exception</h1>
+          // if child throws any checked exception, parent must throw same or parent of it
+
+        <h3>
+
+
+            <br><br>      public class MainMain extends A{
+
+
+            <br><br>      // parent throws exception, but child does not
+            <br><br>      @Override
+            <br><br>      void m1() {
+
+            <br><br>     }
+
+
+            <br><br>    // child is throwing checked exception so parent must throws the same or its parent
+            <br><br>    @Override
+            <br><br>    void m2() throws Exception{
+
+            <br><br>    }
+
+            <br><br>     // child is throwing checked exception so parent must throws the same or its parent
+            <br><br>    @Override
+            <br><br>   void m3() throws IOException{
+
+            <br><br>   }
+            <br><br>   }
+
+            <br><br>   abstract class A {
+
+            <br><br>  // parent is throwing exception, child may  not throw it
+            <br><br>  abstract void m1() throws IOException;
+
+            <br><br>  // child is throwing exception so parent must throws same or parent
+            <br><br>   abstract void m2() throws Exception;
+
+            <br><br>  // child is throwing exception so parent must throws same or parent
+
+            <br><br>   abstract void m3() throws Exception;
+
+            <br><br>  }
+
+        </h3>
+
+
+</table></html>

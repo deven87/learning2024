@@ -1,0 +1,279 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1>// Method overloading</h1>
+
+            <br><br>// When a class having more than 1 method with same name and different no or type of parameters
+            <br><br>//  The overloaded method must change the argument list (number of parameters, or data type, or sequence of parameters).
+            <br><br>// The overloaded method can change the return type.
+            <br><br>// The overloaded method can change the access modifier (the signature of the function should be different).
+            <br><br>// a class can not have more than 1 method with same signature
+            <br><br>// return type does not matter in overloading
+            <br><br>// overloading is resolved at compile time by compiler, it is also known as static biding, early binding, compile time polymorphism
+            <br><br>// during overloading, exact match will be given first priority
+            <br><br>// var args method will be given last priority
+            <br><br>// overloading when done for object type with relation, always the child class is given priority
+            <br><br>// overloading can be done for more than 1 static methods, or normal method with static method, just that the name must be smae and return tuype must be different by no or type
+            <br><br>// overloading methods can have final keyword, strictfp keyword, synchronized keyword or not
+            <br><br>// methods available in parent class are can also be overloaded in child class
+
+            <br><br>//  We cannot implement method overloading solely by changing the return type or access modifier of a method. Method overloading is determined based on the method signature.
+            <br><br>// Overloading is used when objects are required to perform similar tasks but use different input parameters.
+
+
+            <br><br>   public class MainMain {
+            <br><br>// define method with 1 parameter
+            <h3>
+            <br><br> void m1(int x) {
+            <br><br>System.out.println("int");
+                </h3>
+
+            <br><br> }
+
+            <br><br>// define same method with 2 parameters
+            <h3>
+            <br><br> void m1(int x, int y){
+            <br><br> System.out.println("int, int");
+            </h3>
+
+            <br><br>  }
+
+
+            <br><br>// define same method with different return type and different parameter type
+            <h3>
+            <br><br>  int m1(int z, String y) {
+
+            <br><br> System.out.println("int, String");
+
+            <br><br> return 10;
+            <br><br> }
+            </h3>
+
+            <br><br>// define same method with different data type than above with same number
+
+            <h3>
+            <br><br> static final void m1(String x, String y) {
+
+
+            <br><br> System.out.println("String, String"); </h3>
+
+            <br><br> }
+
+            <br><br>// define same method with var args is also overloading, var args is called when no other match founds
+            <h3>
+            <br><br> void m1(int... x){
+            <br><br> System.out.println("var arg");
+            </h3>
+            <br><br>  }
+
+            <br><br>// define same method with  different parameter type
+
+            <h3>
+            <br><br>  void m1(int x, float y){
+            <br><br>  System.out.println("int, float");
+            <br><br>  }
+            </h3>
+
+
+            <br><br>// define same method with and different parameter type
+
+            <h3>
+            <br><br>  void m1(float x, int y) {
+            </h3>
+
+            <br><br> System.out.println("float, int");
+            <br><br> }
+
+            <br><br>    // since we have defined var args, so we can not define array method with same no and type
+
+            <h3>
+            <br><br> /*
+            <br><br>// this is not allowed as above we already defined var arg method, which is converted to array only by compiler, so duplicate method
+
+            <br><br> void m1(int[] x) {
+
+            <br><br> }
+
+            <br><br> */
+            </h3>
+
+            <br><br>// olverloaded with different type and number
+            <h3>
+            <br><br> static void m1(String x) {
+            <br><br> System.out.println("String");
+            </h3>
+
+            <br><br> }
+
+            <br><br>// olverloaded with different type and number
+            <h3>
+            <br><br>// olverloaded
+            <br><br> static void m1(char x) {
+            <br><br> System.out.println("char");
+            </h3>
+
+            <br><br> }
+
+            <br><br>// olverloaded with different type and number
+            </h3>
+            <br><br>// olverloaded
+            <br><br> strictfp void m1(boolean x) {
+            <h3>
+            <br><br>System.out.println("boolean");
+
+            <br><br> }
+
+
+                <br><br>// olverloaded with different type and number
+            <h3>
+            <br><br>// olverloaded
+            <br><br> synchronized void m1(Long l) {
+            <br><br> System.out.println("long");
+            </h3>
+            <br><br> }
+
+
+            <h3>
+                <br><br>// olverloaded with different type and number, can have any modifier like final, static, sycn, strictfp
+                <br><br> // it does not make any different in overloading
+            <br><br>final static synchronized strictfp void m1(Double d) {
+
+            <br><br>System.out.println("double");
+            </h3>
+            <br><br> }
+
+            <br><br>*/
+
+            </h3>
+
+
+            <br><br>// calling different overloaded methods
+            <h3>
+            <br><br>public static void main(String[] args) {
+
+            <br><br>MainMain main = new MainMain();
+
+            <br><br> main.m1(10); <br><br>// exact match with int one
+            <br><br>// main.m1(10,20,30,40); <br><br>// no match so will call var args one
+            <br><br> main.m1(10, "string"); <br><br>// exact match with int, string
+
+            <br><br> main.m1(10, 10.0F); <br><br>// exact match with int, float
+            <br><br> main.m1(10.0F, 10); <br><br>// exact match with float, int
+
+            <br><br><br><br>//  main.m1(10.0F, 10.0F); <br><br>// both method int, float and float, int are eligible after promoting int to float so compiler can not determine which one to call, so error
+
+            <br><br>main.m1((String) null); <br><br>// call string specific method
+
+
+            </h3>
+
+
+            <br><br>  }
+
+
+
+
+            <br><br>  }
+
+            <h1> overloading with parameter null and methods having no relation in object parameter</h1>
+                // like overload with Intger and String and pass null
+                // compiler is not sure on which one to call, so compile time ambiguity error
+
+            <h3>
+
+            <br><br>  class Parent {
+
+            <br><br>  void m1(int x) {
+
+            <br><br>  System.out.println("parent");
+
+            <br><br>  }
+
+            <br><br>    void m1(String itr) {
+            <br><br>   System.out.println("String");
+            <br><br>   }
+            <br><br>   }
+
+            <br><br>   class Child extends Parent {
+
+            <br><br>   void m1(int x, int y){
+            <br><br>  System.out.println("child");
+            <br><br>  }
+
+            <br><br>   void m1(Integer itr) {
+            <br><br>  System.out.println("Integer");
+            <br><br>  }
+
+            <br><br>  public static void main(String[] args) {
+
+            <br><br>  Child c = new Child();
+
+            <br><br> c.m1(10); <br><br>// parent method is called as its overloaded in child
+            <br><br>// c.m1(null); <br><br>// both parent and child one are eligibile soo ambiguity compile time error
+
+            <br><br>  Integer i = null;
+            <br><br>  c.m1(i); <br><br>// no compile time error as passing specific value Integer
+
+            <br><br> }
+            <br><br> }
+                </h3>
+
+
+
+
+            <h1> overloading with parameter as related classes and pass null argument</h1>
+            // like overload with String and Object and pass null
+            // compiler will call the child or more specific clas, means String will be called instead of Object
+
+            <h3>
+
+                <br><br>  class Parent {
+
+                <br><br>  void m1(int x) {
+
+                <br><br>  System.out.println("parent");
+
+                <br><br>  }
+
+                <br><br>    void m1(String itr) {
+                <br><br>   System.out.println("String");
+                <br><br>   }
+                <br><br>   }
+
+                <br><br>   class Child extends Parent {
+
+                <br><br>   void m1(int x, int y){
+                <br><br>  System.out.println("child");
+                <br><br>  }
+
+                <br><br>   void m1(Object itr) {
+                <br><br>  System.out.println("Object");
+                <br><br>  }
+
+                <br><br>  public static void main(String[] args) {
+
+                <br><br>  Child c = new Child();
+
+                <br><br> c.m1(10); <br><br>// parent method is called as its overloaded in child
+                <br><br>// c.m1(null); <br><br>//  since both overloaded method have related class String and Object, child one will be called
+
+                <br><br>  Object i = null;
+                <br><br>  c.m1(i); <br><br> // calling object specific
+
+                <br><br> }
+                <br><br> }
+            </h3>
+
+
+
+
+        </td></tr></table></html>

@@ -1,0 +1,24 @@
+package gorest.reports;
+
+import com.aventstack.extentreports.ExtentReports;
+
+public class ExtentReport {
+	
+	
+	public static startReporting() {
+		
+		ExtentReports er = new ExtentReports();
+		ExtentSparkReporter avent = new ExtentAventReporter("/user/build/");
+		ExtentKlovReporter klov = new ExtentKlovReporter("project", "build");
+		
+		
+		er.attachReporter(null);
+		er.attachReporter(null);
+		
+		
+		
+	}
+	
+	
+
+}

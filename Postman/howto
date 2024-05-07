@@ -1,0 +1,47 @@
+
+
+first install node js, node js is a server environment, which runs js just like browser is a client and run js
+
+it will install npm automatically or install npm
+
+
+now install api runner json-server
+
+npm install -g json-server
+
+now create a json file, in terminal run json-server filename.json
+
+open the localhost url and you can see your api working
+
+in browser you will be able to fetch only get response
+
+in postman, you can install postman agent to run local api and then do get, post, delete, put, patch
+
+
+
+
+What is Node.js?
+Node.js is an open source server environment
+Node.js is free
+Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+Node.js uses JavaScript on the server
+Why Node.js?
+Node.js uses asynchronous programming!
+
+A common task for a web server can be to open a file on the server and return the content to the client.
+
+Here is how PHP or ASP handles a file request:
+
+Sends the task to the computer's file system.
+Waits while the file system opens and reads the file.
+Returns the content to the client.
+Ready to handle the next request.
+Here is how Node.js handles a file request:
+
+Sends the task to the computer's file system.
+Ready to handle the next request.
+When the file system has opened and read the file, the server returns the content to the client.
+Node.js eliminates the waiting, and simply continues with the next request.
+
+Node.js runs single-threaded, non-blocking, asynchronous programming, which is very memory efficient.
+

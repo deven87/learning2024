@@ -1,0 +1,15 @@
+package gorest.payloads;
+
+public class UserPayload {
+	
+	data.setEmail(faker.internet().emailAddress());
+	data.setName(faker.name().fullName());
+	data.setGender("male");
+	data.setStatus("active");
+	
+	String email;
+	String name;
+	String gender;
+	String status;
+
+}

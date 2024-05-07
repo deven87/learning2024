@@ -1,0 +1,6 @@
+
+‹	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(òÀû„øÿÿÿÿHÎºRMINORZ
+CODE_SMELL
+
+java:S1192P"QDefine a constant instead of duplicating this literal "/user/{username}" 3 times.(ˆçÕÙúÿÿÿÿ8Éõæ¿…1H°½RCRITICALZ
+CODE_SMELL

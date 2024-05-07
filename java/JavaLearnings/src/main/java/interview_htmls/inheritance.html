@@ -1,0 +1,313 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Inheritance</h1>
+// Using some or all properties of one class into another class is inheritance
+<br><br>// inheritance IsA relation
+<br><br>// Car IsA Vehicle, Car inherit some or all properties of vehicle and can have its own properties.
+<br><br>// inheritance is used to provide code reusability, to implement method overriding, to implement abstraction
+<br><br>// inherit class to class use extends,
+<br><br>// private members can not be inherited
+<br><br>// constructors can not be inherited, parent constructors are executed via child class constructors as compiler add super() in every constructor
+<br><br>// all methods, members are inherited including the static ones
+<br><br>//  each class is child of Object class, if a class inherit another class then its a multilevel inheritance with respect to object class and not multiple inheritance
+<br><br>// a class can extends only 1 class but can implements any no of interfaces
+<br><br>// an interface can extends any no of interface, it can not implement any interface or can not extends any class
+ <br><br>// cyclic inhertance not allowed, e.g. A is parent of B and B is parent of A
+<br><br>// Parent class or interface reference can hold any of its child class object, hence it prevents tightly couping of parent with child
+            // as at any time, you can assign any child to parent reference
+<br><br> //
+            <br><br> // extends must come before implements as for java compiler parent class is of more important and its bytcode is required first as child is using that class
+ <br><br> <h3>// class A extends B implements C, D, E, F</h3>
+
+
+
+            <br><br><br><h1>Single Inheritance</h1>
+// when one class is parent and 1 class is child
+
+            <h3>
+                <br><br>  class Vehicle {
+
+                <br><br>int noOfTyres;
+                <br><br>static int x=20;
+
+                <br><br>private String vipVehicles;
+
+                <br><br>public void setTyres(int tyres) {
+
+                <br><br>this.noOfTyres = tyres;
+
+                <br><br>}
+
+                <br><br>public int getTyres() {
+
+                <br><br>return this.noOfTyres;
+
+                <br><br>}
+
+                <br><br>}
+
+                <br><br>class Car extends Vehicle{
+
+
+                <br><br>String carCompany;
+
+                <br><br>public String getCarCompany() {
+
+                <br><br>return this.carCompany;
+
+
+                <br><br>}
+
+                <br><br>public void setCarCompany(String carCompany) {
+
+                <br><br>this.carCompany = carCompany;
+
+                <br><br>}
+
+                <br><br>public static void getParentStaticField() {
+
+                <br><br>System.out.println(x);
+                <br><br>}
+
+
+                <br><br>public static void main(String[] args) {
+
+<br><br>// here in car class we are not having tyre field and method, as it will be common to all vehicle
+<br><br>// so we have create a parent vehicle class which has tyre and we are extending vehicle to Car
+<br><br>// no in car we can use all vehicle properties
+<br><br>// single inheritance
+                <br><br>Car car = new Car();
+                <br><br>car.setTyres(4);
+                <br><br>System.out.println(car.getTyres());
+                <br><br>car.setCarCompany("Audi");
+                <br><br>System.out.println(car.getCarCompany());
+<br><br>//  System.out.println(car.vipVehicles); vipVehicles is private in V
+
+                <br><br>}
+
+                <br><br>}
+            </h3>
+
+
+<br><br>// <h1>multilevel inheritance</h1>
+
+            <h3>
+// A is Parent of B, B is parent of C and so on, C will inherit both B and C
+                <br><br>class MultilevelParent {
+
+                <br><br>int x;
+
+                <br><br>}
+
+                <br><br>class MultilevelChild extends MultilevelParent {
+
+                <br><br>int y;
+                <br><br>}
+
+
+                <br><br>class MultilevelChild1 extends MultilevelChild {
+
+                <br><br>int z;
+
+                <br><br>public static void main(String[] args) {
+                <br><br>MultilevelChild1 mc = new MultilevelChild1();
+                <br><br>System.out.println(mc.x); <br><br>// inherited from super parent
+                <br><br>System.out.println(mc.y); <br><br>// inherited from direct parent
+                <br><br>System.out.println(mc.z); <br><br>// class own field
+                <br><br>}
+                <br><br>}
+
+                </h3>
+
+<br><br>// <h1>hierarchical inheritance</h1>
+// When there are multiple child and 1 base class
+
+            <h3>
+                <br><br>class HierarchicalParent {
+                <br><br>int x;
+
+                <br><br>}
+
+                <br><br>class HierarchicalChild1 extends HierarchicalParent {
+                <br><br>int y;
+
+                <br><br>}
+
+                <br><br>class HierarchicalChild2 extends HierarchicalParent {
+                <br><br>int z;
+
+                <br><br>}
+
+            </h3>
+
+            <h1>multiple inheritance</h1>
+// multiple inheritance, when there are multiple base class to a single child class
+<br><br>// java provide multiple inheritance only via interfaces not via class
+<br><br>// e.g. A and B are parent , C inherit from A and B, what if A and B both comtains same property, whose property will C get
+<br><br>// so to avoid this java does not support multiple inheritance
+
+            <h3>
+                <br><br>class MultipleParent1 {
+
+                <br><br>int x;
+                <br><br>}
+
+                <br><br>class MultipleParent2 {
+
+                <br><br>int x;
+                <br><br>}
+
+<br><br>// class MultipleChild extends MultipleParent1, MultipleParent2 { } // not allowed
+
+<br><br>// implementing multiple inheritance via interfaces
+                <br><br>interface MultipleParent3{
+
+                <br><br>int x=10;
+                <br><br>void m1();
+
+                <br><br>default void m2() {
+
+                <br><br>System.out.println("MultipleParent3");
+
+                <br><br>}
+
+                <br><br>}
+
+                <br><br>interface MultipleParent4{
+
+                <br><br>int x=10;
+                <br><br>void m1();
+
+
+
+                <br><br>}
+
+                <br><br>class MultipleChild1 implements MultipleParent3, MultipleParent4 {
+
+                <br><br>@Override
+                <br><br>public void m1() {
+
+                <br><br>}
+
+<br><br>// same method is there as defailt in both interfaces so ambiguity on whose method will inherited, so we must override it
+
+<br><br>// if we dont override it, it will give error
+@Override
+public void m2() {
+<br><br>//  MultipleParent3.super.m2(); <br><br>// here we can call method of any of the parent interface
+}
+
+}
+
+            </h3>
+
+
+
+<br><br>// <h1>hybrid inheritance</h1>
+            // combinging more than one inheritance type, e.g. multilevelwithhybrid
+// e.g.. diamond structure
+<br><br>// A class is parent of B and C and D class is child of both B and C
+<br><br>// so having multiple and hierarchical inheritance together is hybrid
+<br><br>// java does not support this via classes but only via interface
+
+            <h3>
+                <br><br>interface HybridParent {
+
+                <br><br>int x=10;
+                <br><br>void m1();
+
+                <br><br>void m10();
+
+                <br><br>default void m2() {
+
+                <br><br>}
+                <br><br>}
+
+                <br><br>interface HybridChild1 extends HybridParent{
+
+                <br><br>int x=20;
+                <br><br>void m1();
+
+                <br><br>@Override
+                <br><br>default void m2() {
+
+                <br><br>HybridParent.super.m2();
+
+                <br><br>}
+                <br><br>}
+
+                <br><br>interface HybridChild2 extends  HybridParent{
+
+                <br><br>int x=30;
+                <br><br>void m1();
+
+                <br><br>@Override
+                <br><br>default void m2() {
+
+                <br><br>}
+                <br><br>}
+
+                <br><br>class HybridClass implements HybridChild1,HybridChild2 {
+
+                <br><br>@Override
+                <br><br>public void m1() {
+
+                <br><br>}
+
+                <br><br>@Override
+                <br><br>public void m10() {
+
+                <br><br>}
+
+                <br><br>@Override
+                <br><br>public void m2() {
+<br><br>//  HybridParent.super.m2();
+                // this will give error as super can be called on direct parent
+
+                <br><br>HybridChild1.super.m2();
+
+                <br><br>HybridChild2.super.m2();
+                <br><br>}
+                <br><br>}
+
+
+
+
+                <br><br>interface A10 {
+
+                <br><br>default void m1() {
+
+                <br><br>}
+                <br><br>}
+
+                <br><br>interface A11 extends A10 {
+
+                <br><br>default void m1() {
+
+                <br><br>}
+
+                <br><br>}
+
+                <br><br>class A09 implements A11 {
+
+                <br><br>@Override
+                <br><br>public void m1() {
+
+                <br><br>A11.super.m1();
+
+                <br><br>}
+
+<br><br>}
+
+            </h3>
+
+        </td></tr></table></html>

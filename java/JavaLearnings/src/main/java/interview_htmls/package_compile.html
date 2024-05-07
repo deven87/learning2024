@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+            <h1> package in java </h1>
+
+ // to provide namespace, encapsulate related class, subpackages, interfaces together
+            <br><br>   // it prevents naming conflicts
+            <br><br>  // it provide accessibility control
+            <br><br>  // packages are names in reverse order of domain of site, as they will provide unique name
+            <br><br>  // com.intelligent
+            <br><br>  // packages are of 2 types, user defined and system defined
+            <br><br> // any package we create is user defined
+            <br><br>   // package already provided by lang framework are system defined, java.lang, java.util, java.sql
+            <br><br> // easier to track down classes and interfaces if packages are used as related classes interfaces will be grouped in packages
+
+            <br><br>  // Every class is part of some package.
+            <br><br>  // If no package is specified, the classes in the file goes into a special unnamed package (the same unnamed package for all files).
+            <br><br> //  All classes/interfaces in a file are part of the same package. Multiple files can specify the same package name.
+            <br><br> //  If package name is specified, the file must be in a subdirectory called name (i.e., the directory name must match the package name).
+            <br><br> //  We can access public classes in another (named) package using: package-name.class-name
+            <br><br> // only 1 package statement is allowed in java file, and will be applicable for all classes interfaces in that file
+
+            <br><br> // package statement comes at the top in java program hierarchy
+            <br><br>
+            <h3> package college.art.history</h3>
+            <h3> package college.science.cse</h3>
+
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <br><br>
+            <h1> Compile program</h1>
+
+            // javac tool is used for converting source code into bytecode
+            <br><br>   // java tool is used for converting bytecode to machine code, i.e for execution
+            <br><br>   // jar is tool used to combine .class files in jar package and run them all
+
+            <h3>
+            <br><br>   javac abc.java // compile a java file without any package statement
+            <br><br>   java abc // run the .class
+            </h3>
+
+            <h3>
+            <br><br>  javac -d . abc.java // compile a java file with package and create .class in same directory as package, . means in current directory
+            <br><br>  java pack1.pack2.abc // run the file created from above statement
+            </h3>
+
+            <br><br><h3>  javac -d folder1/folder2 abc.java // compile a java file with package statement and save .class in folder1/folder2/package statement
+            <br><br>  java -cp folder1.folder2 pack1.pack2.abc // run .class with classpath option, go to the specified folder and then give fully qualified class name
+            </h3>
+
+
+
+
+
+
+
+
+
+        </td></tr>
+
+
+
+</table>
+</html>

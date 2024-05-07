@@ -1,0 +1,9 @@
+2023-06-01 17:04:42,538 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-01 17:05:33,374 [Worker-29: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: RestAssured:RestAssured:0.0.1-SNAPSHOT @ /Users/intelligent/learning/restassured/RestAssured/pom.xml.
+2023-06-01 17:05:33,739 [Worker-29: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RestAssured/src/main/java
+2023-06-01 17:05:33,739 [Worker-29: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RestAssured/src/test/java
+2023-06-01 17:05:33,790 [Worker-29: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2023-06-01 17:05:34,550 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-01 17:05:34,551 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/intelligent/learning/restassured/RestAssured/src/main/resources
+2023-06-01 17:05:34,553 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-01 17:05:34,553 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/intelligent/learning/restassured/RestAssured/src/test/resources

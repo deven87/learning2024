@@ -1,0 +1,28 @@
+
+’
+java:S1488/"`Immediately return this expression instead of assigning it to the temporary variable "response".(‚âçšøÿÿÿÿHâ²RMINORZ
+CODE_SMELL
+‹	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(òÀû„øÿÿÿÿHè²RMINORZ
+CODE_SMELL
+™
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "response".(‚âçšøÿÿÿÿ8·¶ç¾…1H¬ºRMINORZ
+CODE_SMELL
+
+java:S1192"LDefine a constant instead of duplicating this literal "contentType" 5 times.(‚âçšøÿÿÿÿHÎ¼RCRITICALZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(¡ÊİÄûÿÿÿÿ8Ÿ¿Å¾…1HÍ¼RMAJORZ
+CODE_SMELL
+a
+java:S11726"/Remove this unused method parameter "userName".(«æ¬ëüÿÿÿÿHì²RMAJORZ
+CODE_SMELL
+t	java:S125$"<This block of commented-out lines of code should be removed.(’ëûºùÿÿÿÿ8¥¦±¿…1Hü»RMAJORZ
+CODE_SMELL
+k
+java:S1128"2Remove this unused import 'org.hamcrest.Matchers'.(İ†âúÿÿÿÿ8ô‰§¿…1H¯»RMINORZ
+CODE_SMELL
+
+java:S1488;"`Immediately return this expression instead of assigning it to the temporary variable "response".(Ëº¹âHå²RMINORZ
+CODE_SMELL
+€
+java:S1128"GRemove this unused import 'io.restassured.matcher.RestAssuredMatchers'.(®Ö½Îşÿÿÿÿ8ô‰§¿…1H­»RMINORZ
+CODE_SMELL

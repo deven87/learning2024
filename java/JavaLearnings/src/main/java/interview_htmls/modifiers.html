@@ -1,0 +1,359 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+<table>
+    <tr>
+        <td>
+
+            <h1> All Java Modifiers</h1>
+
+
+            // all java modifiers are
+
+            <br><br>// public, protected, default access (no modifier), private, strictfp, native, synchronized, static, final, transient, volatile
+
+            <br><br> public is applicable for outer, inner class, top level variable, methods, accessed from anywhere
+            <br><br> protected is applicable for inner class,top level variable and methods, means accessible from inside package, and via inheritance and only via child class object outside package
+            <br><br> default, applicable for outer, inner class, top level variables, methods, accessible only in package
+            <br><br> private, applicable for inner classs and top level variables, methods. accessible from within class
+            <br><br> strictfp, applicable for outer, inner class, methods, means will follow stritct floating points
+            <br><br> native for method only, means non java implementation
+            <br><br> synchronized for method only, means only 1 thread can access method at a time
+            <br><br>static applicable for inner class, top level variable, methods, means no object creation required and accessible directly via out class name, class name
+            <br><br>final, outer class, inner class, top level variable, local variable, methods, final class can not be inhertied final method can not be overriden, final variable can not be reinitialized
+            <br><br>volatile only for top level variables, means will be accessed from main memory and never from cache
+            <br><br> transient, only for top level variables, means can not be serialized
+
+
+
+        </td></tr>
+
+    <tr><td> <br><br><h1> Class Modifiers</h1>
+        // class level modifiers
+        // all modifiers applicable for inner class are public, protected, default, private, final, static, strictfp, abstract
+        // all modifiers applicable for outer class are public, default, final, strictfp, abstract
+
+        <br><br>// outer class can be public or default or final
+        <br><br>// inner class can be public, protected, private, default, final, static
+        <br><br>  // public class have to declare inside the file having same name as class name, as JVM will know that this is the clas to access
+        <br><br>   // public class is accessible everywhere
+        <br><br>   // default class can have any file name, accessed only in current package
+        <br><br>  // strictfp, can be inner or outer class, class means it will have all calculations on strict floating points
+        <br><br>  // static, can be inner class only, means it can be accessed directly via outerclass name, no need to creat object of outer class
+        <br><br>  // final class means it can not be inherited, can be outer or nested
+
+
+
+<h3>class A{ /* class is available only in same package */}  // valid with default modifier</h3>
+
+
+        <h3>public class MainMain{ /* class is available everywhere */ }  // valid with public modifier</h3>
+
+        <h3>final class MainMain1{ /* class can not be inherited */}  // allowed</h3>
+
+        <h3>strictfp class MainMain2{ /* all methods will be strictfp as class is strictfp */} // allowed // all methods of the class with be strictfp</h3>
+
+        <h3>// protected class MainMain3{}  // not allowed for outer class</h3>
+
+        <h3>// private class MainMain4{}  // not allowed for outer class</h3>
+
+        <h3>// synchronized class MainMain5{} // not allowed as sync is for method only</h3>
+
+        <h3>// native class MainMain5{} // not allowed as native is for method only.</h3>
+
+
+        <br>
+<b>// inner classes</b>
+
+        <br>
+            class A11 {
+
+            <h3>private class A111{} // private inner class</h3>
+
+            <h3>protected class A112{} // protected inner class</h3>
+
+            <h3>class A113{} // default inner class</h3>
+
+            <h3>// public A114{} // public inner class // public class must be in  the same name file</h3>
+
+            <h3>strictfp class A115{} // allowed</h3>
+
+            <h3>//  synchronized  class A116{} // not allowed for inner as sync is for methods only</h3>
+
+            <h3>final class A116{} // allowed</h3>
+
+            <h3>// native class A117{} // not allowed, native is for method only</h3>
+
+            <h3>static class A17{ /* this can be access by outerclass name, no need to create object of outer class to access this, it can access only static members of outer class */ } // inner static class, allowed
+
+</h3>  }
+
+    </td></tr>
+
+    <tr><td>
+
+        <br><br>
+        <h1>  // method modifiers</h1>
+
+         // method can be public, protected, default, private, final,static, abstract, default, synchronized, native, strictfp
+
+        <br><br>  // abstract method means it will not have implementation, so it can not come with private, final, static, synchronized, native
+        <br><br>  // abstract method can be strictfp, it can be protected, default, public in abstrasct class, it can only be public in interface
+        <br><br>  // final method means it can not be overridden, it will be inherited though
+        <br><br>  // protected means method is accessible inside package, and outside package via current child class object only and not via parent class
+        <br><br>  // public method is accessible from everywhere
+        <br><br>  // private method can only be accessed from inside the class
+        <br><br>  // default method is accessible only in the package
+        <br><br>  // static method means it can be called via class reference, interface static method can only be called via that interface name only
+        <br><br>  // static methods are overloaded and inherited but can not override them, concept is method hiding
+        <br><br>  // static to non static and non static to static overriding is not allowed
+        <br><br>  // synchronized method means it can only be accessed by 1 thread at a time, so threadsafe
+        <br><br> // native means not a java method
+        <br><br> // strictfp means method will follow strict floating point rules, so on every platform, this method will give same decimal point result for all floating calculations
+        <br><br> // default keyword is only applicable for methods inside interface, outside interface default keyword is not allowed
+
+        }
+
+        <br><br>
+        <b> Accessing protected member in child class</b>
+        <br> <b> Accessing protected member in child's child class</b>
+        <br> <b> normal protected method is avaialble in all childs class but only via current child class object</b>
+        <br> <b> static protected method can be accessed via parent or any child class name or object</b>
+
+        <h3>
+            <br><br>   package interview_htmls;
+
+            <br><br>  import interfaces.MyProtectedMethod;
+
+            <br><br>   class MainMain {
+
+
+            <br><br>   class MyMainClass extends MyProtectedMethod {
+
+
+            <br><br>   public static void main(String[] args) {
+
+            <br><br>   // static protected method, accessible via parent class name
+            <br><br>  // not accessible if parent is not inherited
+            <br><br>  MyProtectedMethod.myMethod();
+
+
+            <br><br>  MyProtectedMethod m = new MyProtectedMethod();
+
+            <br><br>  MyMainClass m1 = new MyMainClass();
+            <br><br>  m.myMethod(); // static protected method can be accessed via parent class object though not recommended
+            <br><br>  m1.myMethod(); // static protected method can be accessed via child class object though not recommended
+
+            <br><br>  //  m.myMethodNormal(); // protected normal method can not be access via parent class object, can be accessed only via child object
+            <br><br>  m1.myMethodNormal(); // accessing parent normal method via child object
+
+            <br><br>  }
+            <br><br>  }
+
+            <br><br> class FurtherChild extends MyMainClass {
+
+            <br><br>  public static void main(String[] args) {
+
+            <br><br>  MyMainClass m1 = new MyMainClass();
+            <br><br>  m1.myMethod(); // static protected method can be accessed via child's child class object though not recommended
+
+            <br><br>  // here m1 is parent of this class but child of main parent
+            <br><br>  //  m1.myMethodNormal(); // protected member can only be accessed via current child class and not by parent child
+            <br><br>  FurtherChild fc  = new FurtherChild();
+            <br><br> fc.myMethodNormal();
+
+            <br><br>  }
+            <br><br>  }
+
+        </h3>
+
+    </td></tr>
+
+    <tr><td>
+        <br><br>
+        <h1>all access and  non access modifiers for variables</h1>
+
+
+        // data members and their modifiers
+
+        <br><br>  // for local variable, only default and final can be there
+
+        <br><br>  // for instance and static variable
+        <br><br>  // final, static, public, protected, private, default, transient, volatile
+
+        <br><br> // final data member can not be reinitialized, it becomes a constant
+        <br><br>  // final can only be initialized at time of declaration, or in constructor or in instance block
+        <br><br>  // final can not be reinitialized
+        <br><br>  // static member means only 1 copy is created for that member for all the objects
+        <br><br>  // static members are created at the time of class loading and scope destroys with class
+        <br><br>  // instance members are created at the time ob object initialization and scope destroys with object
+        <br><br>  // local variables have only scope with in the blocks
+        <br><br>  // private members can be accesed only from within class
+        <br><br>  // protected can be access within package and from current child class outside package
+        <br><br>  // default is accessible wihin package
+        <br><br>  // public can be accessed from anywhere
+        <br><br>  // public static final are accessible from anywhere are static and can not be reinitialized
+        <br><br>  // data members can not be sync, strictfp, native
+        <br><br>  // abstract, synchronized, native, and strictfp  not allowed for variable
+        <br><br> // local variables can only have final and nothing else
+        <br><br> // The volatile keyword in Java is used to indicate that a variable's value
+        <br><br> // may be modified by multiple threads simultaneously. It ensures that the variable is always read from
+        <br><br> // and written to the main memory, rather than from thread-specific caches, ensuring visibility across threads.
+
+        <br><br> // any non access modifier can come along with anyone access modifier and any other non access modifier except volatile and final
+        <br><br> // volatile and final can not come together
+
+
+
+        <h3> public int x = 0; // public </h3>
+        <h3> protected int y = 10; // protected</h3>
+        <h3> private int z = 20; // private</h3>
+        <h3> int x1 = 30; // default</h3>
+
+        <h3> static int x2 = 40;</h3>
+
+        <h3> final int x3 = 50;</h3>
+
+        <h3> transient int x4 = 60;</h3>
+
+        <h3> volatile  int x5 = 70;</h3>
+
+        <h3>static final int x6 = 80;</h3>
+
+        <h3> transient final int x7= 90;</h3>
+
+        <h3> //  volatile final int x8= 90; // final means it can not change, volatile means it must change, so can not come together</h3>
+
+        <h3> volatile static int x8= 100;</h3>
+
+        <h3> transient static int x9 = 110;</h3>
+
+        <h3> void m1() {
+
+            <br><br>  // only allowed is final for local variables
+            <br><br>  int m = 10;
+            <br><br>  final int m1 =20;
+
+            <br><br>  }</h3>
+
+
+
+
+    </td></tr>
+
+
+    <tr><td>
+        <br><br>
+        <h1> Volatile Variable</h1>
+
+
+       // using volatile here ensure that the variable is not read or write from local thread copy, it is always read and write to main memory
+        // so that inconsistency does not comes
+
+       <h3> class A1{
+
+           <br><br> static volatile int counter = 0;
+
+           <br><br>private static class A2 extends Thread{
+
+
+           <br><br>@Override
+           <br><br>public void run() {
+
+           <br><br> for (int i = 0; i < 1000; i++) {
+
+           <br><br> counter++;
+           <br><br> System.out.println("updated counter is " + counter);
+           <br><br> }
+
+           <br><br> }
+
+
+           <br><br>  }
+
+           <br><br>  public static void main(String[] args) {
+           <br><br>  A2 a2 = new A2();
+           <br><br>  A2 a3 = new A2();
+           <br><br>  a2.start();
+           <br><br>  a3.start();
+           <br><br>  }
+
+
+           <br><br> }
+       </h3>
+
+
+    </td></tr>
+
+    <tr><td>
+
+        <h1> using final variable</h1>
+
+
+
+        class MainMain {
+
+        <br><br>  // final  instance class level variable can be initialized from instance block or at the time of declaration or from the constructor
+
+        <br><br>   // final class level variable must be initialized, even if you dont use them
+
+        <h3>
+        <br><br>   final int x;
+        <br><br>  final int y;
+
+        <br><br>  final int z=10;
+
+        <br><br>  // final static variable must be initialized at the time of declaration or via static block only,
+        <br><br>  // they can not be initialized from instance block or constructor
+        <br><br>  final static int z1 = 100;
+
+        <br><br>  final static int z2;
+
+        <br><br> static
+        <br><br> {
+        <br><br> z2 = 100;
+        <br><br> }
+
+        <br><br> // final int z1; // not initialized so CTE
+
+        <br><br> // can be initialized from constructor
+        <br><br> MainMain() {
+
+        <br><br> y = 20;
+        <br><br> }
+
+
+        <br><br> // can be initialized from static block
+        <br><br> {
+        <br><br> x = 20;
+        <br><br> }
+
+        <br><br>public static void main(String[] args) {
+
+        <br><br>MainMain m = new MainMain();
+
+        <br><br> }
+
+        <br><br>void m1() {
+
+
+        <br><br>// local final variable have to be initialized if used, initialization is allowed only during declaration
+        <br><br>final int x = 10;
+
+        <br><br> // final variable not initialized as not used anywhere, if used without initialization CTE
+        <br><br>final int y;
+
+        <br><br> System.out.println(x);
+        <br><br>}
+
+
+        <br><br>}
+
+        </h3>
+
+
+    </td></tr>
+
+</table></html>

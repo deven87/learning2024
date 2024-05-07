@@ -1,0 +1,63 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> import</h1>
+
+import sout.SOUT;
+
+import java.util.*; <br><br> implicit  import of all classes only in util package and not subpackages
+import java.util.Date; <br><br> explicit import
+import static java.lang.Math.sqrt; <br><br> static import of a particular member
+import static java.lang.Math.*; <br><br> static import of all members of a class
+
+class MainMain {
+
+<br><br> import statement
+<br><br> important statement are at second level in java program hierarchy after package
+<br><br> import statement are required to access any class which is not available in current directory
+<br><br> importing which have same method can cause ambiguity. e. java.sql and java.util both have Date class, so it creates ambiguity
+<br><br> import is implicit and explicit
+<br><br> implicit import is when you use * at the end, which will import all classes, interfaces from the directory, not from the subdirectories
+<br><br> explicit is when you specify only a single class in an import and only import that single class
+<br><br> static import is when you import using keyword static, all the static members of the class are imported and can be used directly without the class name
+<br><br> explicit import is given first preference
+<br><br> import pack1.pack2.pack3.*; <br><br> this will import all classess inside package pack3 but not further subpackages
+<br><br> import pack1.pack2.pack3.ClassA; <br><br> this will import only class A
+<br><br> import static pack1.pack2.pack3.ClassA <br><br> this will do a static import of classA
+<br><br> if we dont use import, we can given fully qualified name of the class along with its package and use it without import
+<br><br> java.lang is by default imported in each and every java program as it comtains most important classes, like System, String, Wrapper Classes
+
+<br><br> static import has to be done by pattern import pack1.pack2.Class.* - means all static members are imported of given class
+<br><br> or it can be like import pack1.pack.Class.MemberName;
+
+
+<h3>
+    <br><br> public static void main(String[] args) {
+    <br><br> getDate();
+    <br><br> }
+
+    <br><br> public static void getDate() {
+
+    <br><br> System.out.println(new Date()); <br><br> using import for specific Date class;
+
+    <br><br> System.out.println(new java.util.Date()); <br><br> not using import, using fully qualified class name
+
+    <br><br> System.out.println(Math.sqrt(10)); <br><br> Math is available inside java.lang which is by default imported, no need to import
+
+
+    <br><br> System.out.println(sqrt(10)); <br><br> static import of Math so no need to use class name for static memberss
+
+
+}
+</h3>
+
+        </td></tr></table></html>

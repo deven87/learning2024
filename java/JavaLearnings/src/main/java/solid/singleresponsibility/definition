@@ -1,0 +1,3 @@
+every class should have only 1 responsibility
+
+every class should have only 1 reason to change

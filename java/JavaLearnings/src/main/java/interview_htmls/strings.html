@@ -1,0 +1,410 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> String definition</h1>
+
+            <br><br>Strings are the types of objects which can store characters as elements.  <br>String are like an array of characters in java.
+            <br>String can be created either dynamically by specifying new keywork, a new object will be created in heap area
+            <br> or String can be created without new keyword and by using literal, a new object will be created in SCP only if the same literal object does not exists
+
+            <h3>
+                <br><br>{
+                <br><br> // creating string from new
+                <br><br> String str = new String("devendra");
+
+                <br><br> // creating string from literal
+                <br><br> String str1 = "singh";
+
+                <br><br>byte[] b_arr = {71, 101, 101, 107, 115};
+                <br><br>String s_byte_array =new String(b_arr); //Geeks
+
+                <br><br> // create string from char array
+                <br><br> char char_arr[] = {'G', 'e', 'e', 'k', 's'};
+                <br><br> String s_char_array = new String(char_arr); //Geeks
+
+                <br><br> // create string from stringbuffer
+                <br><br> StringBuffer s_buffer = new StringBuffer("Geeks");
+                <br><br>  String s_from_buffer = new String(s_buffer); //Geeks
+
+                <br><br>  // create string from stringbuilder
+                <br><br> StringBuilder s_builder = new StringBuilder("Geeks");
+                <br><br>String s_from_builder = new String(s_builder); //Geeks
+
+                <br><br> }
+            </h3>
+
+
+            <b><br><br>Strings are immutable in java, means they can not be modified whenever anyone tries to modify them, a new object is created
+            <br><br> They are immutable Because java uses the concept of string literal.
+                <br> Suppose there are 5 reference variables, all refer to one object.
+                <br>If one reference variable changes the value of the object,
+                <br>it will be affected by all the reference variables.
+                <br>That is why string objects are immutable in Java.
+            </b>
+            <h3> {<br>
+                // Declaring Strings
+               <br><br> String s1 = "TAT"; // object created in SCP if does not exists
+                <br><br> String s2 = "TAT"; // object already created above
+                <br><br> String s3 = new String("TAT"); // new object created
+                <br><br> String s4 = new String("TAT"); // new object created
+                <br>}
+                </h3>
+
+            <img src = "scp.png">
+
+
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+
+            <br>
+            <h1> String class common methods</h1>
+
+            <h3>
+
+                String s = abc
+
+                <br><br><br><br> s.length(); // get the length of the string, means no of character it has
+                <br>// returns 3
+
+                <br><br><br><br> s.concat("abc);  append passed string to the end of given string
+                <br>// returns abcabc, but not stored anywhere, so eligible for garbage collection
+
+                <br><br>
+                <br><br> s.contains("abc"); // return true if the given string contains passed string, case sensitive
+                <br> // return true as our string contains abc
+
+                <br><br><br><br> // return abc
+                <br><br> s.toLowerCase(); // change string to lower case
+
+
+                <br><br><br><br> // return ABC
+                <br><br> s.toUpperCase(); // change string to upper case
+
+                <br><br><br><br> // return {97, 98, 99}
+                <br><br> s.getBytes(); // get byte array from string
+
+
+                <br><br><br><br> // returns an integer number
+                <br><br> s.hashCode(); // return the hascode of the string object
+
+                <br><br> <br><br> // returns bbcbbc
+                <br><br> s.replace('a', 'b'); // replace all occurance of old char with new char
+
+                <br><br><br><br> // return defdef
+                <br><br> s.replace("abc", "def"); // replace all occurance of old string with new string
+
+                <br><br> // s still holds abcabc
+
+                <br><br> s = "abcabc0abc";
+
+                <br><br><br><br>  // returns abcabc abc
+                <br><br>  s.replaceAll("[0-9]", " "); // replace all occurance of given regex with new string
+
+
+                <br><br><br><br> // returns defabc abc
+                <br><br> s.replaceFirst("abc", "Def"); // replace only first occurance with given string
+
+                <br><br><br><br>  // return 1
+                <br><br>  s.indexOf('a'); // return first index of given char;
+
+                <br><br><br><br>  // returns -1
+                <br><br>  s.indexOf("as"); // return first index of given string
+
+                <br><br><br><br> // returns 3
+                <br><br> s.indexOf('a', 3); // return first index starting from given index of char
+
+                <br><br><br><br>// returns 3
+                <br><br> s.indexOf("abc", 3); //return first index starting from given index of string
+
+                <br><br><br><br> // similarly lastIndex() method is there
+
+
+                <br><br><br><br> s.trim(); // remove white space from begining and end
+
+
+                <br><br><br><br>s.endsWith("abc"); // return true if string end with given string
+
+                <br><br><br><br>s.contentEquals(s1); // return true if content of both strings are equal, case sensitive
+
+                <br><br><br><br> s.charAt(2); // get char at particular index
+
+                <br><br><br><br> s.toCharArray();  // change string to char array
+
+                <br><br><br><br> s.substring(1,2); // get substring from a given index to given index(not inclusive)
+
+
+                <br><br> s = "abc:def:ghi";
+
+                <br><br><br><br> String[] sSplit  = s.split(":"); // split the given string into string array based on passed spliter
+                <br><br> // {"abc", "def", "ghi"}
+
+
+                <br><br>                <br><br> // equals() and ==
+                <br><br> String sFirst = "devendra";
+
+                <br><br> String sSecond  = "devendra";
+
+                <br><br>String sThird  = new String("devendra");
+
+                <br>// equals()
+                <br><br> System.out.println(sFirst.equals(sSecond)); // euqals in String class is for content compare, return false if operands are not related
+
+                <br><br> // ==
+                <br><br> System.out.println(sFirst==sSecond); // == is always for reference compare, since same object, true
+
+                <br><br> System.out.println(sFirst==sThird); // == is always for reference compare, since different object, false
+
+                <br><br><br><br> // compareTo
+
+                <br>// return <0 if first comes before second
+                <br>// return 0 if both are equals
+                <br>// return >0 if first comes after second
+                <br><br>  System.out.println(sFirst.compareTo(sSecond)); // this will return 0 as both are same
+                <br><br> sFirst = "e";
+
+                <br><br> System.out.println(sFirst.compareTo(sSecond)); // now first comes after second so returns >0
+
+                <br><br> sSecond = "f";
+
+                <br><br> System.out.println(sFirst.compareTo(sSecond)); // now first comes before second so returns <0
+
+
+            </h3>
+
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td>
+
+            <br><br> when we print a string, stringbuilder, stringbuffer, directly its content is get printed
+
+            <br>because object call means .toString() and toString is overriden in these classes to return content
+
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+
+            <br><br>
+            <h1> StringBuffer & StringBuilder definition</h1>
+
+           <br> <br> StringBuffer came in 1.0,  are mutable classes, does not use SCP, StringBuffer can be modified, are synchronized hence thread safe
+
+            <br><br> StringBuilder came in 1.5, are mutable classes, does not use SCP, StringBuilder can be modified, are no synchronized hence not thread safe
+            <br><br>  StringBuilder are more efficent than StringBuffer, StringBuilder came in java 1.15
+
+
+            <br><br>Using these instead of String if content keep on changing, as String will create new object everytime
+
+            <br>but above will modify the same object
+
+            <br>if content is fixed, go with string, if not go with builder, buffer
+
+            <br><br>  Both StringBuilder and StringBuffer are growable objects, having default capacity of 16, once reaches out of capactiy
+           <br> new capactiy object is created with capacity as  and all old values are copied to it,
+            <br> old object is applicable for garbage collection
+            <br> new capacity = (old capacity *2) + 2
+
+            <h3>
+           <br><br>StringBuffer sb = new StringBuffer();
+
+
+                <br>Sting s = new String("as");
+
+               <br> StringBuffer sb1 = new StringBuffer(s); // creating stringbuffer from string
+               <br>    StringBuffer sb1 = new StringBuffer("hello"); // creating stringbuffer from string
+
+
+                <br>System.out.println(sb.capacity()); // default capacity 16
+
+                <br> sb.append("aaaaaaaaaaaaaaaaa");
+
+                <br>System.out.println(sb.capacity()); // 34  ((16*2)+2)
+
+                <br>StringBuffer sb1 = new StringBuffer(100);
+
+                <br>System.out.println(sb1.capacity()); // 100, as we have provided capacity
+
+
+            </h3>
+
+
+
+
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+
+            <br><br>
+            <h1> StringBuffer & StringBuilder are mutable</h1>
+
+            <br> means object content can be changed, without creating a new object
+
+            <br>
+            <h3>
+                <br> // only one object is created below and it keeps modifying
+                <br>   StringBuffer sb2 = new StringBuffer();
+                <br> sb2.append("Hello");
+                <br> sb2.append(" ");
+                <br> sb2.append("world");
+                <br> System.out.println(sb2);
+
+            </h3>
+
+
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+
+            <br><br>
+            <h1> StringBuffer & StringBuilder methods</h1>
+
+            <br>// all of the string methods are applicable to StringBuffer and StringBuilder also
+            <br>// few methods which are only in StringBuffer and StringBuilder are as below
+
+            <h3>
+
+                <br><br> capacity(), to get the capactiy of the object
+
+               <br> sb.capacity();
+
+                <br><br> append(String s), to append a string at the end of object content
+
+                sb.append("last"); // you can append any int, float, double, char, boolean, string value
+                sb.append(10);
+
+                <br><br> setLength() to increase capacity so that the object can have given length value
+
+                 <br> StringBuffer sb10 = new StringBuffer(); // 16 capactigy default
+
+                <br>  System.out.println(sb.capacity());
+
+                <br>  sb.setLength(50);
+                <br> // you can set length of the string, means capacity will increase as per formula so that it can hold 50 characters atleast
+
+                <br> // so (16*2)+2 = 34 which still can not hold 50 so (34*2)+2 = 70
+
+                <br> System.out.println(sb.capacity()); //70
+
+                <br><br> sb.reverse(); // to reverse the content
+
+                <br> System.out.println(sb); // will print cba
+
+                <br><br>   sb.replace(0,1,"cbc"); // this will replace from start to end non inclusive withgiven string
+
+                <br> System.out.println(sb);  // output will be cbcba
+
+                <br><br> sb.insert(1,10); // insert any int, char, float, double, string, long
+                <br> // output will be c10bcba
+
+                <br><br>  sb.insert(2 ,"myname");
+                <br> //c1myname0bcba
+
+                <br> System.out.println(sb);
+
+                <br><br>   sb.delete(0,1); // delete string from start to end index(non inclusive)
+               <br> System.out.println(sb);
+                <br> // 1myname0bcba
+
+
+                <br><br> sb.ensureCapacity(100); // ensure that capacity is at least 100
+
+
+            </h3>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+
+            <br>
+            <h1> String Constant Pool</h1>
+
+            <br>  <br>whenever any string literal is encountered, an object is create in SCP without any explicit reference variable
+            <br>  <br>JVM internally manager the reference variable for SCP objects
+            <br>  <br>till 1.6 SCP was in    method area, permGen
+            <br>  <br>from 1.7 SCP is part of heap area only and moved from permGen because size of permGen was limited 64MB
+            <br><br> SCP providers reusability for objects as multiple reference refer to same object, so memory saved
+            <br><br> one e.g. is creating a voting application and create city as Gurgaon, same city object used for all the voters of gurgaon
+            <br><br> now if anyone tries to change the city, a new separate object will be created, as strings are immutable
+            <br><br> so string are made immutable  to solve such kinf of issues as if object update was allowed, and someone changed the city from gurgaon to delhi
+            <br><br>it would have been changed for all voters
+
+            <h3>
+
+                <br> // below code create 1 object in heap as new is used, and one object in SCP for literal "devendra"
+
+                <br> // so below line will create 2 objects, 1 in heap, 1 in SCP
+
+               <br> <br>  {
+                <br> <br> String s = new String("devendra")<br>
+
+                } <br> <br>
+
+
+
+            </h3>
+
+            <h3>
+                { <br><br>
+                <br><br> String s1 = new String("devendra"); // 2 object create 1 in heap 1 in SCP
+
+                <br><br>String s2 = new String("devendra"); // 1 object create in heap as new is used, literal is same as above so SCP does not create new SCP object, as SCP already have object having same literal
+
+
+                <br><br> String s3 = "devendra"; // same SCP object is used, no new object created at all
+
+                <br><br> String s4 = "devendra"; // same SCP object is used, no new object created at all
+             <br><br>}
+
+            </h3>
+
+            <h3>
+
+                { <br><br>
+                <br><br> String s = new String("devendra"); // 1 object create in heap and 1 for literal is created in SCp
+                <br><br>String s1 = s.concat("singh"); // here 1 copy will be created in SCp as "singh" liternal does not exist there
+                <br><br> // also concat is a run time operation, so a new object will be created in heap area and s1 will be assigned to it
+
+                <br><br> s1.concat(" hello "); // again 1 SCp object will be created for literal
+                <br><br>  // 1 object again will be created in heap area for run time concat operation, but no reference so will be garbage collected
+
+                 <br><br>}
+
+            </h3>
+
+
+
+
+        </td>
+
+    </tr>
+
+
+</table>
+</html>

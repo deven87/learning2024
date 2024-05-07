@@ -1,0 +1,32 @@
+
+”
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "response".(ú…´€8üÎ¼½…1Hü¯RMINORZ
+CODE_SMELL
+”
+java:S1488-"`Immediately return this expression instead of assigning it to the temporary variable "response".(Ëº¹â8üÎ¼½…1H‚°RMINORZ
+CODE_SMELL
+s
+java:S1118
+":Add a private constructor to hide the implicit public one.(È«‘èÿÿÿÿÿ8¥“À¼…1H˜­RMAJORZ
+CODE_SMELL
+™
+java:S1488#"`Immediately return this expression instead of assigning it to the temporary variable "response".(‚âçšøÿÿÿÿ8üÎ¼½…1Hÿ¯RMINORZ
+CODE_SMELL
+€
+java:S1128"GRemove this unused import 'io.restassured.matcher.RestAssuredMatchers'.(®Ö½Îşÿÿÿÿ8°ĞÃ½…1Hå±RMINORZ
+CODE_SMELL
+ƒ
+java:S1192"LDefine a constant instead of duplicating this literal "contentType" 6 times.(Ëº¹â8üÎ¼½…1Hó¯RCRITICALZ
+CODE_SMELL
+k
+java:S1128"2Remove this unused import 'org.hamcrest.Matchers'.(İ†âúÿÿÿÿ8°ĞÃ½…1Hç±RMINORZ
+CODE_SMELL
+”
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "response".(Ëº¹â8ºú‡½…1HÂ¯RMINORZ
+CODE_SMELL
+h
+java:S1172*"/Remove this unused method parameter "userName".(¬‘¥øÿÿÿÿ8âšÇ½…1H¥²RMAJORZ
+CODE_SMELL
+c
+java:S1172"/Remove this unused method parameter "userName".(ßäÆ8êæ¿½…1H”±RMAJORZ
+CODE_SMELL

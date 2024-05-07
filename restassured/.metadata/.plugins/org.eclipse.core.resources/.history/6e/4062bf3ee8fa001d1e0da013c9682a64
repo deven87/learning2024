@@ -1,0 +1,86 @@
+package RestAssured.RestAssured;
+
+import static io.restassured.RestAssured.given;
+
+import org.json.JSONObject;
+
+import com.github.javafaker.Faker;
+
+/**
+ * Hello world!
+ *
+ */
+public class RestRequests1 
+{
+
+	public RestRequests1() {
+
+		System.out.println("RestRequests1 constructor");
+	}
+	
+	
+	private int id;
+	
+	public void createUser() {
+		
+		
+		DataPojo1 data = new DataPojo1();
+		
+		Faker faker = new Faker();
+		
+		data.setEmail(faker.internet().emailAddress());
+		data.setName(faker.name().fullName());
+		data.setGender("male");
+		data.setStatus("active");
+		
+		System.out.println(data.email);
+		
+		id = 
+				
+		given().auth().oauth2("d5fb694ce3c1feae1c7ab8ed194f52bb8b1cdeb6e8813224d02399ffae914830").contentType("application/json").
+		
+		body(data).
+		
+		when().post("https://gorest.co.in/public/v2/users").jsonPath().getInt("id");
+	
+	
+		
+	}
+	
+	public void getUser() {
+		
+		
+		System.out.println("generated user id is " + id);
+		
+		given().auth().oauth2("d5fb694ce3c1feae1c7ab8ed194f52bb8b1cdeb6e8813224d02399ffae914830").contentType("application/json").pathParam("id", id).when().get("https://gorest.co.in/public/v2/users/{id}").then().log().all();
+		
+		
+	}
+	
+public void updateUser() {
+		
+		
+		DataPojo1 data = new DataPojo1();
+		
+		Faker faker = new Faker();
+		
+		data.setEmail(faker.internet().emailAddress());
+		data.setName(faker.name().fullName());
+		data.setGender("male");
+		data.setStatus("active");
+		
+		System.out.println(data.email);
+		
+		id = 
+				
+		given().auth().oauth2("d5fb694ce3c1feae1c7ab8ed194f52bb8b1cdeb6e8813224d02399ffae914830").contentType("application/json").pathParam("id", id).
+		
+		body(data).
+		
+		when().put("https://gorest.co.in/public/v2/users").then().statusCode(200);
+	
+	
+		
+	}
+
+}

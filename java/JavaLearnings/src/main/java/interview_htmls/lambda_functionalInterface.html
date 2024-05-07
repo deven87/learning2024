@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Lambda and functional interface</h1>
+
+          // lambda expression came in java very late in 1.9
+            <br><br>// using lambda expression, length of the code is reduced to a great extent
+
+            <br><br>  // lambda expression is basically a function not having any name, return type and any access modifier
+            <br><br>  // one use of lambda expression is calling functional interface method without having a implementing class
+            <br><br>   // functional interface is the one which have only 1 abstract method, it can have any no of defualt and static methods
+
+
+            <h3>
+
+                <br><br>   public class MainMain {
+
+
+
+                <br><br>   public String  m1(int x) {
+
+                <br><br>   return "As";
+
+                <br><br>   }
+
+                <br><br>   // same method can be represented without name, return type and without access modifier
+                <br><br>   // parameter type are also not required to specify
+
+                <br><br>   //    (x) -> { return new String("as"); }
+
+
+                <br><br>  // it can be return as
+
+                <br><br> //  (x) -> return new String("yes");
+
+
+                <br><br>  // we can remove () if only one parameter
+
+                <br><br>   //   x -> return new String("as");
+
+                <br><br> // lambda expresssion always return value, so return can be removed
+
+                <br><br>  //   x-> new String("As");
+
+                <br><br>   //   it can be represented like this
+
+
+                <br><br>   }
+
+                <br><br>  // came in java 1.8, an interface having only 1 non concrete method is called as functional interface
+                <br><br>   // functional interface can have multiple default and static methods, but it will have only 1 abstract method
+                <br><br>    interface MyFunctionalInterface {
+
+                <br><br>   public int squareIt(int x);
+
+                <br><br>   default void m1() {
+
+                <br><br>   }
+
+                <br><br>  static void m2() {
+
+                <br><br>   }
+
+                <br><br>   }
+
+                <br><br>  // now we have to create a class and implement it, and use that class object in our code to call this method
+                <br><br>  // but using lambda expression we can directly use the method
+
+                <br><br>  // not implementing the functional interface as will directly implement its method
+                <br><br>  class Test {
+
+
+                <br><br>    public static void main(String[] args) {
+
+                <br><br>   // here since interface has only 1 abstract method, compiler knows that is to call
+                <br><br>  MyFunctionalInterface i = y -> y * y; // implementation for functional interface method, instead of creating a class and implement it
+                <br><br>  // we are directly implementing it here
+
+                <br><br> System.out.println(i.squareIt(10));
+
+                <br><br>  System.out.println(i.squareIt(20));
+                <br><br>  }
+
+
+            </h3>
+
+        </td></tr>
+
+
+    <tr><td>
+        <br><br>
+        <h1>Predicates</h1>
+
+     // there are some predefined functional interface created e.g. Predicate
+        <br><br>     // if you want to check if a nuber is even or odd, you dont need to write code
+        <br><br>    // you can use predicate functional interface
+
+        <h3>
+        <br><br>    Predicate&ltInteger&gt p = x -> x%2==0;
+
+        <br><br>   System.out.println(p.test(0));
+        </h3>
+
+
+
+    </td></tr>
+
+    <tr><td>
+        <br><br>
+        <h1> using lambda expression in wait until</h1>
+
+
+      // using lambda expression for fluent wait
+
+      <h3>  public static void main(String[] args) {
+
+
+          <br><br>   // using  wait with lambda expression
+
+          <br><br>   WebDriver driver = new ChromeDriver();
+          <br><br>   String url = "https://www.selenium.dev/selenium/web/dynamic.html";
+
+          <br><br>   driver.get(url);
+
+          <br><br>   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+          <br><br>   WebElement element1 = driver.findElement(By.id("reveal"));
+
+          <br><br>   // this until method takes Function() functional interface
+          <br><br>   // and will keep on exeucting until false is returned, given expire time is reached, or any exception is thrown
+
+          <br><br>   element1.click();
+
+
+          <br><br>   WebElement element = driver.findElement(By.id("revealed"));
+
+
+          <br><br> wait.until(x-> element.isDisplayed());
+
+
+          <br><br>  Wait waitF = new FluentWait(driver).
+          <br><br>  pollingEvery(Duration.ofSeconds(1)).
+          <br><br>  withTimeout(Duration.ofSeconds(30)).
+          <br><br>  ignoring(ElementNotInteractableException.class);
+
+
+          <br><br> waitF.until(x->{element.sendKeys("as"); return true;});
+
+
+          <br><br> waitF.until(ExpectedConditions.elementToBeClickable(element));
+
+          <br><br> }
+
+          <br><br> public boolean sendKey(WebElement element1) {
+
+          <br><br> element1.sendKeys("as");
+
+          <br><br> // return will execute only if sendKeys is successful
+          <br><br> return true;
+
+          <br><br> }
+
+          </h3>
+
+    </td></tr>
+
+
+
+
+
+</table></html>

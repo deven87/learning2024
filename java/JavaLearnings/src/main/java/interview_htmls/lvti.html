@@ -1,0 +1,105 @@
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Local Variable Type Inference</h1>
+
+            // LVT is introduced in java 10
+          <br><br>  // using var as a variable type, now from right hand side it is clear that left hand side variable will contain string valye only
+
+            <br><br>   // var can be used as a local variable or inside static or instance block
+            <br><br>   //  var can be used in side method as a variable, inside loop as a loop variable, to get returned value for a method
+
+
+            <br><br>   // var can not be used as instance or static variable
+            <br><br>   // var can not be used as method parameter
+
+
+            <h3>
+
+                <br><br>   public static void main(String[] args) {
+
+
+
+                <br><br>    var s = new String("s");
+
+                <br><br>    var s1 = "Asd";  // based on right side value, compiler will know that var is of type string
+
+
+
+
+
+                }    </h3>
+
+
+            <h3>
+                <br><br>    // using var as loop variable
+                <br><br>    void varType() {
+
+
+                <br><br>    var x = new int[]{1,2,3,4};
+
+                <br><br>    for (var x1: x) {
+                <br><br>    System.out.println(x1);
+                <br><br>    } </h3>
+
+
+
+            }
+            <h3>
+                <br><br>   // var used as returned variable
+
+                <br><br>   int x() {
+
+                <br><br>   var y = 20;
+                <br><br>   return y;
+                <br><br>   }
+            </h3>
+
+            <h3>
+                <br><br>   // using var to store returned value from method
+                <br><br>   void x1() {
+
+
+                <br><br>   var x1 = x();
+                <br><br>   }
+            </h3>
+
+
+            <h3>
+
+                <br><br>     // var in instance block
+                <br><br>   {
+
+                <br><br>   var x = 10;
+                <br><br>   System.out.println(x);
+
+
+                <br><br>  }
+
+
+                <br><br>    // var in static block
+
+                <br><br>   static
+                <br><br>   {
+
+                <br><br>  var x = 10;
+                <br><br>  System.out.println(x);
+
+                <br><br>   }
+
+                </h3>
+
+        </td></tr>
+
+
+</table></html>

@@ -1,0 +1,262 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Arrays</h1>
+
+      <br><br>      Array in java is a group of like-typed variables referred to by a common name.
+            <br><br>    Arrays in Java work differently than they do in C/C++.
+            <br><br>    Following are some important points about Java arrays.
+
+            <br><br>    In Java, all arrays are dynamically allocated. (discussed below)
+            <br><br>    Arrays are stored in contiguous memory [consecutive memory locations].
+            <br><br>    Since arrays are objects in Java, we can find their length using the object property length.
+            <br><br>    This is different from C/C++, where we find length using sizeof.
+            <br><br>     A Java array variable can also be declared like other variables with [] after the data type.
+            <br><br>     The variables in the array are ordered, and each has an index beginning with 0.
+            <br><br>     Java array can also be used as a static field, a local variable, or a method parameter.
+            <br><br>     The size of an array must be specified by int or short value and not long.
+            <br><br>     The direct superclass of an array type is Object.
+            <br><br>     Every array type implements the interfaces Cloneable and java.io.Serializable.
+            <br><br>    This storage of arrays helps us randomly access the elements of an array [Support Random Access].
+            <br><br>    The size of the array cannot be altered(once initialized).  However, an array reference can be
+            <br><br>    made to point to another array.
+            <br><br>     An array can contain primitives (int, char, etc.) and object (or non-primitive) references of a class depending
+            <br><br>    on the definition of the array. In the case of primitive data types, the actual values are stored
+            <br><br>    in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
+
+
+            <br><br>  array when allocated by new keyword, is automatically initialized by 0 for numeric, false for boolean and null for reference type
+
+
+            <h3>
+                <br><br>      // both declaration are valid
+                <br><br>      int[] arr;
+                <br><br>      int arr1[];
+
+
+                <br><br>     // allocating memory to array, here each element will be initialized by zero
+                <br><br>     arr = new int[10];
+
+                <br><br>     arr1 = new int[]; // size is must
+
+
+                <br><br>    // both above can be combined into one statement
+                <br><br>    int[] arr2 = new int[10];
+
+            </h3>
+
+            <br><br>
+
+           <b> // if size is already known we can write it as</b>
+            <h3>
+
+
+
+                <br><br>    int[] arr3 = new int[]{1,2,3,4,5};
+
+                <br><br>    // or
+
+                <br><br>  int[] arr4 = {1,2,3,4,5};
+
+            </h3>
+
+            <br><br>
+            <b>  // methods and properties of arrays</b>
+
+
+            <br><br>       // length property of object class is used to find length of array
+
+            <h3>
+
+                <br><br>       int[] arr = new int[] {1,2,3,4};
+
+                <br><br>       System.out.println(arr.length);  // 4
+
+                <br><br>       // first element is accessed by index [0].. and so on
+
+            </h3>
+
+            <br><br>
+            <h1>
+
+                Array of object in java </h1>
+
+
+            <h3>
+                <br><br>        // array of object
+                <br><br>        Student[] s = new Student[5];
+                <br><br>        // this will create an array of 5 references of type Student having null by default
+                <br><br>        // we have to intialize each of the created object
+
+                <br><br>       for (int i = 0; i<s.length; i++) {
+                <br><br>
+                s[i] = new Student();
+                <br><br>     }
+
+
+                <br><br>    System.out.println(s[0].rollNo);
+                <br><br>    System.out.println(s[1].rollNo);
+
+
+                <br><br>     }
+                <br><br>         class Student {
+
+                <br><br>       int rollNo;
+
+                <br><br>     }
+
+            </h3>
+
+            <h1> MultiDimensional arrays </h1>
+
+             Multidimensional arrays are arrays of arrays with each element of the array holding the reference of other arrays.
+            <br><br>   These are also known as Jagged Arrays.
+            <br><br>   A multidimensional array is created by appending one set of square brackets ([]) per dimension.
+
+
+            <br><br>    // giving size of the first dimension is mandatory in java
+            <br><br>    // multidimenstion array means each element of array storing another array
+
+            <h3>
+
+
+
+                <br><br>      // int[][] arr = new int[][]; // not allowed
+
+                <br><br>       int[][] arr1 = new int[2][]; // valid
+
+                <br><br>     int[][] arr2 = new int[2][2]; // valid
+
+                <br><br>    int[][] arr3 = new int[][] {{1,2,3}, {3,4,5}};
+
+                <br><br>    int[][] arr4 =  {{1,2,3}, {3,4,5}};
+
+
+            </h3>
+
+            <img src="mtdararays.jpg", width="500"/>
+
+
+            <br><br>
+            <h1>Arrays Types and Their Allowed Element Types</h1>
+            Array Types	Allowed Element Types
+            <br><br>  Primitive Type Arrays	Any type which can be implicitly promoted to declared type.
+            <br><br>  Object Type Arrays	Either declared type objects or it’s child class objects.
+            <br><br> Abstract Class Type Arrays	Its child-class objects are allowed.
+            <br><br> Interface Type Arrays	Its implementation class objects are allowed.
+
+
+            <br><br>
+            <h1>clone of single and multidimension array</h1>
+
+         <b> clone of single dimension array is always a deep copy so new object is created</b>
+            <br><br>  <b> clone on multiple dimension array, main array is deep copy but all subarray are shared so shallow copy</b>
+
+    <h3>
+
+        <br><br>   int[] i = new int[]{1,2,3};
+
+        <br><br>    int[] j = i; // both i and j refer to same array
+
+        <br><br>    System.out.println(i == j);
+
+        <br><br>   i[0] = 3;
+
+        <br><br>   // j will print 3
+        <br><br>   System.out.println(j[0]);
+
+
+        <br><br>   int[] i1 = new int[]{1,2,3};
+
+        <br><br>   int[] j1 = i1.clone();
+
+        <br><br>   System.out.println(j1==i1); // false // as deep copy is created
+
+
+        <br><br><b>   // multidimesion array// for subarray shared copy is created</b>
+
+        <br><br>    int[][] ar = {{1,2},{3,4}};
+
+        <br><br>   int[][] ra = ar.clone();
+
+        <br><br>   System.out.println(ar==ra);  // false as deep clone
+
+        <br><br>   System.out.println(ar[0]==ra[0]); // true as subarrays are shalow copy
+        <br><br>   System.out.println(ar[1]==ra[1]); // true as subarrays are shalow copy
+    </h3>
+
+
+            <img src="mtdarrayclone.jpg" width="500"/>
+
+
+            <br><br>
+            <h1> returning array in method</h1>
+
+            <h3>
+
+                <br><br>   int[] m1() {
+
+                <br><br>    return new int[]{1,2,3};
+                <br><br>    }
+
+                <br><br>     <br><br>     public String[] arrReturn() {
+
+                <br><br>     String[] str = {"ab", "cf"};
+
+                <br><br>     return str;
+
+                <br><br>     }
+
+            </h3>
+            <br><br>
+            <h1 > passing array as parameter in method</h1>
+
+           <h3>   <br><br>    public static void main(String[] args) {
+
+
+               <br><br>       int[] i = {1,2,3};
+
+               <br><br>      m1(i);
+
+
+
+
+               <br><br>        }
+
+               <br><br>       static void m1(int[] arr) {
+
+               <br><br>     System.out.println(arr.length);
+
+               <br><br>      }
+
+
+
+           </h3>
+            <br><br>
+            <h1>anonymous array </h1>
+
+
+            // annonymous array, arrays without any name, are for one time usage like returning value
+
+            <h3>
+                <br><br>  System.out.println(new int[]{1,2,3}); // valid [I
+
+                <br><br>  //  System.out.println(new int[10]{1,2,3}); // not allowed with size
+
+            </h3>
+
+
+        </td>
+    </tr>
+
+
+</table></html>

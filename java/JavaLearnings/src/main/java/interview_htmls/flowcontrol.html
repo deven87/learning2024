@@ -1,0 +1,356 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Loops</h1>
+
+            // loop, to interate over a set of statement a no of times
+           <br><br> // java has for loop, while loop, do while loop, for each loop
+
+
+            <br><br>   public class MainMain{
+
+
+
+            <br><br>static void  printArrayElementForEach() {
+
+
+            <br><br>int l1=0,l2=0;
+
+            <br><br>int [] i = {1,2,3,4,5};
+            <br><br> <h1> for each</h1>
+
+            <h3>
+                <br><br>for (int k : i) {
+                <br><br>System.out.println(k);
+
+}
+            </h3>
+
+            <br><br>int [][] i1 = {{1,2,3,4,5}, {6,7,8,9,10}};
+
+            <h3>
+                <br><br>for (int[] k: i1) {
+
+                <br><br>for (int k1: k) {
+                <br><br>System.out.println(k1);
+                <br><br>}
+}
+            </h3>
+}
+
+            <br><br>
+            <h1> for </h1>
+         public static void printArrayElementFor() {
+
+            <br><br>int [] i = {1,2,3,4,5};
+
+            <br><br>// initializer, condition, increment/decrement
+            <br><br>// initializer can be any java statement, increment, decrement can be any java statement
+            <br><br>// compare can be a boolean value only
+            <br><br>// only 1 of them can come, 2 of them can come, none can come
+            <br><br>// at first initialization is executed, then condition is
+            <br><br>// checked and then loop body executed if condition is true,
+            <br><br>// once loop first iteration is over, increment/decemrent is done
+            <br><br>// and then again condition is checked and body is executed based on condition and so on
+
+            <h3>
+                <br><br>for ( int k = 0; k<i.length; k++) {
+
+                <br><br>System.out.println(i[k]);
+                <br><br>}
+                </h3>
+            <br><br>}
+
+            <br><br>public static void main(String[] args) {
+            <br><br>printArrayElementFor();
+            <br><br>printArrayElementForEach();
+            <br><br>forLoops();
+            <br><br>}
+
+
+            <br><br>static void forLoops() {
+
+            <h3>
+                <br><br>/*
+                <br><br>// infinite loop
+                <br><br>for (;;) {
+
+                <br><br>}
+            </h3>
+
+            <br><br>*/
+
+
+            <br><br>int x =10;
+
+            <h3>
+
+                <br><br>for (System.out.println("hello"); x>10;System.out.println("hello")) {
+
+                <br><br>}
+            </h3>
+
+
+            <h3>
+                <br><br>// multiple  initializtion and increment/decrement
+                <br><br>for (int i=0,j =0;;i++,j--){}
+
+
+}</h3>
+
+            <br><br>
+            <h1> while loop </h1>
+           void whileLoop() {
+
+
+            <br><br>int [] i = {1,2,3,4,5};
+
+            <br><br>int condition = 0;
+
+
+            <h3>
+/*
+                <br><br>// infine loop
+                <br><br>while(true) {
+
+
+}
+
+*/</h3>
+
+            <h3>
+                <br><br>// while loop parameter can be any boolean value
+                <br><br>while(condition<i.length) {
+
+                <br><br>System.out.println(i);
+                <br><br>}
+
+
+                <br><br>// loop will iterate till the condition is true, condition will be checked before each iteration
+
+                </h3>
+
+            <br><br>
+            <h1>do while loop</h1>
+            // do while will execute at least once even if the condition is false
+
+            <h3>
+                <br><br>//   do{}while(true); // do while inifinite loop
+
+                </h3>
+
+
+            <tr><td>
+
+    <br><br>
+    <h1> branching statement switch</h1>
+
+
+    // switch, is a branch statement in java like if else ladder
+    <br><br> // Java switch expression must be of byte, short, int, long(with its Wrapper type), enums and string.
+    <br><br> // Beginning with JDK7, it also works with enumerated types (Enums in java), the String class, and Wrapper classes.
+    <br><br> // switch cases can not be duplicate
+    <br><br> // switch case must be for a constant/literals, final variable
+    <br><br> // switch cases if found true will flow till end, so should use break to get out of switch
+    <br><br> // default can come at any place and will run only when no other case is matched
+    <br><br> // default is not mandatory
+    <br><br> // empty switch will not give any CTE
+    <br><br> // type of case literal must be same as passed parameter
+
+    <br><br> public static void main(String[] args) {
+
+    <h3>
+        <br><br>  switch (Days.Friday) {
+
+        <br><br> case Sunday:
+        <br><br> System.out.printf("Sunday");
+        <br><br> break;
+
+        <br><br>  case Monday:
+        <br><br> System.out.printf("Monday");
+        <br><br> break;
+
+        <br><br> case Tuesday:
+        <br><br> System.out.printf("Tuesday");
+        <br><br> break;
+
+        <br><br> case Thursday:
+        <br><br> System.out.printf("Thursday");
+        <br><br> break;
+
+        <br><br> case Friday:
+        <br><br> System.out.printf("Friday");
+        <br><br> break;
+
+        <br><br> case Saturday:
+        <br><br> System.out.printf("Saturday");
+        <br><br> break;
+
+        <br><br>  default:
+        <br><br> System.out.println("my default");
+        <br><br> break; // break is not required if default is at end, but should add if default is not at end
+
+
+        <br><br>  }
+
+        <br><br>  switch (Days.Saturday){}
+        <br><br>
+    Days d = Days.Friday;
+
+        <br><br>switch (d) {
+
+        <br><br>  //      case 1:  // not allowed, as case value can only be of passed value types
+        <br><br>  }
+
+        <br><br>  }
+        <br><br>
+
+
+
+
+    }
+
+
+        <br><br>  enum Days{
+        <br><br>  Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday;
+        <br><br>  }
+
+    </h3>
+
+</td></tr>
+
+    <tr><td>
+
+
+        <h1> if else </h1>
+
+        // if else branching statement
+        <br><br>    // any expression can be passed inside if
+
+        <br><br>    public static void main(String[] args) {
+
+        <br><br>     int x = 10;
+        <br><br>     int y = 10;
+
+        <h3>
+        if(x>10) {
+        // run only when given condition is true
+        System.out.println("x>10");
+        }    </h3>
+
+        <h3>
+        if(x<10) {
+
+        // run only when given condition is true
+        } else {
+        // run otherwise
+        }    </h3>
+
+        <h3>
+        if (x>10) {
+
+        // run if above condition is true
+
+        } else if (x<10) {
+
+        // come here only when if condition is not true
+
+        } else {
+        // come here only when above all conditions are false
+        }    </h3>
+
+        <h3>
+        if(x<10 && y>=10) {
+        // execute only when both conditions are true, exit out if first statement is false
+        }    </h3>
+
+        <h3>
+        if(x<10 || y>=10) {
+        // execute only when any of  conditions or both are true, enter if first condition is true
+        }
+            </h3>
+
+        }
+        }
+        <h3>
+        if(true) {
+
+        } </h3>
+
+
+        <h3>
+        if(true) {
+
+        } else {
+
+        }
+        </h3>
+
+    </td></tr>
+
+
+    <tr><td>
+        <br><br>
+        <h1> continue</h1>
+        <br>  // continue is used to continue with the loop next iteration, control will go to increment and then condition
+
+        <h3>
+            <br>  for (int i = 0; i< 10; i++) {
+
+            <br>   if (i == 5) {continue;}
+
+            <br>   System.out.println("statement");
+            <br>   }
+            <h3>
+                <br><br>
+                <h1> continue with label</h1>
+
+                  // label and continue, label can be used to continue or break to outer loops/blocks
+
+                <h3>
+                    <br>  label1:
+                    <br>   for (int i = 0; i< 10; i++) {
+
+                    <br>  for (int j = 0; i < 10; i++) {
+
+                    <br>   if (i == 5) {
+                    <br>   continue label1;
+                    <br>  }
+
+                    <br>  System.out.println("statement");
+                    <br>  }
+                    <br>  }
+                </h3>
+                <br><br>
+                <h1> break statement, to break out of switch, or loop body</h1>
+
+                <br>  // label and continue, label can be used to continue or break to outer loops/blocks
+                    <h3>
+                        <br>  label1:
+                        <br>  for (int i = 0; i< 10; i++) {
+
+                        <br>  for (int j = 0; i < 10; i++) {
+
+                        <br>  if (i == 5) {
+                        <br>  break label1;
+                        <br>  }
+
+  <br>  System.out.println("break");
+                        <br>   }
+                        <br>   }
+
+                    </h3>
+
+    </td></tr>
+
+    </td></tr></table></html>
+

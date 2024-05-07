@@ -1,0 +1,114 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <br><br>
+            <h1> Number System</h1>
+
+            <br><br>   public static void main(String[] args) {
+
+            <br><br>   // literals are any constant value which we assign to any variable of a particular data type
+
+            <br><br>   int x = 10; // here 10 is a int literal
+
+            <br><br>   float f = 20.0F ; // here 20.0 is a float literal
+
+            <br><br>   String s = "As" ; // As is a string literal
+
+            <br><br> //integer literal (byte, short, int, long) can be in decimal, binary, octal, hexadecimal form
+            <br><br>  // by default every integral literal is int type (not short, byte, long)
+            <br><br>  // by default every floating literal is double type and not float
+
+            <br><br>  // decimal vase 10, allowed 0-9
+            <br><br>  // binary base 2 , allowed 0,1, starts with 0B or 0b
+            <br><br>  // octal base 8 , allowed 0-7, starts with 0
+            <br><br>  // hexadecimal base 16 allowed 0-9, ABCDEF. , start with 0x 0X
+
+            <br><br> // in expression, always decimal will be used, so all the values will be converted to decimal only
+            <br><br>
+
+            <br><br> // floating point literals can only be in decimal form only
+
+            <br><br>  int x1 = 10;
+            <br><br>  <br><br>  int x2 = 0777;
+            <br><br> int x3 = 0x79;
+            <br><br> int x4 = 0X79;
+
+            <br><br> System.out.println(x3);
+
+
+            <br><br> double d = 0777;  // valid // every integral literal is int which will be auto promoted to double
+            <br><br> //  double d1 = 0X77.0; // not allowed as literal is hexadecimal, only allowed for integral value
+
+
+            <br><br>  }
+            <br><br>
+
+            <h1>   Indetifiers</h1>
+
+
+            <br><br>    // identifiers, name given for any data member, class, interface, enum, abstract class, method is identifier
+            <br><br>   // allowed are a-z, 0-9, $, _
+            <br><br>   // can not start with numbers
+            <br><br>   // no limit on size or use of alphabets, $, _
+            <br><br>   // can not be same as keyword of java
+            <br><br>   // String is not a keyword, it's a predefined class, so class, interface names can be same as variable name, but not recommended
+
+            <br><br>  For class and interfaces, the first letter has to be uppercase.Class names should be nouns
+            <br><br> Interface names should be adjectives.
+            <br><br>   For method , variable, package_name, and constants, the first letter has to be lowercase.Methods should be verbs
+            <br><br>  One-character variable names should be avoided except for temporary variables
+            <br><br> constant Should be all uppercase with words separated by underscores (“_”).
+            <br><br>The prefix of a unique package name is always written in all-lowercase ASCII letters
+
+
+            <br><br>
+            <h1>   // data types</h1>
+
+
+
+            <br><br> // numeric and non numeric
+            <br><br> // primitive and non primitive
+            //
+
+            <br><br> // in numeric type - there are integral (byte, short, int ,  long) and floating point (float, double)
+            <br><br> // in non numeric type boolean and char
+
+
+
+            <br><br> // byte range 1 byte  -2^(8-1) to 2^(8-1)
+            <br><br>  // short range 2 byte  -2^(16-1) to 2^(16-1)
+            <br><br> // int range 4 byte  -2^(32-1) to 2^(32-1)
+            <br><br> // long range 8byte -2^(64-1) to 2^(64-1)
+            <br><br> // float range 4 byte  -2^(32-1) to 2^(32-1), only 5-6 decimal point
+            <br><br> // double range 8byte -2^(64-1) to 2^(64-1), 15-16 decimal point
+            <br><br> // boolean is 1 bit true or false
+            <br><br> // char 2 byte, as its signed only so 0 65535
+
+
+            <h1>   using _ with literals</h1>
+         <br><br>   // can use _ with integral and floating literals to make it more readable
+
+            <br><br> int x = 123_4_3;
+            <br><br> //  int x1 = _12;// at first and last, no meaning so not allowed
+
+            <br><br> // int x2 = 12_; // not allowed
+
+            <br><br> // double d1 = 123_.123; // before and after . is not allowed
+
+            <br><br>  //  double d2 = 123._123;
+
+            <br><br> double d3 = 123.123_12312; // allowed
+
+
+
+
+        </td></tr></table></html>

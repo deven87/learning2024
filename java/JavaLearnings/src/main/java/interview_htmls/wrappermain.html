@@ -1,0 +1,363 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+
+
+    <tr>
+        <td>
+
+            <h1> definition</h1>
+
+            <br>A Wrapper class in Java is a class whose object wraps or contains primitive data types.<br>
+
+            <br> wrapper classes are used for autoboxing and unboxing, converting from primitive to object is autoboxing
+            <br> <br>and converting from object to primitive is autounboxing
+
+            <br><br>there are several things which you can do only on an object and not an primitive
+
+            <br><br>e.g. creating arraylist with generics, can not be done for primitive but can be done for object
+
+            <br><br>so like this there are a several advantages of objects over primitive, hence wrapper classes are created to convert
+            <br><br>primitives to object as we have a lot of utilitiy methods in wrapper classes to use
+
+
+
+    </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <br><h1> Autoboxing </h1>
+            <h3>
+            <br><br>  // converting primitive to object is autoboxing
+                <br> // autoboxing needed as Collections can only work with object type
+                <br> // There are some methods like clone, compare, can only be call on objects
+                <br> // Serialization can be done only for object
+                <br> // as java uses only call by value, but on object a reference is just a copy of same object
+                // so to update the passed object we have to use object rather then primitive
+
+                <br><br>    Integer i= 10; // autoboxing int to Integer
+
+                <br><br>// Integer type arraylist
+
+                <br><br>     arrayList.add(i);
+                <br><br>     al.add(2); // 2 is int, autoboxing is done here so int is converted to Integer
+
+                </h3>
+
+        </td>
+
+
+    </tr>
+
+    <tr>
+        <td>
+            <br><h1> Auto unboxing </h1>
+            <h3>
+                <br><br>        // converting object to primitive is auto unboxing
+
+                <br><br>// one e.g. is arraylist retrieval is primitive value, so auto unboxing takes place here
+
+                <br><br> //int k =  arraylist.get(0);
+
+            </h3>
+
+        </td>
+
+
+    </tr>
+
+
+    <tr>
+        <td>
+
+            <br><h1> Wrapper Classes </h1>
+
+            <br> following are wrapper classes for corrseponding primitives (all extends Number which is an abstract class)
+
+            <br>  int - <b>Integer</b>
+            <br>  char - <b>Character</b>
+            <br>  byte - <b>Byte</b>
+            <br>  short -<b> Short</b>
+            <br>  long - <b>Long</b>
+            <br>  double - <b>Double</b>
+            <br>  float - <b>Float</b>
+            <br>  boolean <b>Boolean</b>
+
+            <br> These wrapper classes have no relation with each other, so can not be converted from one to another
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br><h1> Wrapper class methods</h1>
+            each wrapper class has below method types:<br><br>
+
+            parsetXXX() // XXX is int, float, double anything, to pass string and get its primitive values<br><br>
+            xxxValue() // to pass wrapper object and get its primitives<br><br>
+            valueOf() // to pass primitive and get its wrapper object<br><br>
+            toString() // to pass string and get its primitive<br><br>
+
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+            <br><h1> Integer Wrapper</h1>
+
+            <h3>
+                {<br> // converting string to primitive<br>
+                <br>  int x = Integer.parseInt("10"); // valid, here parameter can only be a valid string which can be converted to integers<br>
+                }<br>
+                <br><br>
+                {<br>
+                <br> int x1 = Integer.parseInt("ten"); // invalid, as "ten" can not be converted to int type, CCE<br>
+                }<br>
+            </h3>
+
+            <h3>
+                {<br> // converting primitive to string<br>
+                <br>  String x = Integer.toString(10);<br>
+                }<br>
+                <br><br>
+                {<br>
+                }<br>
+            </h3>
+
+                <h3>
+
+                {<br> // converting primitive to object<br><br>
+
+                Integer i11 = Integer.valueOf(10);<br><br>
+
+                Integer i12 = Integer.valueOf("10");<br><br>
+
+
+
+                    }<br>
+
+                    </h3>
+
+
+                <h3>
+
+                    {<br>// converting object to primitive<br>  <br>
+
+                    int x = i.intValue(); <br>  <br> // here we are converting object to primitive  <br>
+
+                    }<br>  <br>
+
+
+                </h3>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+            <br>
+
+            <br><h1> Float Wrapper</h1>
+
+            <h3>
+                {<br> // converting string to primitive<br>
+                <br> float x = Float.parseFloat("10.5"); // valid, here parameter can only be a valid string which can be converted to Float<br>
+                <br>
+                float x = Float.parseFloat("10"); // valid, here parameter can only be a valid string which can be converted to Float<br>
+                <br>
+
+                }<br>
+                <br><br>
+                {<br>
+                float x1 = Float.parseFloat("ten"); // invalid, as "ten" can not be converted to float type, CCE<br>
+                }<br>
+            </h3>
+
+            <h3>
+                {<br> // converting primitive to string<br>
+                <br>  String x = Float.toString(10.5F);<br>
+                }<br>
+                <br><br>
+                {<br>
+                }<br>
+            </h3>
+
+            <h3>
+
+                {<br> // converting primitive to object<br><br>
+
+                Float i11 = Float.valueOf(10);<br><br>
+
+                Float i12 = Float.valueOf("10");<br><br>
+
+
+                }<br>
+
+            </h3>
+
+
+            <h3>
+
+                {<br>// converting object to primitive<br>  <br>
+
+                float x = i.floatValue(); <br>  <br> // here we are converting object to primitive  <br>
+
+                }<br>  <br>
+
+
+            </h3>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+
+            <h1> Similarly Double, Byte, Short, Long classes are there and have same functions as Integer and Float
+            </h1>
+            <br>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+            <h1> Character Wrapper </h1>
+
+            <h3>
+
+                <br><br>{
+           <br> <br>char ch1 = 'a';
+
+                <br><br> Character ch = Character.valueOf(ch1);   // get object from primitive
+
+                <br><br> char ch2 = ch.charValue();  // get primitive from object
+
+                <br> <br>String char1 = Character.toString(ch1); // get string from primitive
+
+                // parseXXX method is not available for characters
+
+                <br>}<br>
+            </h3>
+
+
+
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+            <h1> Boolean Wrapper </h1>
+
+            <h3>
+
+
+
+                <br>// true case insenstive is true, everything else is false
+                <br><br>// from primitive to object
+
+                {
+
+                <br> <br>Boolean b = Boolean.parseBoolean("true"); // true
+                <br> <br>System.out.println(b);
+
+                <br> <br>Boolean b1 = Boolean.parseBoolean("True"); // true, as case insensitive
+                <br> <br>System.out.println(b1);
+
+                <br> <br>Boolean b4 = Boolean.parseBoolean("false"); //false
+                <br> <br>System.out.println(b4);
+
+                <br> <br> Boolean b2 = Boolean.parseBoolean("a"); // false
+                <br> <br>System.out.println(b2);
+
+                <br> <br> Boolean b3 = Boolean.parseBoolean("null"); //false
+                <br> <br> System.out.println(b3);
+
+                <br>
+                <br>  <br>// from object to primitive
+                <br> <br> boolean b5 = b3.booleanValue();
+
+
+
+                <br>
+                <br>  <br>// from primitive to string
+
+                <br> <br> // only true and false case sensitive are boolean values
+
+                <br> <br> String s = Boolean.toString(true); // will hold true
+
+                <br> <br> String s1 = Boolean.toString(false); // will hold false
+
+                <br>}<br>
+            </h3>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <br>
+
+        </td>
+    </tr>
+
+</table>
+</html>

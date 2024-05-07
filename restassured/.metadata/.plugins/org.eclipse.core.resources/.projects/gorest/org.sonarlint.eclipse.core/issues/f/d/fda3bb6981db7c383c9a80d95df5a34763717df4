@@ -1,0 +1,15 @@
+
+o	java:S125"<This block of commented-out lines of code should be removed.(Öı­È8øÀë†1H¬×RMAJORZ
+CODE_SMELL
+m
+java:S1854"9Remove this useless assignment to local variable "faker".(Êƒ¿â8øÀë†1H´×RMAJORZ
+CODE_SMELL
+…
+java:S1192#"IDefine a constant instead of duplicating this literal "user.dir" 3 times.(ª„çÅûÿÿÿÿ8Àã¢±†1Hµ×RCRITICALZ
+CODE_SMELL
+‘
+java:S1192#"UDefine a constant instead of duplicating this literal "/testdata/Book1.xlsx" 3 times.(ª„çÅûÿÿÿÿ8Àã¢±†1H¹×RCRITICALZ
+CODE_SMELL
+^
+java:S1481"*Remove this unused "faker" local variable.(Êƒ¿â8øÀë†1H½×RMINORZ
+CODE_SMELL

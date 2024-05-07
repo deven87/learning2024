@@ -1,0 +1,10 @@
+package gorest.payloads;
+
+public class UserPayload {
+	
+	String email;
+	String name;
+	String gender;
+	String status;
+
+}

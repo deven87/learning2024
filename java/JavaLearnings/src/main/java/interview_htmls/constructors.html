@@ -1,0 +1,102 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Constructors</h1>
+
+           <br><br> // constructor are used to initialize objects with given values instead of default JVM initializations
+            <br><br> // constructors have name same as class name
+            <br><br> // every time an object is created, at least one constructor is called
+            <br><br> // constructor can not have return type
+            <br><br> // by default a constructor having same modifer as a class, e.g. if a class is public, constructor is also public by default
+            <br><br> // constructor can be public, protected, private, default
+            <br><br> // constructor can not be final, static, synchronized, native, strictfp
+            <br><br> // constructor is called automatically by JVM when an object is created
+            <br><br> // compiler will create a default constructor for every class, if programmer has not created any constructor
+            <br><br> // compiler will not create default constructor, if programmer has created any constructor
+            <br><br> // compiler will add super() statement as first statement in every constructor if you have not added super() or this() as first statement
+            <br><br> // instance blocks can also be created which are executed before constructor and during object creation
+            <br><br> // inheritance concept is not applicable for constructors and since compiler add super, child classes constructors call parent class constructor
+            <br><br> // programmer can add super() in any constructor to call parent class constructor
+            <br><br> // programmer can add this() in any constructor to call another constructor of current object of the class
+            <br><br> // three type of constructors are there default, parameterized and copy constructor
+            <br><br> // constructors can be overloaded
+            <br><br> // constructors can not be overriden, as they are not inherited.
+            <br><br> // parent class must have default constructor explicitly created if there are any other arg constructor, as each child will call parent class default constructor by default
+
+
+
+
+
+    <h3>
+        <br><br>    // default constructor created explicility, so compiler will not create any
+        <br><br>     MainMain() {
+
+        <br><br>    // compiler will add super() here as first statement
+        <br><br>     System.out.println("const");
+
+        <br><br>     }
+
+        <br><br>    MainMain(int x) {
+
+        <br><br>    // compiler will add super() here as first statement
+        <br><br>    System.out.println("one param");
+
+        <br><br>   }
+
+        <br><br>   MainMain(int x, int y) {
+
+        <br><br>   this(10); // compiler will not add super() or this() as we have added this(), which will call const of same class object
+        <br><br>   System.out.println("two param");
+
+        <br><br>   }
+
+
+        <br><br>   public static void main(String[] args) {
+
+        <br><br>   // here calling 2 para constructor after creating object to initialize it, 2 param const, will call one param cons as using this()
+        <br><br>   MainMain m = new MainMain(10,20); // object created and 2 param const will be called
+        <br><br>    MainMain m1 = new MainMain(); // object created and default const will be called
+
+
+        <br><br>   }
+        <br><br>    }
+
+        <br><br>   class A{
+
+        <br><br>   // default const explicitly created
+        <br><br>   A() {
+
+        <br><br>  this(10); // compiler will not add super() as we have added this()
+        <br><br>   System.out.println("parent");
+        <br><br>   }
+
+        <br><br>   // since below is parameterized const, we have to explicitly create default const, as compiler will not create
+        <br><br>   // the default const if we have any parameterized one in the class
+        <br><br>   A(int x) {
+
+        <br><br>   // compiler will add super() as no super() or this() added by us
+
+        <br><br>    System.out.println("parent");
+        <br><br>   }
+
+
+</h3>
+
+            <br></td>
+    </tr>
+
+</table>
+
+
+</html>
+
+

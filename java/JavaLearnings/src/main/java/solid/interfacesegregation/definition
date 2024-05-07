@@ -1,0 +1,7 @@
+
+no class should be forced to implement all interface methods
+so we should segregate interfaces so that each interface only has useful
+related methods and no class is forced to implement any of the method
+
+
+segregate interfaces and create multiple interfaces, so that class implements them as required

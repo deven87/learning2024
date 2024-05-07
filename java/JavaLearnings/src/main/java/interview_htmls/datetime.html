@@ -1,0 +1,69 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+<table>
+    <tr>
+        <td>
+
+            <h1> Working with date and time</h1>
+
+            <br><br>// We can use LocalDate class to get date
+            <br><br>// we can use LocalDateTime class to get date and time
+            <br><br>// We can user Date class of util package to get the date with time
+            <br><br>// We can use SimpleDateFormat class and its method to get date in a given format and time zone
+            <br><br>// We can use Calendar class to use different utilities methods
+
+            <h3>
+                <br><br>LocalDate d =   LocalDate.now();
+
+                <br><br>LocalDate bday = LocalDate.of(1987,05,05);
+
+                <br><br>Period p = Period.between(bday, d); // 36Y3M22Ds
+
+                <br><br>System.out.println(d);
+
+                <br><br>LocalDateTime ldt  = LocalDateTime.now();
+
+                <br><br>System.out.println(ldt);
+
+
+                <br><br>System.out.println(d.getDayOfMonth());
+
+                <br><br>System.out.println(ldt.getMonthValue());
+
+                <br><br>System.out.println(new Date());
+
+                <br><br>SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+                <br><br>System.out.println(sdf.format(new Date()));
+
+                <br><br>Calendar c = Calendar.getInstance();
+
+                <br><br>System.out.println(c.getTime());
+
+                <br><br>Calendar c1 = Calendar.getInstance(); // get instance of Calendar
+
+                <br><br>System.out.println(c1.get(Calendar.DAY_OF_WEEK)); // get day of the week
+
+                <br><br>System.out.println(c1.get(Calendar.DAY_OF_MONTH)); // get day of the month
+
+                <br><br>System.out.println(c1.getTimeZone().getDisplayName()); // get current time zone
+
+                <br><br>c1.setTimeZone(TimeZone.getTimeZone("GMT")); // set time zone to gmt
+
+                <br><br>System.out.println(c1.get(Calendar.HOUR)); // will return gmt current hour
+
+
+                <br><br>// get time in different zone
+                <br><br>SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd:::hh-mm-ss");
+
+                <br><br>sdf1.setTimeZone(TimeZone.getTimeZone("GMT"));
+
+                <br><br>String date1 =  sdf1.format(new Date());
+
+                <br><br>System.out.println(date1);
+
+            </h3>
+        </td></tr></table></html>

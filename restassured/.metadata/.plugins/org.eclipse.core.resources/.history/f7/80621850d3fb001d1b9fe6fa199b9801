@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-26T17:43:56 IST" name="Pet Store API Suite" finished-at="2023-05-26T17:44:01 IST" duration-ms="4636">
+    <groups>
+    </groups>
+    <test started-at="2023-05-26T17:43:56 IST" name="Pet Store API Suite" finished-at="2023-05-26T17:44:01 IST" duration-ms="4636">
+      <class name="petstore.test.UserModuleTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:petstore.test.UserModuleTest@54c562f7]" started-at="2023-05-26T17:43:51 IST" name="beforeSuite" finished-at="2023-05-26T17:43:56 IST" duration-ms="5349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:petstore.test.UserModuleTest@54c562f7]" started-at="2023-05-26T17:43:56 IST" name="beforeClass" finished-at="2023-05-26T17:43:56 IST" duration-ms="164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="createUserTest()[pri:1, instance:petstore.test.UserModuleTest@54c562f7]" started-at="2023-05-26T17:43:56 IST" name="createUserTest" finished-at="2023-05-26T17:43:59 IST" duration-ms="2848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method signature="getUserTest()[pri:2, instance:petstore.test.UserModuleTest@54c562f7]" started-at="2023-05-26T17:43:59 IST" name="getUserTest" finished-at="2023-05-26T17:44:01 IST" depends-on-methods="petstore.test.UserModuleTest.createUserTest" duration-ms="1603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:petstore.test.UserModuleTest@54c562f7]" started-at="2023-05-26T17:44:01 IST" name="afterSuite" finished-at="2023-05-26T17:44:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- petstore.test.UserModuleTest -->
+    </test> <!-- Pet Store API Suite -->
+  </suite> <!-- Pet Store API Suite -->
+</testng-results>

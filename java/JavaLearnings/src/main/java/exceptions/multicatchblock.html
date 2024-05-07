@@ -1,0 +1,64 @@
+<html>
+
+<table>
+
+    <tr>
+
+
+        <td>  <br>from 1.7 version, you can have multiple exceptions inside a single catch block</td>
+    </tr>
+    <tr>
+
+        <td>  <br>Separate exception using | and multiple exception can be handled in same catch block</td>
+    </tr>
+    <tr>
+
+        <td>  <br>this is helpful where the handling code is same for different exception, code reduandncy is reduced as not need to write same code in multiple catch blocks</td>
+    </tr>
+    <tr>
+
+        <td>   <br>the exception class in a single catch should not be related with each other, as e.g. if parent child are there then there is no need for child
+            as parent itself will handle child exception also, so the classes should not be related
+        </td>
+    </tr>
+
+    <tr>
+
+        <td>
+
+            <br><br> <b>this will handle both arithmetic and null pointer exception</b><br><br>
+            catch (ArithmeticException | NullPointerException e1)<br>
+            {  <br>
+
+            System.out.println("handled");<br>
+            <br>
+            }<br>
+
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td>
+
+            <br><br> <b>below is not allowed as Exception is parent of ArithmeticException and it can handle ArithmeticException itself, related classes not allowed</b><br><br>
+            catch (ArithmeticException | Exception e1)<br>
+            {  <br>
+
+            System.out.println("handled");<br>
+            <br>
+            }<br>
+
+
+        </td>
+
+    </tr>
+
+
+
+</table>
+
+
+</html>

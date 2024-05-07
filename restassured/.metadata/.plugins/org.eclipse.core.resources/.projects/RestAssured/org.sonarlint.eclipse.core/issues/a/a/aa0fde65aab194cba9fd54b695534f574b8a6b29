@@ -1,0 +1,23 @@
+
+q	java:S106H"9Replace this use of System.out or System.err by a logger.(Ô˜éòøÿÿÿÿ8Û¹ì“…1H¥­RMAJORZ
+CODE_SMELL
+¹
+java:S1192("Define a constant instead of duplicating this literal "d5fb694ce3c1feae1c7ab8ed194f52bb8b1cdeb6e8813224d02399ffae914830" 4 times.(¾¬¶º8Û¹ì“…1H®­RCRITICALZ
+CODE_SMELL
+e	java:S106"9Replace this use of System.out or System.err by a logger.(ïÙÄ¦H­­RMAJORZ
+CODE_SMELL
+i
+java:S1128"0Remove this unused import 'org.json.JSONObject'.(œÖ´üşÿÿÿÿ8ºÅõ“…1H¦­RMINORZ
+CODE_SMELL
+‹	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶§âÜÿÿÿÿÿH¬­RMINORZ
+CODE_SMELL
+¡
+java:S11927"jDefine a constant instead of duplicating this literal "https://gorest.co.in/public/v2/users/{id}" 3 times.(Ï—Äú8Û‹…”…1H¨­RCRITICALZ
+CODE_SMELL
+ˆ
+java:S1192("QDefine a constant instead of duplicating this literal "application/json" 4 times.(¾¬¶º8Û¹ì“…1HŸ­RCRITICALZ
+CODE_SMELL
+q	java:S106$"9Replace this use of System.out or System.err by a logger.(Ô˜éòøÿÿÿÿ8ãÔ¯“…1H¤­RMAJORZ
+CODE_SMELL
+k	java:S1065"9Replace this use of System.out or System.err by a logger.(Ù‹´98ùÍ¹“…1H­RMAJORZ
+CODE_SMELL

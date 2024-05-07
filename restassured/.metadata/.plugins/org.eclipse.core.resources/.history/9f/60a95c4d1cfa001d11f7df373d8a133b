@@ -1,0 +1,73 @@
+package RestAssured.RestAssured;
+
+import java.io.FileNotFoundException;
+
+import org.testng.annotations.Test;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+{
+
+	RestRequests test = new RestRequests();
+
+	/**
+	 * Rigorous Test :-)
+	 */
+	@Test (priority = 1, enabled = false)
+	public void shouldAnswerWithTrue()
+	{
+
+		System.out.println("my first test method");
+
+
+
+		test.getRequestexample();
+
+
+	}
+
+	@Test (priority = 2, enabled = false)
+	public void createUser() throws FileNotFoundException {
+
+		test.createUser1();
+		test.createUser2();
+		test.createUser3();
+		test.createUser4();
+
+
+	}
+
+	@Test (priority = 3, enabled = false, dependsOnMethods = {"createUser"})
+	public void updatedUser() {
+
+		test.updateUser();
+
+
+	}
+
+	@Test (priority = 4, enabled = false, dependsOnMethods = {"createUser"})
+	public void getUser() {
+
+		test.getUser();
+
+
+	}
+	
+	@Test (priority = 6, enabled = false)
+	public void getUserWithPathAndParam() {
+
+		test.sendParam();
+
+
+	}
+	
+	@Test (priority = 7, enabled = true)
+	public void getCookieHeader() {
+
+		test.sendParam();
+
+
+	}
+}

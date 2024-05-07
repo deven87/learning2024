@@ -1,0 +1,795 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+         <h1> Collection Framework</h1>
+
+            <br> Collection is an interface in java and Collection Framework is a complete framework, set of interfaces, classes and varous utility methods
+
+            <br><br>Collection is basically a group of objects
+
+            <br><br> just like Array is a group of homogenous data types, collection is group of objects
+
+            <br><br>similarly Collection is a group of object, can be homogeneous or hetrogeneous
+
+            <br><br> Collections class is part of collection framework and a utility class which provide several methods
+
+            <br> <br>All of the Collection classes have tostring overridden to return the content.
+            <br> so collection printing with give [element1, element2, ...]
+
+            <br><br>all collections implement  serializable and cloneable
+        </td>
+
+    </tr>
+
+    <tr><td>
+
+
+        <br><br><h1> Collection hierarchy</h1>
+        <img src="collectionhierarchy.png" width="700"/>
+
+    </td></tr>
+
+    <tr><td><br><br>
+        <h1> Collection interface methods which are available in all implementing classes</h1>
+
+    <br>few methods are defined inside collection interface which are applicable thrugh out the hierarchy
+
+
+        <h3>
+    <br><br>add(Object o) to add an object to any collection
+
+    <br><br>add(Collection c) to add a complete colelction to any collection
+
+    <br><br>contains() contains a object or a collection // return true if the given object is found in collection
+
+    <br><br> isEmpty() // return true if collection does not contains any object
+
+    <br><br>remove(object ) to remove a object // return the object if removed, else return false
+
+    <br><br>remove(collection) to remove a collection , remove the collection if removed, else return false
+
+    <br><br> toArray()  // change collection to array of object
+
+
+    <br><br>size() // return the no of object the collection has
+        </h3></td></tr>
+
+    <tr><td>
+
+        <br><h1>
+          <br>  List: List are collection in which insertion order is preserved and duplicates are allowed
+        </h1>
+
+        <br> List interface implementing classes are
+
+        <br><br> <b>ArrayList:</b> arraylist are internally array of object only which are growable
+        <br> ArrayList are used when retrieval is the main this as retrieval is fast for any element
+        while insertion is slow, as when any element we want to insert, all elements after that will be shifted
+        <br><br><b>LinkedList</b> linked list are internally double linked list having node, each node contains address of previous and next node
+            <br>each node contain value
+                <br> Linked list are worst on retrieval as retreival is done from the start to end
+                <br> Linked list are best at insertion, as only two nodes address to be changed when elements to be inserted in between
+
+        <br><br><b>Vector and its child class stack are also List type collection</b>
+
+
+    </td></tr>
+
+    <tr><td>
+
+        <h1>
+            <br> List common methods</h1>
+
+            <h3>
+                <br><br>  all collection methods are available inside list along with its own methods:
+
+                <br><br>  add(index, object) // add object at any index
+
+                <br><br> object get(index) // get object at an index
+
+                <br><br> int indexOf(object) // get index of an object, it returns first object index
+
+
+                <br><br> int lastIndexOf(object) // get last index of object
+
+            </h3>
+
+
+
+
+
+    </td></tr>
+
+    <tr><td>
+
+        <h1> Arraylist in detail: </h1>
+        <br> insertion order is preserved, duplicates are allowed, insertion is slow and worst, retrieval is very fast
+
+        <b> Use Arraylist when you have a lot of retrival operations and less insertion operation</b>
+
+        <h3> ArrayList Constructors
+
+            <br>
+            <br>ArrayList al = new ArrayList(); // default capacity is 0 untill first element is added
+
+
+            <br> ArrayList&lt;Integer&gt; al1 = new ArrayList&lt;Integer&gt;();
+            <br>    ArrayList&lt;Integer&gt; al2 = new ArrayList&lt;&gt;();
+            <br>      ArrayList&lt;Integer&gt; al3 = new ArrayList();
+            <br>          ArrayList&lt;Integer&gt; al4 = new ArrayList(100); // capacity 100
+
+            <br>              ArrayList&lt;Integer&gt; al5 = new ArrayList(al);
+
+
+        </h3>
+
+        <br><br><b>arraylist capacity increased when current one is full, increased to- (currentcapacity*3/2)+1</b>
+
+
+        <br><br><b>ArrayList and vector only are the two which implements RandomAccess to access any element, so any element can be accessed fast in same time</b>
+
+        <br> retriving first element will take same time as retriving 1000th element in array list as they implement random access
+
+        <h3>
+
+            <br>ArrayList li1 = new ArrayList(20);
+
+
+            <br> System.out.println( li1 instanceof Serializable); //true
+            <br> System.out.println( li1 instanceof Cloneable); // true
+
+            <br>System.out.println( li1 instanceof RandomAccess); // true
+
+        </h3>
+
+    </td></tr>
+
+
+
+
+    <tr><td>
+
+        <br>
+        <h1> Arraylist methods: </h1>
+
+    <h3>
+
+
+        <br> <br> ArrayList al = new ArrayList(); // default capacity is 0 untill first element is added
+        ArrayList al1 = new ArrayList();
+
+        <br> <br> al.add(10); // add object
+
+        al.add("abc"); // ad object
+
+        <br> <br> al.add(1, 10); // add element at an index
+
+        <br> <br> al.add(al1); // added a collection
+
+        <br> <br> al.add(null); // add object
+        <br> <br> al.add(null); // add object
+
+        <br> <br> al.remove(10); // remove object at index and return object, return false otherwise
+
+        <br> <br> al.remove("abc"); // remove the object, return true if removed, else false
+
+        <br> <br> al.removeAll(al1); // remove a collection, return true if found and removed
+
+        <br> <br>al.size(); // get size, collection method
+
+        <br> <br> al.isEmpty(); // true if empty, collection method
+
+        <br> <br> al.ensureCapacity(100); // ensure that al will have atleast given capacity
+
+        <br> <br> al.get(10); // return element from an index
+
+        <br> <br> al.indexOf(10); // return index of the passed object, if not exist, return false
+
+        <br> <br> al.clear(); // remove all elements
+
+    </h3>
+
+    </td></tr>
+
+    <tr><td>
+
+        <h1>Arraylist with generic</h1>
+
+        <h3>
+        ArrayList al1&ltInteger&gt = new ArrayList();
+
+        <br> <br> al.add(10); // add object valid
+
+            <br>  al.add("abc"); // ad object invalid and will give compile time error, as arraylist now is homogeneous and can hold only Integer values
+            <br> we have made arraylsit typesafe here using generic
+        </h3>
+
+    </td></tr>
+
+
+    <tr><td>
+
+        <h1> Linkedlist in detail: </h1>
+        <br><b> insertion order is preserved, duplicates are allowed, insertion is fast, retrieval is always done from start of list to end
+
+        so in finding first element time is 1 sec, finding 100th element will take 100 sec</b>
+
+        <br> retrival is worst in linked list
+
+        <b> Use LinkedList when you have a lot of insertion operations and less retrival operation</b>
+
+        <h3> LinkedList Constructors
+
+            <br>ArrayList al = new ArrayList();
+            <br>LinkedList ll = new LinkedList();
+            <br> LinkedList&lt;Integer&gt; ll1 = new LinkedList&lt;Integer&gt;();
+            <br>    LinkedList&lt;Integer&gt; ll2 = new LinkedList&lt;&gt;();
+            <br>      LinkedList&lt;Integer&gt; ll3 = new LinkedList();
+            <br>          LinkedList&lt;Integer&gt; ll4 = new LinkedList();
+
+            <br>              LinkedList&lt;Integer&gt; ll5 = new LinkedList(al);
+
+
+        </h3>
+
+        <h3>
+
+            <br>LinkedList li1 = new LinkedList();
+
+
+            <br> System.out.println( li1 instanceof Serializable); //true
+            <br> System.out.println( li1 instanceof Cloneable); // true
+
+            <br>System.out.println( li1 instanceof RandomAccess); // false
+
+        </h3>
+
+    </td></tr>
+
+
+
+
+    <tr><td>
+
+        <br>
+        <h1> Linkedlist methods: </h1>
+
+        <h3>
+
+            <br><br><b> SPECIFIC LINKED LIST METHODS ARE:</b>
+
+            <br>  <br>   addfirst, addlast, getfirst, getlast, removefirst, removelast
+
+            <br>  <br>  LinkedList l = new LinkedList(al);
+
+
+            <br>   ll.addFirst(10);
+            <br>  ll.addLast(20);
+
+            <br>  ll.getFirst();
+            <br>  ll.getLast();
+
+            <br>  ll.removeFirst();
+            <br>  ll.removeLast();
+
+
+            <br><br> Other common methods from collection, list
+            <br> <br> LinkedList ll = new LinkedList();
+            <br> LinkedList ll1 = new LinkedList();
+
+            <br> <br> ll.add(10); // add object
+
+            ll.add("abc"); // ad object
+
+            <br> <br> ll.add(1, 10); // add element at an index
+
+            <br> <br> ll.add(al1); // added a collection
+
+            <br> <br> ll.add(null); // add object
+            <br> <br> ll.add(null); // add object
+
+            <br> <br> ll.remove(10); // remove object at index and return object, return false otherwise
+
+            <br> <br> ll.remove("abc"); // remove the object, return true if removed, else false
+
+            <br> <br> ll.removeAll(al1); // remove a collection, return true if found and removed
+
+            <br> <br>ll.size(); // get size, collection method
+
+            <br> <br> ll.isEmpty(); // true if empty, collection method
+
+            <br> <br> ll.get(10); // return element from an index
+
+            <br> <br> ll.indexOf(10); // return index of the passed object, if not exist, return false
+
+            <br> <br> ll.clear(); // remove all elements
+
+
+
+
+        </h3>
+
+    </td></tr>
+
+    <tr><td>
+
+        <h1>Linkedlist with generic</h1>
+
+        <h3>
+            LinkedList al1&ltInteger&gt = new LinkedList();
+
+            <br> <br> al.add(10); // add object valid
+
+            <br>  al.add("abc"); // ad object invalid and will give compile time error, as linkedlist now is homogeneous and can hold only Integer values
+            <br> we have made arraylsit typesafe here using generic
+        </h3>
+
+    </td></tr>
+
+
+    <tr><td><h1> Set:</h1>
+
+    <br>   <br>Set does not allow duplicates and insertion order is not preserved, means when you insert them, they are not
+    <br>inserted in the same order
+
+        <br> Set is implemented by classes HashSet and TreeSet
+
+        <br>  <br>    underlying data structure is hashtable
+
+        <br>  <br>  duplicates are not allowed
+
+        <br>  <br>  insertion order is not preserved
+
+    </td></tr>
+
+
+    <tr><td>
+
+        <br><br>
+        <h1> HashSet: implements Set interface</h1>
+        <br> underlying structure is hashtable
+        <br> HashSet can be hetrogeneous
+
+        <h3>
+           <br><br> HashSet set1 = new HashSet();
+
+            <br> // initial capacity is 16
+
+            <br>  <br>   FillRatio/Load Factor:
+
+            <br> 0.75 that means if hashset is filled 75%, a new hashset object is created with bigger capacity
+
+            <br>   in arraylist new object is created when old one is completelty full and a new insertion comes.
+
+            <br>  in HashSet, new one will be created when its 75% full
+
+            <br><br>  HashSet set2 = new HashSet(100);
+            <br> // with 100 capacity and defailt load factor 75%
+
+
+            <br><br> HashSet set3 = new HashSet(100, 0.99F);
+            <br>// create hashset object with capacity as 100 and load factor as 99%
+            <br>// means new object will be created when old one is 99% filled
+
+            <br><br> ArrayList al = new ArrayList();
+            <br> al.add(10);
+
+            <br><br> HashSet set4 = new HashSet(al);
+
+            <br><br>  set4.add(20);
+
+
+            <br><br> System.out.println(set4.add(20));
+
+            <br><br> set4.add(30);
+
+            <br><br> set4.add("hello");
+
+            <br><br>set4.add(true);
+
+            <br><br> set4.add(null);
+
+            <br><br>  set4.add(20); // now 20 is already there in set, so duplicates are not allowed
+            <br>// so it will return false and will not add element again
+
+
+            <br><br> // since insertion order is not preserved, output will not give elements in order
+
+           <br> System.out.println(set4);
+
+            <br> // it willl not be same order as added like [10, 20, 30, hello, true, null]
+            <br> // can be [null, 20, 10, hello, 30, true]
+        </h3>
+
+    </td></tr>
+
+
+    <tr><td>
+
+        <br><br>
+        <h1> TreeSet: implements Set interface</h1>
+        <br> TreeSet can not be hetrogeneous because the objects are stored in some sorting order and not in order in which we add
+
+        <br> since it is sorted, so object used must implement comparable interface as on inserting, a compare is required
+
+
+
+        <h3>
+            <br><br> TreeSet set1 = new TreeSet();
+
+            <br><br>  // sorted set
+
+            SortedSet sortedSet = new TreeSet();
+
+            // in normal set we can say that this is first element, this is second element
+
+            // in sorted set they will be added in sorted order only
+
+
+            <br><br> sortedSet.add(10);
+
+            <br><br> sortedSet.add(5);
+
+            <br><br> sortedSet.add(15);
+
+            <br><br>   System.out.println( sortedSet.add("ten")); // will give exception as sorted set can not have hetrogeneous elements
+
+
+            <br><br> sortedSet.add(4);
+
+            <br><br> sortedSet.add(20);
+
+            <br><br>  // duplicate not allowed
+            System.out.println(  sortedSet.add(20));
+
+
+            <br><br> // data will be stored any printed in sorted order as we used sorted sets
+            System.out.println(sortedSet); // [4,5,10,15,20]
+
+
+            <br><br> System.out.println(sortedSet.first()); // first element //4
+
+            <br><br> System.out.println(sortedSet.last()); // last element //20
+
+
+            <br><br> System.out.println(sortedSet.headSet(10)); // elements less than 10, fetch from set // [4,5]
+
+            <br><br> System.out.println(sortedSet.tailSet(10)); // elements greater than equal to 10 // [10, 15, 20]
+
+            <br><br> System.out.println(sortedSet.subSet(10,20)); // greater than equal to 10 less than 20 // [10, 15]
+
+            <br><b>null is not allowed</b>
+           <br><br> SortedSet s1 = new TreeSet();
+
+            <br><br>  s1.add(null); // run time ecxception, since treeset is sorted, each element when added is compared with other objects
+            <br> // hence it will return NullPointerException
+
+        </h3>
+
+    </td></tr>
+    <br> <br>
+    <tr><td><h1> Map </h1>
+
+
+      <br><br>  // Map, map basically strores object in key value pair which are called entries
+        <br><br> // so Map is basically  group of entries
+        <br><br> // Map is further implemented by classes HashMap, TreeMap and LinkedHashMap
+        <br><br> // Map internally uses array list and linkedlist
+        <br><br> // Map node has following this:
+        <br><br> // key, value, next element reference which has the same index
+        <br><br> // In map based on key a hashcode is calculated and then it is stored in array index
+        <br> <br> each keyvalue pair is known as entry
+
+        <img src="map.png" width="500"/>
+
+
+    </td></tr>
+
+    <tr><td><h1> <br><br>HashMap </h1>
+
+        <b>It is implemented by an array of linked lists.</b>
+
+        <br> <br> values are stored as key pair, duplicate keys are allowed
+        <br> <br> initial capacity is 16 and  load factor is -.75
+
+        <br> <br>A HashMap contains values based on the key.
+        <br> <br>It contains only unique elements.
+        <br> <br>It may have one null key and multiple null values.
+        <br> <br>It maintains no order.
+        <br><br> // hetrogeneous
+
+        <h3> Hashmap is hetrogenous for key and value both
+          <br><br>  HashMap map = new HashMap();
+
+            <br><br>     map.put(null, 1);
+
+            <br><br>    map.put(1, null);
+            <br><br>    map.put(2, null);
+            <br><br>    map.put("three", true);
+
+            <br><br>  map.get(1); // get value for any key
+
+            <br><br>   System.out.println(map);
+        </h3>
+
+        <h3>
+            <br> <br>  HashMap&ltInteger, String&gtmap = new HashMap<>();
+
+            <br> <br> map.put(10, "a");
+             <br> map.put(11, "b");
+            <br> map.put(2, "c");
+
+            <br> <br> System.out.println(map);
+            <br> // no insertion order so output is not in any order
+            <br>// [2=c, 10=a, 11=b]
+        </h3>
+
+     <h3>
+
+        <br> <br>Map&ltInteger, String&gt mapH = new HashMap();
+
+        <br> <br> mapH.put(1, "devendra");
+        <br>mapH.put(2, "devendra");
+        <br>mapH.put(1, "singh"); // key can not be duplicate, so value for key 1 is replaced
+
+        <br> <br>System.out.println(mapH);
+
+        <br> <br>  mapH.remove(1); // remove object from key, return the object removed or false if not found
+
+        <br> <br>  mapH.remove(1, "devendra"); // true if removed
+
+        <br> <br> mapH.isEmpty(); // return true if empty
+
+        <br> <br>  mapH.size(); // get the size of map
+        <br> System.out.println( "size " + mapH.size());
+
+        <br> <br> mapH.clear(); // remove all elements from map
+
+        <br> <br> mapH.put(1, "devendra");
+        <br> mapH.put(2, "hello");
+
+        <br> <br> System.out.println( "size " + mapH.size());
+
+        <br> <br>Set s = mapH.entrySet(); // give the set view of entries of map
+
+        <br> <br> Iterator itr = s.iterator(); // get the iterator for set
+
+        <br> <br> while(itr.hasNext()) {
+        <br> System.out.println("hello");
+        <br> System.out.println(itr.next());
+        <br> }
+
+        <br> <br> // we can also iterator over map using Entry property of Map class
+
+        <br> <br> for (Map.Entry e :  mapH.entrySet()) {
+
+        <br> System.out.println(e.getKey());
+        <br>System.out.println(e.getValue());
+        <br>}
+    </h3>
+
+    </td></tr>
+
+    <tr><td><h1>
+        <br><br>TreeMap    </h1>
+        <br> Treemap store value same as hashmap but in sorting order of keys by default
+
+        <br> treemap is homogenous for both key and value, it can not store null key but can store multiple null values
+
+        <br> since it is sorted based on key, so key must implement comparable interface
+        <br>TreeMap is implemented by a Red-Black Tree.
+
+
+        <h3>
+
+        <br><br>Map&ltInteger, String&gt mapT = new TreeMap();
+
+            <br><br> mapT.put(3, "singh");
+            <br><br> mapT.put(2, "devendra");
+
+            <br><br> mapT.put(1, "manish");
+
+            <br><br>  // since its a sorted map, insertion order is in some sorting mechanism
+            <br>// here it is inserted based on sorting of key by default
+            <br>System.out.println(mapT); // [1=manish, 2=devendra, 3=singh] as it is sorted in natural order
+
+            <br><br> mapT.remove(1); // remove object from key, return the object removed or false if not found
+
+            <br><br> mapT.remove(1, "devendra"); // true if removed
+
+            <br><br> mapT.isEmpty(); // return true if empty
+
+            <br><br> mapT.size(); // get the size of map
+            <br><br> System.out.println( "size " + mapT.size());
+
+            <br><br> mapT.clear(); // remove all elements from map
+
+            <br><br> mapT.put(1, "devendra");
+            <br><br> mapT.put(2, "hello");
+
+            <br><br>  mapT.get(1); // get value for any key
+
+            <br><br>mapT.containsKey(1);
+            <br><br>mapT.containsValue("as");
+
+            <br><br> System.out.println( "size " + mapT.size());
+
+            <br><br> Set s = mapT.entrySet(); // give the set view of entries of map
+
+            <br><br>Iterator itr = s.iterator(); // get the iterator for set
+
+            <br><br> while(itr.hasNext()) {
+            <br>System.out.println("hello");
+            <br>System.out.println(itr.next());
+            <br>}
+
+            <br><br>// we can also iterator over map using Entry property of Map class
+
+            <br><br>  for (Map.Entry e :  mapT.entrySet()) {
+
+            <br>System.out.println(e.getKey());
+        <br>System.out.println(e.getValue());
+            <br>}
+
+            <br><br> mapT.put(2, "devendra");
+
+            <br><br>System.out.println(mapT);
+
+
+          <br><br>  mapT.put(1, null); // null are allowed in value
+
+            <br>  mapT.put(2, null);
+
+            <br>  System.out.println(mapT);
+
+            <br><br>   mapT.put(null, "As"); // exception for using null as a key
+
+            </h3>
+
+
+    </td></tr>
+
+    <tr><td><h1> LinkedHashMap</h1>
+
+     <br><br>   // LinkedHashMap underlying structure is double linked lists
+
+        <br><br>   // LinkedHashMap store data in order in which they are inserted
+
+        <br><br>  // no sorting, duplicate values are allowed
+
+        <br><br> // hetrogeneous
+
+       <h3><br><br> LinkedHashMap hmp = new LinkedHashMap();
+           <br><br>  LinkedHashMap hmp = new LinkedHashMap(20);
+           <br><br>LinkedHashMap hmp = new LinkedHashMap(20, 0.99F);
+
+           <br><br>  hmp.put(1, "abd");
+           <br>  hmp.put(15, "deb");
+           <br> hmp.put(2, "as");
+
+           <br><br>System.out.println(hmp);
+           <br>   //  {1=abd, 15=deb, 2=as} order is same as insertion order
+
+           <br><br> Set s = hmp.keySet(); // give a set of all keys of map
+
+           <br><br> Iterator itr = s.iterator();
+
+           <br><br> while (itr.hasNext()){
+           <br> System.out.println(itr.next());
+           <br> }
+
+           <br><br> hmp.remove(1); // remove they entry
+
+           <br><br> hmp.containsKey(1);// returns true if given key is contains in map
+           <br><br> hmp.containsValue("as"); // returns true if given value is contains in map
+
+           <br><br>hmp.entrySet(); // return a set representation of entries of map
+
+           <br><br> hmp.get(1); // get value for any key
+
+           <br><br> hmp.replace(1, "asd"); // replace value of key with given value
+
+       </h3>
+
+
+
+    </td></tr>
+
+    <tr><td>
+<br><br>
+        <h1> Iterator vs ListIterator</h1>
+        <br> Iterator is applicable to all collections while ListIterator is only for List type of collection
+
+        <br> Iterator can traverse only in forward direction and can not access the index
+        <br> ListIterator can traverse in both forward and backward directly and can access index
+
+       <br><br> <h1>ListIterator</h1>
+
+        <h3>
+
+
+            <br> <br>   List list = new LinkedList();
+
+            <br> <br>  list.add(1);
+            <br> <br>list.add(2);
+
+            <br> <br>   ListIterator itr = list.listIterator();
+
+            <br> <br>  // hasNext() will return true if list has more element when traversing forward
+            <br> <br>  while(itr.hasNext()) {
+
+
+            <br> <br> // nextIndex() return the element index which will be returned by next(), will return list size if last element
+            <br> <br> // since next will be the 0th element at first so index with return 0 at first
+            <br> <br> System.out.println(itr.nextIndex());
+
+            <br> <br> // next() return the next element in the list and move curser to one forward
+            <br><br> System.out.println(itr.next());
+
+
+            <br><br> }
+
+            <br> <br> // output will be 1 2 for itr.next()
+
+            <br> <br>  // hasPrevious() return true when traversing the list in reverse order
+            <br> <br>  while  (itr.hasPrevious()) {
+
+            <br> <br>// previous() return the previous element in the list, and move curser to one backward
+            <br> <br> System.out.println(itr.previous());
+
+            <br><br> // previousIndex() return the index of previous element, -1 if first element
+            <br><br> System.out.println(itr.previousIndex());
+            <br><br> }
+
+            <br><br>// output will be 2 1 for itr.previous()
+
+
+        </h3>
+
+
+
+    </td></tr>
+
+    <tr><td>
+
+        <br><br>
+        <h1>Iterator</h1>
+
+        <h3>
+            <br><br> List list = new LinkedList();
+
+            <br><br> list.add(1);
+            <br><br> list.add(2);
+
+            <br><br> // using Iterator instead of ListIterator
+            <br><br> Iterator itr = list.iterator();
+
+            <br><br> // hasNext() will return true if list has more element when traversing forward
+            <br><br> // Iterator  does not have index or previous methods
+            <br><br> // Iterator traverse in foroward direction only
+
+            <br><br> while(itr.hasNext()) {
+
+            <br><br> // return the next element in the iteration
+            <br><br> // throws nosuchelement if no next element
+            <br><br> System.out.println(itr.next());
+
+
+            }
+        </h3>
+
+
+    </td></tr>
+
+
+
+</table>
+</html>

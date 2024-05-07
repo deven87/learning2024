@@ -1,0 +1,41 @@
+package gorest.reports;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class ExtentReport {
+
+
+	static ExtentReports er;
+	static ExtentSparkReporter reporter;
+	static ExtentTest test;
+
+	public static void startReporting() {
+
+		er = new ExtentReports();
+		reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/extentreport.html");
+
+		er.attachReporter(reporter);
+		
+
+	}
+	
+	public static ExtentReports getReport() {
+		
+		return er;
+	}
+
+public static ExtentTest getTest() {
+		
+		return test;
+	}
+
+public static ExtentReports getTest() {
+	
+	return test;
+}
+
+
+
+}

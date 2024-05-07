@@ -1,0 +1,583 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+   <tr>
+    <td>
+
+        <h1> definition</h1>
+        condition which cause program to stop and exit abnormally is called exception<br>
+
+        to stop this and handle the exception so that program terminates normally we use exception handling<br>
+        <br>
+
+        <h3>
+
+            {
+            int i = 0; <br>
+            System.out.println(10/i); <br> <br>// we are dividing by zero here, so arithmetic exception will occur<br><br>
+            int z =10;  // this will not execute as exception above has caused abnormal termination of program<br>
+
+            }
+
+        </h3>
+    <br></td>
+   </tr>
+
+
+
+    <tr>
+        <td>
+            <h1>try catch finally </h1>
+            add code which can give exception in try block, when exception will occur, control will shift to catch block, rest of the try block after exception will not execute<br><br>
+            write your code in catch block which you want to execute in case exception occurs, once catch is executed control will return to first statement after catch<br><br>
+            write your code in finally block, which you want to execute when exception is there or no exception. finally will execute even when there is no exception, so here you can write your logic which you want to execute in every case<br><br>
+            finally will either execute just after try or just after catch <br><br>
+
+            <h3>
+                try{} <br>
+                catch(ExceptionClass reference){}<br>
+
+            </h3>
+
+            <h3>
+                try{ <br>int i = 0;<br>
+                int z = 10/i; // here control will shift to catch and no statement inside try after this will execute<br>
+                int k = 20 } <br><br>
+                catch(ArithmeticException e){<br>
+
+                System.out.println("you have encountered /0 exception, but we are in catch so it is handled, now<br>
+                first statement after catch will execute<br>
+
+                }<br><br>
+                finally{<br>
+                System.out.println("I will execute whether exception or no exception")<br>
+                }<br>
+
+            </h3>
+
+
+            <h3>
+                try{} <br>
+                catch(ExceptionClass reference){}<br>
+                finally{}<br>
+            </h3>
+
+            </td>
+    </tr>
+
+
+    <tr>
+        <td>
+
+
+            normal try block can not come alone, it can come either with catch or finally<br>
+
+            catch and finally can not come alone, try-catch, try-finally, try-catch-finally is one block<br>
+            so {} are also mandatory in try catch finally<br>
+
+            <br></td>
+    </tr>
+
+    <tr>
+        <td>
+
+            <h1>multiple catch </h1>
+            multiple catch blocks can be there to handle different exception, same exception two catch block are not allowed<br>
+
+            when exception occurs in try, control will come out, check the first catch if handling the exception, if not it will go to second catch and so on until it finds the same or parent excepotion catch
+            <h3>
+                try{} <br>
+                catch(NullPointerException e1){}<br>
+                catch(Exception e){}<br>
+                finally{}<br>
+            </h3>
+
+            if parent exception and child exception are there in catch, parent must come after child, otherwise child wont execute at all so compile time error<br>
+
+
+            <h3>
+                <b>// below not allowed as parent exception catch is followed by child exception</b><br>
+                try{} <br>
+                catch(Exception e){}<br>
+                catch(NullPointerException e1){}<br>
+
+                finally{}<br>
+            </h3>
+
+            <h3>
+                <b>// below is allowed as parent exception catch is at the end</b><br>
+                try{} <br>
+                catch(NullPointerException e1){}<br>
+                catch(Exception e){}<br>
+
+
+                finally{}<br>
+            </h3>
+
+            <br></td>
+    </tr>
+
+    <tr>
+        <td>
+
+            <h1>  <b>default exception handler</b></h1>
+
+            when an exception occurs, exception object is created and given to JVM, JVM will see if it is being handled by the method<br>
+            which caused exception if not, it will go to the caller of the method and see if the caller is handling the exception<br>
+
+            if no one is handling it, JVM will give it to default exception handler wchich cause the program to terminate abnormally with exception details<br>
+
+                <br>
+            <br></td>
+    </tr>
+
+    <tr>
+        <td>
+
+            <h1>
+            <b> Checked, unchecked and fully checked exception</b><br></h1>
+
+            Any exception which is checked by compiler to certain that it must be handled is checked<br><br>
+
+            e.g. FileNotFound, these are some mandatory things which compiler consider that it must be handled<br><br>
+
+            any exception which is not checked by compiler, means compiler wont give any error if it is handled or not<br><br>
+
+            is unchecked
+
+            in java RunTimeException and its subclasses(AE, NPE, CCE) and Error and its subclasses(VME, SOFE, ME) are unchecked<br><br>
+            rest all are checked
+
+            any class which is checked and all of its subclasses are also checked is called fully checked<br><br>
+
+            any class which is checked but its subclasses are unchecked is partially checked<br><br>
+
+            to catch a fully checked exception it must be thrown in try block<br><br>
+
+            we must handle the checked exception either using try-catch or using throws<br><br>
+
+            we should handle unchecked exception, as from compiler side there is no error <br><br>
+
+            to catch a partially checked or unchecked exception it may or may not be thrown in try block<br><br>
+
+
+            <b> only exception and throwable are partially checked exception classes</b><br>
+
+            <br>
+
+
+        <h3>
+            <br>
+        try {<br>
+
+        } catch (NullPointerException e) { // this is allowed as unchecked or partially checked exception <br>
+       can be caught without them even not being thrown<br>
+
+        } <br><br>catch(IOException e1){<br>
+            // not allowed as fully checked exception must be thrown then only we can catch them<br>
+
+        }<br>
+        </h3>
+        </td>
+
+
+
+
+    </tr>
+
+    <tr>
+        <td>
+            <h1>
+            <b>throw</b><br><br></h1>
+
+            you can explicitly throw an exception using throw key work <br>
+
+            <h3>
+            throw new NPE("my NPE Exception"); <br>
+
+            throw new MyOwnException("my NPE Exception"); <br>
+                </h3>
+            you can not write any statement after throw as that will be out of reach<br>
+
+            <br>
+            <h3>
+        throw new ArithmeticException("division by zero");<br>
+               int i = 20; // this is not allwed as it will be out of reach as throwing exception above<br>
+
+                </h3>
+            <br></td>
+    </tr>
+
+    <tr>
+        <td>
+            <h1>
+            <b> throws </b><br><br></h1>
+
+            if an exception is there, you can either handle it using try catch or delicate it to caller using throws<br>
+
+            the caller then have to handle it or it can also delicate to its caller using throws<br>
+
+            you can use multiple exceptions using , in throws, should not use related exceptions<br>
+
+            you can use throws same or parent exception if a method is throwin any exception<br>
+
+            in case of overriding, the child class method if throws checked exception, parent must throws same or its parent<br>
+
+
+            <h3>
+            public static void main(String[] args) throws FileNotFoundException, InterruptedException {<br>
+                </h3>
+
+            <br></td>
+    </tr>
+
+    <tr>
+        <td>
+            <br><h1>
+            You can create your own exception by implmenting/extending any of the exception hierarchy class<br></h1>
+
+            e.g. if you extent Runtimeexception, your class will be unchecked, if you extends Exception class, your class with be checked exception
+
+            <br>  <br>  <br>
+            <h3>
+            class InsufficentFundException extends RuntimeException{  <br>
+
+            InsufficentFundException(String s) {  <br>
+
+            super(s);  <br>
+
+            }  <br>
+
+
+            }  <br>
+
+
+            main() {<br>
+
+            throw new  InsufficentFundException("withdrawl amount is more than balance")<br>
+
+            }<br>
+                </h3>
+            <br>// above is a checked exception class we created</td>
+    </tr>
+
+    <tr>
+        <td>
+
+            <h1><br><b>printing exception</b></h1>
+
+            1. using printstacktrace
+            this method is to print the exception information on output console<br>
+
+           name, description and stacktrace <br><br>
+            <h3>
+             Exception in thread "main" java.lang.NullPointerException<br>
+             : my exception <br>
+
+            at exceptions.D.m2(Throw2.java:59) <br>
+            at exceptions.D.m1(Throw2.java:54) <br>
+            at exceptions.D.main(Throw2.java:49) <br>
+
+            </h3>
+            <br>
+            2. using tostring method
+
+            this will print only name and description
+
+            <h3>
+                Exception in thread "main" java.lang.NullPointerException<br>
+                : my exception <br>
+
+
+            </h3>
+
+            <br><br>
+            3. using getMessage method
+
+            this will print only  description
+
+            <h3>
+
+                : my exception <br>
+            </h3>
+            <br>
+
+            <br></td>
+    </tr>
+
+    <tr>
+        <td>
+
+           <h1> <b>nested try catch</b></h1> <br>
+
+            in nested try catch, you can have same catch same exception for inner and outer try
+
+            as both belongs to different try
+
+            if exception is not handled by inner catch, then it will be checked if outer catch can handle it or not
+
+            <br></td>
+    </tr>
+
+    <tr>
+        <td>
+
+
+            <br></td>
+    </tr>
+
+    <tr>
+
+
+        <td>    <h1><br>Try with resources came from 1.7 version, you can declare and initialize resource in try itself and they will be autoclose without using finally</td>
+        </h1>
+    </tr>
+    <tr>
+
+        <td>  <br>Before 1.7 we explicitly hve to close resources by writing finally block, but from 1.7 try with resource autoclose them</td>
+    </tr>
+    <tr>
+
+        <td>  <br>Using try with resources make the code more readable, and we have to write less code, no burden of closing the resources as they will be closed by JVM</td>
+    </tr>
+    <tr>
+
+        <td>   <br>You can only declare and initialize the resource inside try only from 1.7, but from 1.9 you can declare them out side and use reference in try block
+        </td>
+    </tr>
+    <tr>
+
+        <td>   <br>you can use multiple resource in try by separating them with ;</td>
+    </tr>
+    <tr>
+
+        <td>   <br>resources created in try are by default final so that we can not change them further</td>
+    </tr>
+    <tr>
+
+        <td>   <br>resource created can only be closed automatically if they are autoclosable, means they are implementing
+            autoclosable interface</td>
+    </tr>
+
+    <tr>
+
+        <td>   <br>try can come alone without catch/finally if using try with resource </td>
+    </tr>
+    <tr>
+
+        <td>  <br> resource inside trywithresource are closed automatically once try block reaches its end</td>
+    </tr>
+
+    <tr>
+
+        <td>
+            <br><br>
+
+            <b>from 1.7 version</b><br>
+            1. try with resource using single resource <br><br>
+
+            <h3>
+
+            try (FileInputStream fis = new FileInputStream("asd.a")) {<br>
+
+            fis.read();<br>
+
+            }<br>
+
+                </h3>
+
+            <h3>
+
+
+                try (FileInputStream fis = new FileInputStream("asd.a")) {<br>
+
+                fis.read();<br>
+
+                }<br>
+
+            </h3>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+
+            <br><br>
+            <b>from 1.7 version</b><br><br>
+
+            2. try with resource using multiple resource <br><br>
+            <h3>
+            try (FileInputStream fis = new FileInputStream("asd.a");<br>
+            FileOutputStream fos = new FileOutputStream("abc.txt")) <br>
+            {<br>
+
+            fis.read();<br>
+            fos.write('a');<br>
+
+            }<br>
+            catch (IOException e) <br>
+            {<br>
+            throw new RuntimeException(e);<br>
+            }<br>
+                </h3>
+        </td>
+
+    </tr>
+    <tr>
+
+        <td>
+            <br>
+            <b>from 1.9 version</b><br>
+
+            <br><br>
+
+            3. try with resource using multiple resource and using reference only in try <br><br>
+
+            <h3>
+            FileOutputStream fos = new FileOutputStream("abc.txt")<br>
+
+            try (fos ; FileInputStream fis = new FileInputStream("asd.a")<br>
+            )<br>
+            {<br>
+
+            fis.read();<br>
+            fos.write('a');<br>
+
+            } <br>
+            catch (IOException e) <br>
+            {<br>
+            throw new RuntimeException(e);<br>
+            }<br> // not allowed to declare resource outside try in 1.7 but allowed in 1.9
+                </h3>
+        </td>
+
+
+    <tr>
+        <td>
+            <br><br> <b>resorces declared inside try resource are final</b><br><br>
+            <h3>
+            try (FileInputStream fis = new FileInputStream("asd.a"))<br>
+            {<br>
+
+            fis = new FileInputStream("asd.a"); // not allowed ,resources defined in try are by default final so that we can not reassign them
+            <br>
+            }
+                </h3>
+            <br>
+        </td>
+    </tr>
+
+
+    </tr>
+
+    <tr>
+        <td>
+
+
+            <br>
+            <b>before 1.7 version</b><br>
+
+            <br>
+            <h3>
+            FileInputStream fis = null;<br>
+
+            try {<br>
+            fis = new FileInputStream("abc.txt");<br>
+
+            } <br>
+            finally {<br>
+
+            // here we are closing the file stream in finally block<br>
+            if (fis != null)<br>
+            fis.close();<br>
+            }<br>
+                </h3>
+
+        </td>
+    </tr>
+
+    <tr>
+
+
+        <td>   <h1> <br>Multiple Exception in Single Catch - from 1.7 version, you can have multiple exceptions inside a single catch block</td>  </h1>
+    </tr>
+    <tr>
+
+        <td>  <br>Separate exception using | and multiple exception can be handled in same catch block</td>
+    </tr>
+    <tr>
+
+        <td>  <br>this is helpful where the handling code is same for different exception, code reduandncy is reduced as not need to write same code in multiple catch blocks</td>
+    </tr>
+    <tr>
+
+        <td>   <br>the exception class in a single catch should not be related with each other, as e.g. if parent child are there then there is no need for child
+            as parent itself will handle child exception also, so the classes should not be related
+        </td>
+    </tr>
+
+    <tr>
+
+        <td>
+
+            <br><br> <b>this will handle both arithmetic and null pointer exception</b><br><br>
+            <h3>
+            catch (ArithmeticException | NullPointerException e1)<br>
+            {  <br>
+
+            System.out.println("handled");<br>
+            <br>
+            }<br>
+                </h3>
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td>
+
+            <br><br> <b>below is not allowed as Exception is parent of ArithmeticException and it can handle ArithmeticException itself, related classes not allowed</b><br><br>
+
+            <h3> catch (ArithmeticException | Exception e1)<br>
+            {  <br>
+
+            System.out.println("handled");<br>
+            <br>
+            }<br>
+                </h3>
+
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+
+            <h1><br><b>Different try catch pattern</b></h1>
+
+
+            1. Try resource can come alone, normal try must come with catch or finally
+            <br>  <br>
+            2. normal try,  catch, finally can not come alone
+            <br>  <br>
+            3. order should be try-catch, try-finally or try-catch-finally only
+
+            <br>  <br>
+            4. curly braces are mandatory as try-catch-finally is one block, even if you have only one statement
+            in try, catch or finally, you still need to have curly braces
+
+            <br></td>
+    </tr>
+
+</table>
+
+
+</html>

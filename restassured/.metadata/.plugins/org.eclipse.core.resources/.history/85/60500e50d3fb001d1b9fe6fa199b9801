@@ -1,0 +1,37 @@
+package petstore.test;
+
+import org.testng.annotations.Test;
+
+import com.github.javafaker.Faker;
+
+import petstore.logger.Log;
+import petstore.pomEndpoints.UserEndPoints;
+
+public class UserModuleTest extends Base{
+
+
+	Faker faker;
+	UserEndPoints uep = new UserEndPoints();
+
+
+	@Test (priority = 1)
+	public void createUserTest() {
+
+		Log.logInfo("inside createUserTest");
+				
+		uep.createUser(up).then().statusCode(200).log().all();
+
+	}
+	
+	@Test (priority = 2, dependsOnMethods = {"createUserTest"})
+	public void getUserTest() {
+
+		Log.logInfo("inside get user");
+				
+		//uep.readUser(up.getUserName()).then().statusCode(200).log().all();
+		
+		uep.readUser(up.getUserName());
+
+	}
+
+}

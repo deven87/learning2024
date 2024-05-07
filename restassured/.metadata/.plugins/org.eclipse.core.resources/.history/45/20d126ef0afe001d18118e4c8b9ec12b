@@ -1,0 +1,50 @@
+package gorest.reports;
+
+import java.text.SimpleDateFormat;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class ExtentReport {
+
+
+	static ExtentReports er;
+	static ExtentSparkReporter reporter;
+	static ExtentTest test;
+
+	public static void startReporting() {
+		
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd:hh:mm:ss");
+		
+		String date = sdf.format(new Date())
+
+		er = new ExtentReports();
+		reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/extentreport.html");
+
+		reporter.config().setReportName("my go rest suite report");
+		reporter.config().setDocumentTitle(null)
+		er.attachReporter(reporter);
+
+
+	}
+
+	public static ExtentReports getReport() {
+
+		return er;
+	}
+
+	public static ExtentTest getTest() {
+
+		return test;
+	}
+
+	public static void setTest(ExtentTest extentTest) {
+		test = extentTest;
+
+	}
+
+
+
+}

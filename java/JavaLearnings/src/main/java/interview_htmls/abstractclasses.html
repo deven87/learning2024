@@ -1,0 +1,315 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Abstract Class</h1>
+
+            <br><br> abstract class is a class which provides abstraction from 0 to 100%
+            <br><br> abstract class have keyword abstract
+            <br><br> abstract class may or may not have any abstract method
+            <br><br> if you want to create method without body inside a class, you have to declare the class and method as abstract
+            <br><br> an abstract class can contain both abstract and non abstrct means concrete methods
+            <br><br> it can contain any type of data member or method like final method, concrete method
+            <br><br> abstract method can be public, protected or default
+            <br><br> abstract method can not be private, final, strictfp, static, native
+            <br><br> any class which will inherit an abstract class, must provide the implementation of all abstract methods, or it have to be abstract class itself
+            <br><br> abstract methods can be overloaded and can be overriden, follow same rule for overloading and overriding
+            <br><br> abstract methods inside abstract classes are not public by default
+            <br><br> constructors are allowed inside abstract class
+            <br><br> abstract class instance can not be created
+            <br><br> abstract class can have constructors, they will be called when object of extending class is created
+            <br><br> abstract class can have static block, it will be called at class loading time
+            <br><br> abstract class can have instance block, it will be called during object creation of child
+            <br><br> we can create an abstract class without any abstract method, it can only be inherted but can not be instantiated
+            <br><br> abstract classes can have final method, it wont be overriden in child but can be inherited
+            <br><br> abstract method can not be final
+            <br><br> abstract method can not be overriden as static
+            <br><br> static methods can be deinfed inside abstract class which can be called by same class or child class names
+            <br><br> abstract class object can not be created even if it does not contain any unimplemented methods
+            <br><br> if the child class is not providing implementation to all the abstract methods of abstract class, we must declare child also as abstract
+
+
+
+
+            <h3>
+                <br><br>  /*
+
+                <br><br>   abstract class Shape
+                <br><br>   {
+                <br><br>   int color;  <br><br> normal variable
+
+            <br><br> normal method
+                <br><br> int getColor() {
+
+                <br><br> return color;
+
+            <br><br> An abstract function
+                <br><br>  abstract void draw();
+                <br><br>  }
+
+                <br><br>  */
+
+            </h3>
+        </td></tr>
+
+
+
+    <tr>
+        <td>
+
+            <h1> normal abstraction with polymorphism</h1>
+
+            <h3>
+
+                <br><br>     // normal abstraction with polymorphism
+                <br><br>     public class MainMain extends A{
+
+                <br><br>     public static void main(String[] args) {
+
+                <br><br>    MainMain m = new MainMain();
+                <br><br>     m.m1(); // calling overriden method
+                <br><br>     m.m1(10, "asd"); // calling inherited normal method as it is
+
+                <br><br>    A a = new MainMain();
+
+                <br><br>    a.m1(); // overriding, this will call method of child as run time object is child
+                <br><br>  a.m1(10, "as"); // normal inheritance this will call inherited method as it is
+
+                <br><br>   }
+
+                <br><br>   @Override
+                <br><br>   protected void m1() {
+
+                <br><br>   }
+
+                <br><br>    @Override
+                <br><br>   void m1(int x) {
+
+                <br><br>   }
+                <br><br>    }
+
+                <br><br>   abstract class A {
+
+                <br><br>   abstract  void m1();
+
+                <br><br>   abstract  void m1(int x);
+
+                <br><br>   void m1(int y, String x) {
+
+                <br><br>   System.out.println("abstract class normal method");
+
+                <br><br>   }
+
+
+
+                <br><br>   }
+
+            </h3>
+
+
+        </td></tr>
+
+
+
+    <tr>
+        <td>
+
+            <h1> // abstract class with instance, static block and constructor</h1>
+
+
+            <h3>
+            <br><br>   abstract class B {
+
+            <br><br>   // instance block is allowed
+            <br><br>   {
+              <br><br>   System.out.println("instance block parent");
+            <br><br>  }
+
+
+            <br><br> // static block inside abstract class is allowed
+            <br><br>  static {
+            <br><br>  System.out.println("static block parent");
+
+            <br><br>   }
+
+            <br><br>   // constructor inside abstract class is allowed, will be called via child class
+            <br><br>   B() {
+
+            <br><br>   System.out.println("parent constructor");
+            <br><br>   }
+            <br><br>   }
+
+            <br><br>   class ExtendingClass extends B {
+
+            <br><br> // instance block is allowed
+            <br><br> {
+            <br><br> System.out.println("instance block child");
+            <br><br> }
+
+
+            <br><br> // static block inside abstract class is allowed
+            <br><br> static {
+            <br><br> System.out.println("static block child");
+
+            <br><br>  }
+
+            <br><br> // constructor inside abstract class is allowed, will be called via child class
+            <br><br>  ExtendingClass() {
+
+            <br><br> System.out.println("child constructor");
+            <br><br> }
+
+            <br><br> public static void main(String[] args) {
+
+            <br><br> // this will call instance block of parent first and then child instance block
+            <br><br> // this will call constructor block of parent first and then child
+            <br><br> ExtendingClass e = new ExtendingClass();
+
+            <br><br> // calling order
+            <br><br> //   static block parent
+            <br><br>  //   static block child
+            <br><br> //   instance block parent
+            <br><br> //   parent constructor
+            <br><br> //   instance block child
+            <br><br> //   child constructor
+
+            <br><br>    }
+
+            <br><br>    }
+
+            </h3>
+        </td></tr>
+
+
+
+    <tr>
+        <td>
+
+            <h1>  // calling static method of abstract class via child class and same abstract class</h1>
+
+
+            <h3>
+
+            <br><br>     class D {
+
+            <br><br>     static void m1() {
+
+            <br><br>     System.out.println("D static method");
+            <br><br>     }
+            <br><br>     }
+
+            <br><br>     class E extends D {
+
+            <br><br>   public static void main(String[] args) {
+            <br><br>   E.m1(); // calling static method of abstract class via child class
+            <br><br>   D.m1(); // calling static method of abstract class via same  class
+
+            <br><br>   }
+
+            <br><br>   }
+
+            </h3>
+
+        </td></tr>
+
+
+
+    <tr>
+        <td>
+
+            <h1> // abstract class and its child having same static method</h1>
+
+
+
+            <br><br>     // since static method can not override, they are inherited only, child static will hide parent one
+
+            <h3>
+            <br><br>    class F {
+
+            <br><br>    static void m1() {
+
+            <br><br>   System.out.println("F static method");
+            <br><br>   }
+            <br><br>   }
+
+            <br><br>  class G extends F {
+
+            <br><br>   static void m1() {
+
+            <br><br>    System.out.println("G static method");
+            <br><br>   }
+
+            <br><br>   public static void main(String[] args) {
+            <br><br>   F.m1(); // calling static method of abstract class via child class
+            <br><br>   G.m1(); // calling static method of child class class via same  class
+
+            <br><br>  // static methods can be called via object reference also though not recommended
+
+            <br><br>  G g = new G();
+            <br><br>  g.m1(); // calling G static method
+
+            <br><br>   F f = new G();
+            <br><br>   f.m1(); // this will call F static method as static methods are not overriden and does not support run time polymorphism
+
+            <br><br>   // static methods call is resolved by reference and not by run time object
+
+
+            <br><br>  }
+
+            <br><br>  }
+            </h3>
+
+        </td></tr>
+
+
+
+    <tr>
+        <td>
+
+            <h1> // abstract class with no default constructors</h1>
+
+
+            <br><br>   have to call explicitly from child constructor, otherwise error while inheriting
+            <h3>
+            <br><br>   abstract class H {
+
+            <br><br>   H(int x) {
+            <br><br>   // first line is always super()
+            <br><br>   System.out.println("user defined const");
+            <br><br>   }
+
+            <br><br>   }
+
+
+
+            <br><br>    // compiler will give error as abstract class does not have default const, you have to expilcity call it from child class
+            <br><br>   // otherwise compiler will give error at the time you are inherting the abstract class
+            <br><br>    class I extends H {
+
+
+
+
+            <br><br>   I() {
+
+            <br><br>   // you have to call the abstract class parent constructor expilicty if it does not have default const and have parameterised const
+            <br><br>   super(10);
+            <br><br>   }
+
+            <br><br>   public static void main(String[] args) {
+
+            <br><br>   }
+            <br><br>   }
+            </h3>
+
+        </td></tr>
+
+
+
+</table></html>

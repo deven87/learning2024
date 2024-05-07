@@ -1,0 +1,55 @@
+{
+  "Student": [
+    {
+      "name": "devendra singh singh",
+      "id": 1
+    },
+    {
+      "name": "manish update",
+      "id": 2,
+      "subjectsWithScores": {
+        "physics": 100,
+        "chemisty": 100,
+        "maths": 100
+      }
+    },
+    {
+      "name": "only name will be updated",
+      "id": 5
+    },
+    {
+      "name": "asd",
+      "id": 7
+    },
+    {
+      "name": "asd",
+      "rollNo": "138",
+      "id": 8
+    },
+    {
+      "name": "Rachel Upton",
+      "rollNo": "104",
+      "id": 9
+    },
+    {
+      "name": "Gary Runolfsson",
+      "rollNo": "303",
+      "id": 10
+    },
+    {
+      "name": "Erik Zemlak",
+      "rollNo": "51",
+      "id": 11
+    },
+    {
+      "name": "Luis Metz",
+      "rollNo": "26",
+      "id": 12
+    },
+    {
+      "name": "devendra new student",
+      "rollNumber": 100,
+      "id": 13
+    }
+  ]
+}

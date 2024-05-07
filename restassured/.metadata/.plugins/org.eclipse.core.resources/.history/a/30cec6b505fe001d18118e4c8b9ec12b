@@ -1,0 +1,18 @@
+package gorest.reports;
+
+import com.aventstack.extentreports.ExtentReports;
+
+public class ExtentReport {
+	
+	
+	public static startReporting() {
+		
+		ExtentReports er = new ExtentsReport();
+		
+		
+		
+	}
+	
+	
+
+}

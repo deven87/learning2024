@@ -1,0 +1,190 @@
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<table>
+
+    <tr>
+        <td>
+
+            <h1> Operators</h1>
+
+
+// operators in java are symbols used for specific operation e.g. division / module %
+            // users are not allowed operator overloading but at system level it is allowed ,e.g. concatenation
+
+<br><br>//  Arithmetic Operators  +,  -, /, *, %
+            <br><br>//  Unary Operators  -, +, ++, --, !
+            <br><br>//  Assignment Operator  =, +=, -=, *=, %=, /= x+=5 means x = x+5, with assignment operations type cast is performed e.g. byte b+ = 127
+            <br><br>//  Relational Operators ==, >=, <=, >, <, !=
+            <br><br>//  Logical Operators || any condition is true return true, && both condition true, return true, ! if false then return true
+            <br><br>//  Ternary Operator condition ? if true : if false
+            <br><br>//  Bitwise Operators
+            <br>//  &, Bitwise AND operator: returns bit by bit AND of input values.
+            <br>//      |, Bitwise OR operator: returns bit by bit OR of input values.
+            <br>//      ^, Bitwise XOR operator: returns bit-by-bit XOR of input values.
+            <br>//     ~, Bitwise Complement Operator: This is a unary operator which returns the one’s complement representation of the input value, i.e., with all bits inverted.
+
+            <br><br>//  Shift Operators
+
+            <br>//  These operators are used to shift the bits of a number left or right, thereby multiplying or dividing the number by two, respectively. They can be used when we have to multiply or divide a number by two. General format-
+
+            <br>// number shift_op number_of_places_to_shift;
+
+            <br>//<<, Left shift operator: shifts the bits of the number to the left and fills 0 on voids left as a result. Similar effect as multiplying the number with some power of two.
+            <br>//>>, Signed Right shift operator: shifts the bits of the number to the right and fills 0 on voids left as a result. The leftmost bit depends on the sign of the initial number. Similar effect to dividing the number with some power of two.
+            <br>//>>>, Unsigned Right shift operator: shifts the bits of the number to the right and fills 0 on voids left as a result. The leftmost bit is set to 0.
+
+            <br><br>//  instance of operator
+
+            <br>// object instanceOf object2
+
+
+
+
+
+<h3>
+
+            <br><br>// ternary operator use
+            <br><br>void ternary() {
+
+    <br><br>int a = 20, b = 10, c = 30, result;
+
+    <br><br>// result holds max of three
+    <br><br>// numbers
+    <br><br>result
+    <br><br>= ((a > b) ? (a > c) ? a : c : (b > c) ? b : c);
+    <br><br>System.out.println("Max of three numbers = "
+    <br><br>+ result);
+    <br><br>}
+</h3>
+
+            </h3>
+
+            <h3>
+                <br><br>// instance of use
+                <br><br>// return true if given object is instance of the object
+                <br><br>void instanceOf() {
+
+                <br><br>String s = new String("S");
+
+                <br><br>System.out.println(s instanceof Object);
+
+                <br><br>}
+            </h3>
+
+
+            <img src="operators.jpg" width="600">
+
+
+
+            <tr><td>
+
+    <h1> 1. Precedence and Associativity:</h1>
+   <br><br> There is often confusion when it comes to hybrid equations which are equations having multiple operators.
+    <br><br>  The problem is which part to solve first. There is a golden rule to follow in these situations.
+    If the operators have different precedence, solve the higher precedence first.
+    If they have the same precedence, solve according to associativity,
+    that is, either from right to left or from left to right.
+    <br><br>  The explanation of the below program is well written in comments within the program itself.
+
+    <h3>
+
+        <br><br>   public class operators {
+        <br><br>   public static void main(String[] args)
+        <br><br>   {
+        <br><br>   int a = 20, b = 10, c = 0, d = 20, e = 40, f = 30;
+
+        <br><br>   // precedence rules for arithmetic operators.
+        <br><br>   // (* = / = %) > (+ = -)
+        <br><br>   // prints a+(b/d)
+        <br><br>   System.out.println("a+b/d = " + (a + b / d));
+
+        <br><br>   // if same precedence then associative
+        <br><br>  // rules are followed.
+        <br><br>  // e/f -> b*d -> a+(b*d) -> a+(b*d)-(e/f)
+        <br><br>  System.out.println("a+b*d-e/f = "
+        <br><br>  + (a + b * d - e / f));
+        <br><br>  }
+        <br><br>  }
+
+    </h3>
+
+
+    <h3>
+
+        <br><br>   public static void main(String[] args) {
+
+        <br><br>   int b = 10;
+        <br><br>    int c =20;
+
+        <br><br>    int d = b+++c; // valid as it is taken as b++ + c
+
+        <br><br>    // so d will be 30 and then b will be 11
+
+        <br><br>   System.out.println(d);
+        <br><br>   System.out.println(b);
+
+        <br><br>    }
+    </h3>
+
+
+    <h1> equals() vs == </h1>
+
+
+    <br><br> equals() method is defined in object and is meant for reference compare
+    <br> now there are multiple classes which overrides this to compare content e.g. String
+
+    <br><br> == is always for reference compare
+
+    <h3>
+        <br><br>  public static void main(String[] args) {
+
+
+        <br><br>   String s1 = "devendra";
+        <br><br>   String s2 = "devendra";
+        <br><br>   String s3 = new String("devendra");
+
+        <br><br>   StringBuilder sb = new StringBuilder("as");
+        <br><br>   StringBuilder sb1 = new StringBuilder("as");
+
+        <br><br>   System.out.println(s1==s2); // true
+
+        <br><br>   System.out.println(s2==s3); // false
+
+        <br><br>  // System.out.println(sb==s1); // not allowed as == can be used only with class having relations // String and StringBuilder has no relation
+
+        <br><br> System.out.println(s1.equals(s2)); //true
+
+        <br><br> System.out.println(s2.equals(s3)); // true
+
+        <br><br> System.out.println(s3.equals(sb)); // equals will always given false if used with classes having no relation // String and StringBuilder has no relation
+
+        <br><br> System.out.println(sb==sb1); // false
+        <br><br> System.out.println(sb.equals(sb1)); // stringbuilder does not override euqals, so equals is for reference compare only // false
+        <br><br>  }
+
+
+    </h3>
+
+    <br><br>
+    <h1> operators in expression </h1>
+
+    <b> <br>.operators in any expression used, the expresion type will be determined based on </b>
+
+    <br><br> max(int, operand1, operand 2) // type will be calculated using this
+
+
+
+
+
+</td></tr>
+
+
+        </td></tr></table></html>
+
+

@@ -1,0 +1,135 @@
+
+p	java:S125ö"<This block of commented-out lines of code should be removed.(äÿë‘8ù¿°ê„1H³­RMAJORZ
+CODE_SMELL
+r	java:S106³"9Replace this use of System.out or System.err by a logger.(ÂæÿÁùÿÿÿÿ8Ñü¾ç„1H´­RMAJORZ
+CODE_SMELL
+˜
+java:S1192T"\Define a constant instead of duplicating this literal "https://reqres.in/api/users" 8 times.(²›½öùÿÿÿÿ8ŞÊÆè„1Hµ­RCRITICALZ
+CODE_SMELL
+„
+java:S1192P"HDefine a constant instead of duplicating this literal "manager" 4 times.(’£Î˜ıÿÿÿÿ8îëÉè„1H¾­RCRITICALZ
+CODE_SMELL
+r	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(éí÷„ùÿÿÿÿ8‡¼ç„1HÃ­RMAJORZ
+CODE_SMELL
+t	java:S899Ê"BDo something with the "boolean" value returned by "createNewFile".(ôü¿Ÿÿÿÿÿÿ8«Úìì„1HÄ­RMINORZBUG
+o
+java:S1854û":Remove this useless assignment to local variable "cookie".(›°±¨8Ùï¥ê„1HÅ­RMAJORZ
+CODE_SMELL
+a
+java:S1481B"-Remove this unused "response" local variable.(‚²±‰8ûºç„1HÆ­RMINORZ
+CODE_SMELL
+m	java:S106¶"9Replace this use of System.out or System.err by a logger.(şÖ‰ñ8«óáì„1HÈ­RMAJORZ
+CODE_SMELL
+h
+java:S3740N"/Provide the parametrized type for this generic.(‰¼§°şÿÿÿÿ8ŞÊÆè„1HÉ­RMAJORZ
+CODE_SMELL
+i
+java:S3740¿"/Provide the parametrized type for this generic.(‰¼§°şÿÿÿÿ8ã†ç„1HÊ­RMAJORZ
+CODE_SMELL
+›
+java:S1192¾"^Define a constant instead of duplicating this literal "https://reqres.in/api/unknown" 3 times.(Îõ÷Àÿÿÿÿÿ8Ù´ ï„1HË­RCRITICALZ
+CODE_SMELL
+l	java:S106+"9Replace this use of System.out or System.err by a logger.(§˜¯å8Â›‘í„1HÏ­RMAJORZ
+CODE_SMELL
+}
+java:S2095È"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(•ºÔÈıÿÿÿÿ8ñıëì„1HĞ­RBLOCKERZBUG
+‹	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶§âÜÿÿÿÿÿHÑ­RMINORZ
+CODE_SMELL
+o	java:S125D"<This block of commented-out lines of code should be removed.(æ¸ï‰8ûºç„1HÒ­RMAJORZ
+CODE_SMELL
+l	java:S106”"9Replace this use of System.out or System.err by a logger.(×¾óH8’¨•ë„1HÓ­RMAJORZ
+CODE_SMELL
+p
+java:S1128"7Remove this unused import 'io.restassured.RestAssured'.(ºÉµ±ùÿÿÿÿ8æ™µ…1HÔ­RMINORZ
+CODE_SMELL
+r	java:S106–"9Replace this use of System.out or System.err by a logger.(ÃËóûÿÿÿÿ8ÊõÒè„1HÖ­RMAJORZ
+CODE_SMELL
+r	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(Šÿÿÿÿÿ8ÄŸìì„1H×­RMAJORZ
+CODE_SMELL
+”
+java:S1192ø"WDefine a constant instead of duplicating this literal "https://www.google.com" 6 times.(Éµ£Óùÿÿÿÿ8™áÒê„1HØ­RCRITICALZ
+CODE_SMELL
+€
+java:S1192`"IDefine a constant instead of duplicating this literal "user id " 4 times.(«‘Á8îëÉè„1Hß­RCRITICALZ
+CODE_SMELL
+l
+java:S1854"8Remove this useless assignment to local variable "res1".(‡Ô‹48«Òê„1Hä­RMAJORZ
+CODE_SMELL
+i
+java:S3740¿"/Provide the parametrized type for this generic.(‰¼§°şÿÿÿÿ8ŞÊÆè„1Hå­RMAJORZ
+CODE_SMELL
+q
+java:S1854é"<Remove this useless assignment to local variable "response".(ËŸÖì8çèşí„1Hæ­RMAJORZ
+CODE_SMELL
+m	java:S106‡"9Replace this use of System.out or System.err by a logger.(¹Ú±Û8Ò®ğ„1Hç­RMAJORZ
+CODE_SMELL
+€
+java:S1128"GRemove this unused import 'io.restassured.matcher.RestAssuredMatchers'.(®Ö½Îşÿÿÿÿ8æ™µ…1Hè­RMINORZ
+CODE_SMELL
+r	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(ˆ¢Ûßüÿÿÿÿ8ŞÊÆè„1Hê­RMAJORZ
+CODE_SMELL
+`
+java:S1481û"+Remove this unused "cookie" local variable.(›°±¨8²Ôê„1Hë­RMINORZ
+CODE_SMELL
+r	java:S106¤"9Replace this use of System.out or System.err by a logger.(¬ˆ»ûøÿÿÿÿ8Ÿññ„1Hí­RMAJORZ
+CODE_SMELL
+r	java:S106²"9Replace this use of System.out or System.err by a logger.(óˆÉ×úÿÿÿÿ8îëÉè„1Hî­RMAJORZ
+CODE_SMELL
+
+java:S1192Ÿ"IDefine a constant instead of duplicating this literal "user.dir" 3 times.(«¿é8õ¦ï„1Hï­RCRITICALZ
+CODE_SMELL
+m	java:S106¼"9Replace this use of System.out or System.err by a logger.(ĞÆÈ8Ü£§…1Hó­RMAJORZ
+CODE_SMELL
+k	java:S106{"9Replace this use of System.out or System.err by a logger.(€í›~8ØÅç„1Hô­RMAJORZ
+CODE_SMELL
+]
+java:S1128")Remove this unused import 'org.json.XML'.(÷î8æ™µ…1Hõ­RMINORZ
+CODE_SMELL
+
+java:S1192R"QDefine a constant instead of duplicating this literal "application/json" 9 times.(Ë«ùüÿÿÿÿ8ã†ç„1H÷­RCRITICALZ
+CODE_SMELL
+o	java:S125?"<This block of commented-out lines of code should be removed.(—ÇÔª8§ì•„1H®RMAJORZ
+CODE_SMELL
+]
+java:S1481")Remove this unused "res1" local variable.(‡Ô‹48ÏĞê„1H‚®RMINORZ
+CODE_SMELL
+|
+java:S1128"HRemove this unused import 'io.restassured.response.ValidatableResponse'.(ŸàØ‚8æ™µ…1H„®RMINORZ
+CODE_SMELL
+p
+java:S1117à"6Rename "id" which hides the field declared at line 55.(¶Æ×äÿÿÿÿÿ8Ú‰øé„1H†®RMAJORZ
+CODE_SMELL
+r	java:S106¦"9Replace this use of System.out or System.err by a logger.(èÃÚøÿÿÿÿ8 ³Ÿñ„1H‡®RMAJORZ
+CODE_SMELL
+€
+java:S1192O"IDefine a constant instead of duplicating this literal "devendra" 3 times.(¹‘Ê¦8ã†ç„1Hˆ®RCRITICALZ
+CODE_SMELL
+r	java:S106à"9Replace this use of System.out or System.err by a logger.(›ÎÇùÿÿÿÿ8²ş”ë„1HŒ®RMAJORZ
+CODE_SMELL
+l	java:S106`"9Replace this use of System.out or System.err by a logger.(«‘Á8²ŞÕí„1H®RMAJORZ
+CODE_SMELL
+ƒ
+java:S1128 "JRemove this unused import 'io.restassured.module.jsv.JsonSchemaValidator'.(ùÜÌĞùÿÿÿÿ8æ™µ…1H®RMINORZ
+CODE_SMELL
+‰
+java:S1192†"RDefine a constant instead of duplicating this literal "devendra devendra" 3 times.(ç÷½]8İß¿ï„1H®RCRITICALZ
+CODE_SMELL
+m	java:S106Ç"9Replace this use of System.out or System.err by a logger.(ĞÆÈ8äÂß…1H”®RMAJORZ
+CODE_SMELL
+r	java:S106Ø"9Replace this use of System.out or System.err by a logger.(³‘¶©øÿÿÿÿ8×ª´ì„1H•®RMAJORZ
+CODE_SMELL
+i
+java:S3740ÿ"/Provide the parametrized type for this generic.(‹Çºùÿÿÿÿ8¹ì¨ê„1H–®RMAJORZ
+CODE_SMELL
+h
+java:S3740N"/Provide the parametrized type for this generic.(‰¼§°şÿÿÿÿ8ã†ç„1H—®RMAJORZ
+CODE_SMELL
+b
+java:S1481é"-Remove this unused "response" local variable.(ËŸÖì8çèşí„1H˜®RMINORZ
+CODE_SMELL
+p
+java:S1854B"<Remove this useless assignment to local variable "response".(‚²±‰8ûºç„1Hš®RMAJORZ
+CODE_SMELL
+d
+java:S3740ı"/Provide the parametrized type for this generic.(‚’ó‚8´™§ê„1H›®RMAJORZ
+CODE_SMELL

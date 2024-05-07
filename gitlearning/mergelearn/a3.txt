@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+my branch2 more changes
+my local branch change
+=======
+>>>>>>> parent of 7687510 (asdded)
+my branch 2 changes
+=======
+>>>>>>> parent of 15d770e (added changes)
+my branch2
+mybanch2
+final change
