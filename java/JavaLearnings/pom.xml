@@ -50,6 +50,14 @@
           <version>2.0.1</version>
       </dependency>
 
+      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v121 -->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-devtools-v121</artifactId>
+          <version>4.19.1</version>
+      </dependency>
+
+
       <!-- https://mvnrepository.com/artifact/org.json/json -->
       <dependency>
           <groupId>org.json</groupId>

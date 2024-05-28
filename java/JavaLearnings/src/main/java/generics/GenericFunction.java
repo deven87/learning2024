@@ -13,7 +13,6 @@ generics only work with reference type and not with primitive
 you can parameterise by passing generic type and then can pass any value type, so in a way it is reusable
 
 
-
  */
 
 public class GenericFunction {
