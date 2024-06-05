@@ -1,0 +1,5 @@
+can be installed  via npm or via command palatte in vscode
+
+npm init playwright@latest
+
+node playright -v

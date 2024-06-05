@@ -1,0 +1,13 @@
+codegen is used to record 
+
+npx playwright codegen
+
+this will open codegen inspector and browser, anthing you do in browser will be recorded in insecptro and you can copy code baclk
+
+
+npx plauwright codegen https://www.google.com this will open the browser with site by default
+
+
+npx playwright codegen --view-port=size of window
+
+npx playwright codegen --device=Iphone 12

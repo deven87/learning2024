@@ -1,0 +1,9 @@
+
+
+node modules will be there
+
+tests folder will be there which contains dummy tests
+package.json will be there which contains project configurations
+
+playwright config file will be there which contains config related to palywright
+

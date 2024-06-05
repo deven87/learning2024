@@ -1,0 +1,14 @@
+to see the trace for debugging purpose
+
+you can set the option from playwrightc config file
+
+set
+retry:1
+
+and retry trace option as well
+
+
+now when you will run it, the retyr html report will show trace as well
+or you can view it from command
+
+npx plauwright show-trace path/to/trace.zip file

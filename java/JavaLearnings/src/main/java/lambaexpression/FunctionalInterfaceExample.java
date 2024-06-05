@@ -1,11 +1,9 @@
 package lambaexpression;
 
-import com.sun.org.apache.bcel.internal.generic.IFLE;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import sout.SOUT;
 
 import java.time.Duration;
 import java.util.function.Function;

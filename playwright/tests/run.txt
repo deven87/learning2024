@@ -1,0 +1,14 @@
+to run the playwright tests
+
+npx playwright test
+
+this will run all tests inside test folder in all browsers chromium firefox and webkit in headless mode one by one
+
+npx playwright test --headed --worker 3 tests/mytest.js --project = chromium
+
+this will run the given mytest only with header chromium and max 3 test will run in parallel
+
+
+
+
+
