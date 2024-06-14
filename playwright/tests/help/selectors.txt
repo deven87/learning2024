@@ -1,0 +1,29 @@
+
+
+can use any of the proeprty of the object
+
+test.locator('id=123')
+
+test.locator('[id=123]')
+
+test.locator('[id="123"]')
+
+can use cssselector
+
+test.locator('#id')
+
+can use xpath
+
+test.locator('xpath=//input[@id="name"]')
+
+or test.locator('//input[@id="name"]')
+
+can use text
+
+test.locator('text="LOGIN"')
+
+
+can use hastext
+
+test.locator('input:has-text["LOGIN"])
+

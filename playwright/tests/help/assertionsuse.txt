@@ -1,0 +1,17 @@
+use expect for assertions
+
+element is present or not
+
+element is visible or hidden
+
+element is enabled or disabled
+
+text matches or not
+
+
+page url can matches
+page title can matches
+any attribute of an element can be chceked
+
+page matches screenshot 
+

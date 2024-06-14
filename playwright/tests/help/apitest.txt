@@ -1,0 +1,16 @@
+
+request context can be used for api testing
+
+test('my api test', async ({request})=>{
+
+const response = await request.get('')
+
+now on response you can get response text() or json()
+
+you can use status() method to validate the status code as well
+
+in response text() you can verify for any response text contains
+
+similary you can use delete, put, post
+
+})

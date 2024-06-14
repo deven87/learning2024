@@ -1,0 +1,29 @@
+
+
+test.beforeAll
+
+will be run once before all the tests are run, if used in a describe blog, it will be applicable for that describe
+can not use page and context in it as they are related to each test
+
+
+
+test.afterAll
+
+will be run once after when all the tests are run, if used in a describe blog, it will be applicable for that describe
+can not use page and context in it as they are related to each test
+
+
+test.beforeEach
+
+will be run before each test
+can access page and context
+
+
+
+test.afterEach
+will be run  after each  test
+can access page and context
+
+
+
+can be added in describe block so that all above will be applicable for the block only

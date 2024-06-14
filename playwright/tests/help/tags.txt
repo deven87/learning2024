@@ -1,0 +1,19 @@
+add test tag along with test name
+
+test('my test name @tagname')
+
+e.g,
+
+test('login test @smoketest')
+
+
+
+while running, pass the tag
+
+npx playwright --grep "@smoketest"
+this will run all smoketest
+
+you can all test excep the one passed as well 
+
+npx playwright --grep-invert "@smoketest"
+this will run all other tests except the smoke one
